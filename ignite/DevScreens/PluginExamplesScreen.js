@@ -8,8 +8,8 @@ import { Images } from './DevTheme'
 
 // Examples Render Engine
 import ExamplesRegistry from '../../App/Services/ExamplesRegistry'
-import '../Examples/Components/animatableExample.js.ejs'
-import '../Examples/Components/vectorExample.js.ejs'
+// import '../Examples/Components/animatableExample.js.ejs'
+// import '../Examples/Components/vectorExample.js.ejs'
 
 // Styles
 import styles from './Styles/PluginExamplesScreenStyles'
