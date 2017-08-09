@@ -21,16 +21,17 @@ export default class ZTestScreen extends React.Component {
       if (error) {
         console.log('failed to load the sound', error)
         return
+      } else {
+        click.play((success) => {
+          if (success) {
+            console.log('successfully finished playing')
+          } else {
+            console.log('playback failed due to audio decoding errors')
+          }
+        })
       }
       // loaded successfully
-      console.log('duration in seconds: ' + click.getDuration() + 'number of channels: ' + click.getNumberOfChannels())
-    })
-    click.play((success) => {
-      if (success) {
-        console.log('successfully finished playing')
-      } else {
-        console.log('playback failed due to audio decoding errors')
-      }
+      // console.log('duration in seconds: ' + click.getDuration() + 'number of channels: ' + click.getNumberOfChannels())
     })
   }
   render () {
