@@ -1,6 +1,7 @@
 import React from 'react'
 import { ScrollView, Text, Image, View } from 'react-native'
 import RoundedButton from '../Components/RoundedButton'
+import ZGridContainer from '../Components/ZGridContainer'
 
 import { Images } from '../Themes'
 
@@ -38,10 +39,10 @@ export default class ZTestScreen extends React.Component {
     return (
       <View style={styles.mainContainer}>
         <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
-        <ScrollView style={styles.container}>
+        <View style={styles.container}>
 
           <View style={styles.section} >
-            <Image source={Images.ready} />
+            {/* <Image source={Images.ready} /> */}
             <Text style={styles.sectionText}>
               {'Press a button to hear a sound.'}
             </Text>
@@ -50,7 +51,8 @@ export default class ZTestScreen extends React.Component {
           <RoundedButton onPress={this.playSound}>
             Play Sound
           </RoundedButton>
-        </ScrollView>
+          <ZGridContainer/>
+        </View>
       </View>
     )
   }
