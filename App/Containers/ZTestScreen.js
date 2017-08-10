@@ -1,5 +1,5 @@
 import React from 'react'
-import { ScrollView, Text, Image, View } from 'react-native'
+import { Text, Image, View } from 'react-native'
 import RoundedButton from '../Components/RoundedButton'
 import ZGridContainer from '../Components/ZGridContainer'
 
@@ -51,7 +51,7 @@ export default class ZTestScreen extends React.Component {
           <RoundedButton onPress={this.playSound}>
             Play Sound
           </RoundedButton>
-          <ZGridContainer/>
+          <ZGridContainer />
         </View>
       </View>
     )
