@@ -7,6 +7,9 @@ import ZPhrasePlayer from '../Components/ZPhrasePlayer'
 import ZPersonSelector from '../Components/ZPersonSelector'
 import ZLoadPhrases from '../Components/ZLoadPhrases'
 import Icon from 'react-native-vector-icons/FontAwesome'
+import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons'
+import Icon3 from 'react-native-vector-icons/Ionicons'
+import Icon4 from 'react-native-vector-icons/Entypo'
 
 // Styles
 import styles from './Styles/ZTestScreenStyles'
@@ -125,16 +128,27 @@ export default class ZTestScreen extends React.Component {
     const { showHelp } = this.state
     if (showHelp) {
       return (
-        <View style={{width: width, height: height, position: 'absolute', zIndex: 500, backgroundColor: 'rgba(0, 0, 0, 0.7)'}}>
-          <View style={{width: width, height: 100, top: 0, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
-            <Text style={{color: 'white', fontSize: 30, fontWeight: 'bold', marginTop: 30}}>Select Speaker</Text>
+        <View style={{width: width, height: height, position: 'absolute', zIndex: 500, backgroundColor: 'rgba(0, 0, 0, 0.8)'}}>
+          <View style={{width: width, height: 100, top: 0, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
+            <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold', marginTop: 30}}>1: Select Speaker</Text>
+            <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold', marginTop: 2}}><Icon3 name='ios-person-add' size={30} style={{paddingTop: 20}} /></Text>
           </View>
-          <View style={{width: width, height: 100, top: 80, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
-            <Text style={{color: 'white', fontSize: 20, fontWeight: 'bold'}}>Select Category</Text>
+          <View style={{width: width, height: 100, top: 80, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
+            <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}>2: Select Category</Text>
+            <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}><Icon2 name='gesture-swipe-left' size={30} /></Text>
           </View>
-          <View style={{width: width, height: 100, top: 180, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
-            <Text style={{color: 'white', fontSize: 20, fontWeight: 'bold'}}>Tap words to preview</Text>
-            <Text style={{color: 'white', fontSize: 20, fontWeight: 'bold'}}>Press and hold to add to word tray</Text>
+          <View style={{width: width, height: 100, top: 280, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
+            <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}>3: Tap words to preview</Text>
+            <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}><Icon2 name='gesture-tap' size={30} /></Text>
+            <Text style={{color: 'white', fontSize: 10, fontWeight: 'bold', paddingTop: 13}}>(Press and hold to add to word tray)</Text>
+            <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}><Icon2 name='gesture-double-tap' size={30} /></Text>
+          </View>
+          <View style={{width: width, height: 100, bottom: 80, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
+            <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}>4: Phrase words</Text>
+            <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}><Icon4 name='bucket' size={30} /></Text>
+          </View>
+          <View style={{width: width, height: 100, bottom: 0, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
+            <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold', marginTop: 30}}>5: Tap 'Build Phrase'</Text>
           </View>
         </View>
       )
