@@ -1,0 +1,2400 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
+		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
+		00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
+		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
+		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
+		00E356F31AD99517003FC87E /* PresidentsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PresidentsTests.m */; };
+		01DED5BE3BB04FA3BBBB2B1C /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4C3AED7F314BA48CBB1C0D /* libRNDeviceInfo.a */; };
+		116597176DE04FC2AF34E809 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42654C220E424F078E21AF82 /* FontAwesome.ttf */; };
+		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
+		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
+		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
+		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
+		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
+		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		14C0A5EEF71C4ECC8FAC6438 /* libReactNativeConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5242A2749F1459BA85A02AD /* libReactNativeConfig.a */; };
+		1ED77D5071B64F698DB1FA5A /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5B3BB86CB97459D8FBEE1C4 /* Ionicons.ttf */; };
+		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
+		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2D02E4C21E0B4AEC006451C7 /* libRCTAnimation-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157351DD0AC6500FF2AA8 /* libRCTAnimation-tvOS.a */; };
+		2D02E4C31E0B4AEC006451C7 /* libRCTImage-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E841DF850E9000B6D8A /* libRCTImage-tvOS.a */; };
+		2D02E4C41E0B4AEC006451C7 /* libRCTLinking-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E881DF850E9000B6D8A /* libRCTLinking-tvOS.a */; };
+		2D02E4C51E0B4AEC006451C7 /* libRCTNetwork-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E8C1DF850E9000B6D8A /* libRCTNetwork-tvOS.a */; };
+		2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E901DF850E9000B6D8A /* libRCTSettings-tvOS.a */; };
+		2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E941DF850E9000B6D8A /* libRCTText-tvOS.a */; };
+		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
+		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
+		2DCD954D1E0B4F2C00145EB5 /* PresidentsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PresidentsTests.m */; };
+		4AD0CA5016FB44F08E5845A7 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1917F2E469484A8AAA7FFC90 /* EvilIcons.ttf */; };
+		550DE0D5DBD748ECAEACDF9D /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 204FDEEF7D194A739C011EEC /* Zocial.ttf */; };
+		5B971813972B4201A4D9D9CA /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 364EE4AAB1A54721A505CD75 /* Foundation.ttf */; };
+		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
+		64B69FE21F5C46F798D5703E /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F1E403EB7C74E09BB9B675F /* MaterialIcons.ttf */; };
+		827A79D9BB0544C6A2DC41D0 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C2D9893545444708280EF06 /* MaterialCommunityIcons.ttf */; };
+		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		8C242A511F64DBAF003C69CD /* obama_financing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A411F64DBAF003C69CD /* obama_financing.mp3 */; };
+		8C242A521F64DBAF003C69CD /* obama_at.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A421F64DBAF003C69CD /* obama_at.mp3 */; };
+		8C242A531F64DBAF003C69CD /* obama_the_koch_brothers.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A431F64DBAF003C69CD /* obama_the_koch_brothers.mp3 */; };
+		8C242A541F64DBAF003C69CD /* obama_actually.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A441F64DBAF003C69CD /* obama_actually.mp3 */; };
+		8C242A551F64DBAF003C69CD /* obama_me.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A451F64DBAF003C69CD /* obama_me.mp3 */; };
+		8C242A561F64DBAF003C69CD /* obama_consequence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A461F64DBAF003C69CD /* obama_consequence.mp3 */; };
+		8C242A571F64DBAF003C69CD /* obama_of.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A471F64DBAF003C69CD /* obama_of.mp3 */; };
+		8C242A581F64DBAF003C69CD /* obama_forty_five.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A481F64DBAF003C69CD /* obama_forty_five.mp3 */; };
+		8C242A591F64DBAF003C69CD /* obama_twelve.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A491F64DBAF003C69CD /* obama_twelve.mp3 */; };
+		8C242A5A1F64DBAF003C69CD /* obama_felt.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A4A1F64DBAF003C69CD /* obama_felt.mp3 */; };
+		8C242A5B1F64DBAF003C69CD /* obama_always.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A4B1F64DBAF003C69CD /* obama_always.mp3 */; };
+		8C242A5C1F64DBAF003C69CD /* obama_presidency.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A4C1F64DBAF003C69CD /* obama_presidency.mp3 */; };
+		8C242A5D1F64DBAF003C69CD /* obama_the_united_states_senate.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A4D1F64DBAF003C69CD /* obama_the_united_states_senate.mp3 */; };
+		8C242A5E1F64DBAF003C69CD /* obama_was.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A4E1F64DBAF003C69CD /* obama_was.mp3 */; };
+		8C242A5F1F64DBAF003C69CD /* obama_support.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A4F1F64DBAF003C69CD /* obama_support.mp3 */; };
+		8C242A601F64DBAF003C69CD /* obama_now.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A501F64DBAF003C69CD /* obama_now.mp3 */; };
+		8C242A6A1F65BEDE003C69CD /* obama_leave.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A611F65BEDE003C69CD /* obama_leave.mp3 */; };
+		8C242A6B1F65BEDE003C69CD /* obama_big.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A621F65BEDE003C69CD /* obama_big.mp3 */; };
+		8C242A6C1F65BEDE003C69CD /* obama_to.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A631F65BEDE003C69CD /* obama_to.mp3 */; };
+		8C242A6D1F65BEDE003C69CD /* obama_immediately.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A641F65BEDE003C69CD /* obama_immediately.mp3 */; };
+		8C242A6E1F65BEDE003C69CD /* obama_campaign.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A651F65BEDE003C69CD /* obama_campaign.mp3 */; };
+		8C242A6F1F65BEDE003C69CD /* obama_a.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A661F65BEDE003C69CD /* obama_a.mp3 */; };
+		8C242A701F65BEDE003C69CD /* obama_think.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A671F65BEDE003C69CD /* obama_think.mp3 */; };
+		8C242A711F65BEDE003C69CD /* obama_races.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A681F65BEDE003C69CD /* obama_races.mp3 */; };
+		8C242A721F65BEDE003C69CD /* obama_public.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A691F65BEDE003C69CD /* obama_public.mp3 */; };
+		8C242A851F65CACC003C69CD /* obama_swirl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A731F65CACC003C69CD /* obama_swirl.mp3 */; };
+		8C242A861F65CACC003C69CD /* obama_lost.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A741F65CACC003C69CD /* obama_lost.mp3 */; };
+		8C242A871F65CACC003C69CD /* obama_her.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A751F65CACC003C69CD /* obama_her.mp3 */; };
+		8C242A881F65CACC003C69CD /* obama_a_lot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A761F65CACC003C69CD /* obama_a_lot.mp3 */; };
+		8C242A891F65CACC003C69CD /* obama_gossip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A771F65CACC003C69CD /* obama_gossip.mp3 */; };
+		8C242A8A1F65CACC003C69CD /* obama_were.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A781F65CACC003C69CD /* obama_were.mp3 */; };
+		8C242A8B1F65CACC003C69CD /* obama_contributed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A791F65CACC003C69CD /* obama_contributed.mp3 */; };
+		8C242A8C1F65CACC003C69CD /* obama_somebody.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A7A1F65CACC003C69CD /* obama_somebody.mp3 */; };
+		8C242A8D1F65CACC003C69CD /* obama_start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A7B1F65CACC003C69CD /* obama_start.mp3 */; };
+		8C242A8E1F65CACC003C69CD /* obama_rise_up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A7C1F65CACC003C69CD /* obama_rise_up.mp3 */; };
+		8C242A8F1F65CACC003C69CD /* obama_them.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A7D1F65CACC003C69CD /* obama_them.mp3 */; };
+		8C242A901F65CACC003C69CD /* obama_help.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A7E1F65CACC003C69CD /* obama_help.mp3 */; };
+		8C242A911F65CACC003C69CD /* obama_whatever.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A7F1F65CACC003C69CD /* obama_whatever.mp3 */; };
+		8C242A921F65CACC003C69CD /* obama_climate_change.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A801F65CACC003C69CD /* obama_climate_change.mp3 */; };
+		8C242A931F65CACC003C69CD /* obama_passionate.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A811F65CACC003C69CD /* obama_passionate.mp3 */; };
+		8C242A941F65CACC003C69CD /* obama_generation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A821F65CACC003C69CD /* obama_generation.mp3 */; };
+		8C242A951F65CACC003C69CD /* obama_in.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A831F65CACC003C69CD /* obama_in.mp3 */; };
+		8C242A961F65CACC003C69CD /* obama_vacation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A841F65CACC003C69CD /* obama_vacation.mp3 */; };
+		8C242A9F1F65D00F003C69CD /* obama_substance.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A981F65D00F003C69CD /* obama_substance.mp3 */; };
+		8C242AA01F65D00F003C69CD /* obama_npr.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A991F65D00F003C69CD /* obama_npr.mp3 */; };
+		8C242AA11F65D00F003C69CD /* obama_fake_news.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A9A1F65D00F003C69CD /* obama_fake_news.mp3 */; };
+		8C242AA21F65D00F003C69CD /* obama_and_and.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A9B1F65D00F003C69CD /* obama_and_and.mp3 */; };
+		8C242AA31F65D00F003C69CD /* obama_doubt.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A9C1F65D00F003C69CD /* obama_doubt.mp3 */; };
+		8C242AA41F65D00F003C69CD /* obama_have.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A9D1F65D00F003C69CD /* obama_have.mp3 */; };
+		8C242AB41F65D7B2003C69CD /* obama_controversial.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AA51F65D7B2003C69CD /* obama_controversial.mp3 */; };
+		8C242AB51F65D7B2003C69CD /* obama_consistently.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AA61F65D7B2003C69CD /* obama_consistently.mp3 */; };
+		8C242AB61F65D7B2003C69CD /* obama_the_dnc.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AA71F65D7B2003C69CD /* obama_the_dnc.mp3 */; };
+		8C242AB71F65D7B2003C69CD /* obama_if.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AA81F65D7B2003C69CD /* obama_if.mp3 */; };
+		8C242AB81F65D7B2003C69CD /* obama_any.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AA91F65D7B2003C69CD /* obama_any.mp3 */; };
+		8C242AB91F65D7B2003C69CD /* obama_read.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AAA1F65D7B2003C69CD /* obama_read.mp3 */; };
+		8C242ABA1F65D7B2003C69CD /* obama_the.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AAB1F65D7B2003C69CD /* obama_the.mp3 */; };
+		8C242ABB1F65D7B2003C69CD /* obama_by.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AAC1F65D7B2003C69CD /* obama_by.mp3 */; };
+		8C242ABC1F65D7B2003C69CD /* obama_manipulation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AAD1F65D7B2003C69CD /* obama_manipulation.mp3 */; };
+		8C242ABD1F65D7B2003C69CD /* obama_vulnerable.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AAE1F65D7B2003C69CD /* obama_vulnerable.mp3 */; };
+		8C242ABE1F65D7B2003C69CD /* obama_trumped_up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AAF1F65D7B2003C69CD /* obama_trumped_up.mp3 */; };
+		8C242ABF1F65D7B2003C69CD /* obama_call.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AB01F65D7B2003C69CD /* obama_call.mp3 */; };
+		8C242AC01F65D7B2003C69CD /* obama_deep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AB11F65D7B2003C69CD /* obama_deep.mp3 */; };
+		8C242AC11F65D7B2003C69CD /* obama_avoid.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AB21F65D7B2003C69CD /* obama_avoid.mp3 */; };
+		8C242AC21F65D7B2003C69CD /* obama_political.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AB31F65D7B2003C69CD /* obama_political.mp3 */; };
+		8C242AD41F674215003C69CD /* obama_decade.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AC31F674215003C69CD /* obama_decade.mp3 */; };
+		8C242AD51F674215003C69CD /* obama_steal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AC41F674215003C69CD /* obama_steal.mp3 */; };
+		8C242AD61F674215003C69CD /* obama_british.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AC51F674215003C69CD /* obama_british.mp3 */; };
+		8C242AD71F674215003C69CD /* obama_chinese.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AC61F674215003C69CD /* obama_chinese.mp3 */; };
+		8C242AD81F674215003C69CD /* obama_officers.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AC71F674215003C69CD /* obama_officers.mp3 */; };
+		8C242AD91F674215003C69CD /* obama_among.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AC81F674215003C69CD /* obama_among.mp3 */; };
+		8C242ADA1F674215003C69CD /* obama_explicit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AC91F674215003C69CD /* obama_explicit.mp3 */; };
+		8C242ADB1F674215003C69CD /* obama_maybe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242ACA1F674215003C69CD /* obama_maybe.mp3 */; };
+		8C242ADC1F674215003C69CD /* obama_impact.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242ACB1F674215003C69CD /* obama_impact.mp3 */; };
+		8C242ADD1F674215003C69CD /* obama_the_cia.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242ACC1F674215003C69CD /* obama_the_cia.mp3 */; };
+		8C242ADE1F674215003C69CD /* obama_federal_government.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242ACD1F674215003C69CD /* obama_federal_government.mp3 */; };
+		8C242ADF1F674215003C69CD /* obama_agency.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242ACE1F674215003C69CD /* obama_agency.mp3 */; };
+		8C242AE01F674215003C69CD /* obama_after.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242ACF1F674215003C69CD /* obama_after.mp3 */; };
+		8C242AE11F674215003C69CD /* obama_revelation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AD01F674215003C69CD /* obama_revelation.mp3 */; };
+		8C242AE21F674215003C69CD /* obama_terrorism.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AD11F674215003C69CD /* obama_terrorism.mp3 */; };
+		8C242AE31F674215003C69CD /* obama_islamic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AD21F674215003C69CD /* obama_islamic.mp3 */; };
+		8C242AE41F674215003C69CD /* obama_relationship.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AD31F674215003C69CD /* obama_relationship.mp3 */; };
+		8C242AE61F67451E003C69CD /* obama_like.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AE51F67451E003C69CD /* obama_like.mp3 */; };
+		8C3B76781F6EE22700DC8965 /* trump_dollars.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B766E1F6EE22700DC8965 /* trump_dollars.mp3 */; };
+		8C3B76791F6EE22700DC8965 /* trump_trillion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B766F1F6EE22700DC8965 /* trump_trillion.mp3 */; };
+		8C3B767A1F6EE22700DC8965 /* trump_six.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B76701F6EE22700DC8965 /* trump_six.mp3 */; };
+		8C3B767B1F6EE22700DC8965 /* trump_mess.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B76711F6EE22700DC8965 /* trump_mess.mp3 */; };
+		8C3B767C1F6EE22700DC8965 /* trump_total.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B76721F6EE22700DC8965 /* trump_total.mp3 */; };
+		8C3B767D1F6EE22700DC8965 /* trump_president_obama.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B76731F6EE22700DC8965 /* trump_president_obama.mp3 */; };
+		8C3B767E1F6EE22700DC8965 /* trump_here.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B76741F6EE22700DC8965 /* trump_here.mp3 */; };
+		8C3B767F1F6EE22700DC8965 /* trump_who.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B76751F6EE22700DC8965 /* trump_who.mp3 */; };
+		8C3B76801F6EE22700DC8965 /* trump_without.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B76761F6EE22700DC8965 /* trump_without.mp3 */; };
+		8C3B76811F6EE22700DC8965 /* trump_yes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B76771F6EE22700DC8965 /* trump_yes.mp3 */; };
+		8C7BCE331F67547A000478DB /* trump_primaries.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE321F67547A000478DB /* trump_primaries.mp3 */; };
+		8C7BCE581F675483000478DB /* trump_democrats.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE511F675483000478DB /* trump_democrats.mp3 */; };
+		8C7BCE591F675483000478DB /* trump_from.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE521F675483000478DB /* trump_from.mp3 */; };
+		8C7BCE5A1F675483000478DB /* trump_absolutely.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE531F675483000478DB /* trump_absolutely.mp3 */; };
+		8C7BCE5B1F675483000478DB /* trump_mexico.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE541F675483000478DB /* trump_mexico.mp3 */; };
+		8C7BCE5C1F675483000478DB /* trump_of.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE551F675483000478DB /* trump_of.mp3 */; };
+		8C7BCE5D1F675483000478DB /* trump_correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE561F675483000478DB /* trump_correct.mp3 */; };
+		8C7BCE5E1F675483000478DB /* trump_abe_lincoln.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE571F675483000478DB /* trump_abe_lincoln.mp3 */; };
+		8C7BCE6E1F677C55000478DB /* trump_spoke.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE5F1F677C55000478DB /* trump_spoke.mp3 */; };
+		8C7BCE6F1F677C55000478DB /* trump_sean.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE601F677C55000478DB /* trump_sean.mp3 */; };
+		8C7BCE701F677C55000478DB /* trump_fox.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE611F677C55000478DB /* trump_fox.mp3 */; };
+		8C7BCE711F677C55000478DB /* trump_speech.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE621F677C55000478DB /* trump_speech.mp3 */; };
+		8C7BCE721F677C55000478DB /* trump_illegal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE631F677C55000478DB /* trump_illegal.mp3 */; };
+		8C7BCE731F677C55000478DB /* trump_legitamite.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE641F677C55000478DB /* trump_legitamite.mp3 */; };
+		8C7BCE741F677C55000478DB /* trump_now.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE651F677C55000478DB /* trump_now.mp3 */; };
+		8C7BCE751F677C55000478DB /* trump_dead.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE661F677C55000478DB /* trump_dead.mp3 */; };
+		8C7BCE761F677C55000478DB /* trump_states.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE671F677C55000478DB /* trump_states.mp3 */; };
+		8C7BCE771F677C55000478DB /* trump_vote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE681F677C55000478DB /* trump_vote.mp3 */; };
+		8C7BCE781F677C55000478DB /* trump_people.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE691F677C55000478DB /* trump_people.mp3 */; };
+		8C7BCE791F677C55000478DB /* trump_college.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE6A1F677C55000478DB /* trump_college.mp3 */; };
+		8C7BCE7A1F677C55000478DB /* trump_to.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE6B1F677C55000478DB /* trump_to.mp3 */; };
+		8C7BCE7B1F677C55000478DB /* trump_two.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE6C1F677C55000478DB /* trump_two.mp3 */; };
+		8C7BCE7C1F677C55000478DB /* trump_strongly.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE6D1F677C55000478DB /* trump_strongly.mp3 */; };
+		8C7BCE881F689272000478DB /* trump_audience.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE7D1F689272000478DB /* trump_audience.mp3 */; };
+		8C7BCE891F689272000478DB /* trump_before.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE7E1F689272000478DB /* trump_before.mp3 */; };
+		8C7BCE8A1F689272000478DB /* trump_wow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE7F1F689272000478DB /* trump_wow.mp3 */; };
+		8C7BCE8B1F689272000478DB /* trump_unfairly.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE801F689272000478DB /* trump_unfairly.mp3 */; };
+		8C7BCE8C1F689272000478DB /* trump_forgot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE811F689272000478DB /* trump_forgot.mp3 */; };
+		8C7BCE8D1F689272000478DB /* trump_women.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE821F689272000478DB /* trump_women.mp3 */; };
+		8C7BCE8E1F689272000478DB /* trump_victory.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE831F689272000478DB /* trump_victory.mp3 */; };
+		8C7BCE911F689272000478DB /* trump_did.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE861F689272000478DB /* trump_did.mp3 */; };
+		8C7BCE921F689272000478DB /* trump_you.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE871F689272000478DB /* trump_you.mp3 */; };
+		8C7BCEA01F68C3F7000478DB /* trump_years.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE931F68C3F7000478DB /* trump_years.mp3 */; };
+		8C7BCEA11F68C3F7000478DB /* trump_bread.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE941F68C3F7000478DB /* trump_bread.mp3 */; };
+		8C7BCEA21F68C3F7000478DB /* trump_smarter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE951F68C3F7000478DB /* trump_smarter.mp3 */; };
+		8C7BCEA31F68C3F7000478DB /* trump_shot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE961F68C3F7000478DB /* trump_shot.mp3 */; };
+		8C7BCEA41F68C3F7000478DB /* trump_problem.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE971F68C3F7000478DB /* trump_problem.mp3 */; };
+		8C7BCEA51F68C3F7000478DB /* trump_chicago.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE981F68C3F7000478DB /* trump_chicago.mp3 */; };
+		8C7BCEA61F68C3F7000478DB /* trump_help.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE991F68C3F7000478DB /* trump_help.mp3 */; };
+		8C7BCEA71F68C3F7000478DB /* trump_catastrophe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE9A1F68C3F7000478DB /* trump_catastrophe.mp3 */; };
+		8C7BCEA81F68C3F7000478DB /* trump_afghanistan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE9B1F68C3F7000478DB /* trump_afghanistan.mp3 */; };
+		8C7BCEA91F68C3F7000478DB /* trump_they.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE9C1F68C3F7000478DB /* trump_they.mp3 */; };
+		8C7BCEAA1F68C3F7000478DB /* trump_demean.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE9D1F68C3F7000478DB /* trump_demean.mp3 */; };
+		8C7BCEAB1F68C3F7000478DB /* trump_you2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE9E1F68C3F7000478DB /* trump_you2.mp3 */; };
+		8C7BCEAC1F68C3F7000478DB /* trump_never.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCE9F1F68C3F7000478DB /* trump_never.mp3 */; };
+		8C7BCF051F6A0B5D000478DB /* trump_work.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCEF81F6A0B5D000478DB /* trump_work.mp3 */; };
+		8C7BCF061F6A0B5D000478DB /* trump_does.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCEF91F6A0B5D000478DB /* trump_does.mp3 */; };
+		8C7BCF071F6A0B5D000478DB /* trump_phenonemal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCEFA1F6A0B5D000478DB /* trump_phenonemal.mp3 */; };
+		8C7BCF081F6A0B5D000478DB /* trump_waterboarding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCEFB1F6A0B5D000478DB /* trump_waterboarding.mp3 */; };
+		8C7BCF091F6A0B5D000478DB /* trump_in.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCEFC1F6A0B5D000478DB /* trump_in.mp3 */; };
+		8C7BCF0A1F6A0B5D000478DB /* trump_intelligence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCEFD1F6A0B5D000478DB /* trump_intelligence.mp3 */; };
+		8C7BCF0B1F6A0B5D000478DB /* trump_others.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCEFE1F6A0B5D000478DB /* trump_others.mp3 */; };
+		8C7BCF0C1F6A0B5D000478DB /* trump_fabulous.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCEFF1F6A0B5D000478DB /* trump_fabulous.mp3 */; };
+		8C7BCF0D1F6A0B5D000478DB /* trump_somebody.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCF001F6A0B5D000478DB /* trump_somebody.mp3 */; };
+		8C7BCF0E1F6A0B5D000478DB /* trump_the_cia.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCF011F6A0B5D000478DB /* trump_the_cia.mp3 */; };
+		8C7BCF0F1F6A0B5D000478DB /* trump_approve.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCF021F6A0B5D000478DB /* trump_approve.mp3 */; };
+		8C7BCF101F6A0B5D000478DB /* trump_approved.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCF031F6A0B5D000478DB /* trump_approved.mp3 */; };
+		8C7BCF111F6A0B5D000478DB /* trump_president.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C7BCF041F6A0B5D000478DB /* trump_president.mp3 */; };
+		8CE556381F42816200C3CF96 /* obama_family.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556341F42816100C3CF96 /* obama_family.mp3 */; };
+		8CE5563A1F42816200C3CF96 /* obama_rhetoric.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556361F42816100C3CF96 /* obama_rhetoric.mp3 */; };
+		8CE556411F428A3400C3CF96 /* obama_mexico.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556401F428A3400C3CF96 /* obama_mexico.mp3 */; };
+		8CE556431F428DB600C3CF96 /* obama_the_united_states.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556421F428DB600C3CF96 /* obama_the_united_states.mp3 */; };
+		8CE5564B1F4295EC00C3CF96 /* obama_is.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556481F4295EC00C3CF96 /* obama_is.mp3 */; };
+		8CE5564C1F4295EC00C3CF96 /* obama_myself.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556491F4295EC00C3CF96 /* obama_myself.mp3 */; };
+		8CE5564D1F4295EC00C3CF96 /* obama_and.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE5564A1F4295EC00C3CF96 /* obama_and.mp3 */; };
+		8CE5564F1F4296FF00C3CF96 /* obama_that.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE5564E1F4296FF00C3CF96 /* obama_that.mp3 */; };
+		8CE556511F4297AD00C3CF96 /* obama_but.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556501F4297AD00C3CF96 /* obama_but.mp3 */; };
+		8CE556561F42996200C3CF96 /* obama_proud.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556521F42996100C3CF96 /* obama_proud.mp3 */; };
+		8CE556571F42996200C3CF96 /* obama_happy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556531F42996100C3CF96 /* obama_happy.mp3 */; };
+		8CE556581F42996200C3CF96 /* obama_what.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556541F42996100C3CF96 /* obama_what.mp3 */; };
+		8CE556591F42996200C3CF96 /* obama_ughhh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556551F42996100C3CF96 /* obama_ughhh.mp3 */; };
+		8CE5565F1F429D1900C3CF96 /* obama_mother_fuckers.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE5565A1F429D1900C3CF96 /* obama_mother_fuckers.mp3 */; };
+		8CE556601F429D1900C3CF96 /* obama_mother_fucker.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE5565B1F429D1900C3CF96 /* obama_mother_fucker.mp3 */; };
+		8CE556611F429D1900C3CF96 /* obama_nothing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE5565C1F429D1900C3CF96 /* obama_nothing.mp3 */; };
+		8CE556621F429D1900C3CF96 /* obama_fries.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE5565D1F429D1900C3CF96 /* obama_fries.mp3 */; };
+		8CE556631F429D1900C3CF96 /* obama_bitch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE5565E1F429D1900C3CF96 /* obama_bitch.mp3 */; };
+		8CE556671F43E9AF00C3CF96 /* obama_shit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556651F43E9AF00C3CF96 /* obama_shit.mp3 */; };
+		8CE556691F43EFF400C3CF96 /* obama_complicated.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556681F43EFF400C3CF96 /* obama_complicated.mp3 */; };
+		8CE5566C1F43EFFD00C3CF96 /* obama_sorry_ass.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE5566A1F43EFFD00C3CF96 /* obama_sorry_ass.mp3 */; };
+		8CE5566D1F43EFFD00C3CF96 /* obama_damn_fries.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE5566B1F43EFFD00C3CF96 /* obama_damn_fries.mp3 */; };
+		8CE556701F43F31900C3CF96 /* obama_whos_ass.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE5566E1F43F31900C3CF96 /* obama_whos_ass.mp3 */; };
+		8CE556711F43F31900C3CF96 /* obama_ignorant.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE5566F1F43F31900C3CF96 /* obama_ignorant.mp3 */; };
+		8CE556751F43F6B300C3CF96 /* obama_pussy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556721F43F6B300C3CF96 /* obama_pussy.mp3 */; };
+		8CE556771F43F6B300C3CF96 /* obama_goddam.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556741F43F6B300C3CF96 /* obama_goddam.mp3 */; };
+		8CE556861F4657FD00C3CF96 /* obama_where.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556781F4657FD00C3CF96 /* obama_where.mp3 */; };
+		8CE556871F4657FD00C3CF96 /* obama_states.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556791F4657FD00C3CF96 /* obama_states.mp3 */; };
+		8CE556881F4657FD00C3CF96 /* obama_chunks.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE5567A1F4657FD00C3CF96 /* obama_chunks.mp3 */; };
+		8CE556891F4657FD00C3CF96 /* obama_democrats.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE5567B1F4657FD00C3CF96 /* obama_democrats.mp3 */; };
+		8CE5568A1F4657FD00C3CF96 /* obama_for.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE5567C1F4657FD00C3CF96 /* obama_for.mp3 */; };
+		8CE5568B1F4657FD00C3CF96 /* obama_challenge.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE5567D1F4657FD00C3CF96 /* obama_challenge.mp3 */; };
+		8CE5568C1F4657FD00C3CF96 /* obama_are.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE5567E1F4657FD00C3CF96 /* obama_are.mp3 */; };
+		8CE5568D1F4657FD00C3CF96 /* obama_noo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE5567F1F4657FD00C3CF96 /* obama_noo.mp3 */; };
+		8CE5568E1F4657FD00C3CF96 /* obama_so.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556801F4657FD00C3CF96 /* obama_so.mp3 */; };
+		8CE5568F1F4657FD00C3CF96 /* obama_donald_trump.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556811F4657FD00C3CF96 /* obama_donald_trump.mp3 */; };
+		8CE556901F4657FD00C3CF96 /* obama_who.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556821F4657FD00C3CF96 /* obama_who.mp3 */; };
+		8CE556911F4657FD00C3CF96 /* obama_because.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556831F4657FD00C3CF96 /* obama_because.mp3 */; };
+		8CE556921F4657FD00C3CF96 /* obama_hard.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556841F4657FD00C3CF96 /* obama_hard.mp3 */; };
+		8CE556931F4657FD00C3CF96 /* obama_wellll.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556851F4657FD00C3CF96 /* obama_wellll.mp3 */; };
+		8CE5569E1F4791B400C3CF96 /* obama_people.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556941F4791B400C3CF96 /* obama_people.mp3 */; };
+		8CE5569F1F4791B400C3CF96 /* obama_on.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556951F4791B400C3CF96 /* obama_on.mp3 */; };
+		8CE556A01F4791B400C3CF96 /* obama_bathrooms.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556961F4791B400C3CF96 /* obama_bathrooms.mp3 */; };
+		8CE556A11F4791B400C3CF96 /* obama_promote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556971F4791B400C3CF96 /* obama_promote.mp3 */; };
+		8CE556A21F4791B400C3CF96 /* obama_give.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556981F4791B400C3CF96 /* obama_give.mp3 */; };
+		8CE556A31F4791B400C3CF96 /* obama_made.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556991F4791B400C3CF96 /* obama_made.mp3 */; };
+		8CE556A41F4791B400C3CF96 /* obama_has.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE5569A1F4791B400C3CF96 /* obama_has.mp3 */; };
+		8CE556A51F4791B400C3CF96 /* obama_party.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE5569B1F4791B400C3CF96 /* obama_party.mp3 */; };
+		8CE556A61F4791B400C3CF96 /* obama_well_uh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE5569C1F4791B400C3CF96 /* obama_well_uh.mp3 */; };
+		8CE556A71F4791B400C3CF96 /* obama_then.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE5569D1F4791B400C3CF96 /* obama_then.mp3 */; };
+		8CE556B11F48B57300C3CF96 /* obama_issues.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556A81F48B57300C3CF96 /* obama_issues.mp3 */; };
+		8CE556B21F48B57300C3CF96 /* obama_talk.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556A91F48B57300C3CF96 /* obama_talk.mp3 */; };
+		8CE556B31F48B57300C3CF96 /* obama_trust.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556AA1F48B57300C3CF96 /* obama_trust.mp3 */; };
+		8CE556B41F48B57300C3CF96 /* obama_builds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556AB1F48B57300C3CF96 /* obama_builds.mp3 */; };
+		8CE556B51F48B57300C3CF96 /* obama_it.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556AC1F48B57300C3CF96 /* obama_it.mp3 */; };
+		8CE556B61F48B57300C3CF96 /* obama_or.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556AD1F48B57300C3CF96 /* obama_or.mp3 */; };
+		8CE556B71F48B57300C3CF96 /* obama_dont.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556AE1F48B57300C3CF96 /* obama_dont.mp3 */; };
+		8CE556B81F48B57300C3CF96 /* obama_obama_care.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556AF1F48B57300C3CF96 /* obama_obama_care.mp3 */; };
+		8CE556B91F48B57300C3CF96 /* obama_from.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556B01F48B57300C3CF96 /* obama_from.mp3 */; };
+		8CE556C71F48BC9300C3CF96 /* obama_concerns.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556BA1F48BC9300C3CF96 /* obama_concerns.mp3 */; };
+		8CE556C81F48BC9300C3CF96 /* obama_hearing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556BB1F48BC9300C3CF96 /* obama_hearing.mp3 */; };
+		8CE556C91F48BC9300C3CF96 /* obama_spending.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556BC1F48BC9300C3CF96 /* obama_spending.mp3 */; };
+		8CE556CA1F48BC9300C3CF96 /* obama_months.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556BD1F48BC9300C3CF96 /* obama_months.mp3 */; };
+		8CE556CB1F48BC9300C3CF96 /* obama_fish_fries.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556BE1F48BC9300C3CF96 /* obama_fish_fries.mp3 */; };
+		8CE556CC1F48BC9300C3CF96 /* obama_chicagoans.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556BF1F48BC9300C3CF96 /* obama_chicagoans.mp3 */; };
+		8CE556CD1F48BC9300C3CF96 /* obama_benefit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556C01F48BC9300C3CF96 /* obama_benefit.mp3 */; };
+		8CE556CE1F48BC9300C3CF96 /* obama_incredible.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556C11F48BC9300C3CF96 /* obama_incredible.mp3 */; };
+		8CE556CF1F48BC9300C3CF96 /* obama_had.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556C21F48BC9300C3CF96 /* obama_had.mp3 */; };
+		8CE556D01F48BC9300C3CF96 /* obama_before.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556C31F48BC9300C3CF96 /* obama_before.mp3 */; };
+		8CE556D11F48BC9300C3CF96 /* obama_meaningful.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556C41F48BC9300C3CF96 /* obama_meaningful.mp3 */; };
+		8CE556D21F48BC9300C3CF96 /* obama_salient.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556C51F48BC9300C3CF96 /* obama_salient.mp3 */; };
+		8CE556D31F48BC9300C3CF96 /* obama_feel.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CE556C61F48BC9300C3CF96 /* obama_feel.mp3 */; };
+		8E35118593184310932BF67F /* libRNSound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD17EEBA9EE24AA48D7E028B /* libRNSound.a */; };
+		8E7D9DDECCB54EA8A8E6E7E0 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0E0B7500DB48B398EE1698 /* libRNVectorIcons.a */; };
+		A387FA77CEF54C87AD9A92DC /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C559D6E4A8E94D97A171CAAF /* Octicons.ttf */; };
+		BC65300D44EF4B8A91FE9418 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCB72DC915C440FBA54551B5 /* Entypo.ttf */; };
+		F097B300726242D78E5408CB /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CAFE71625E949138A052A26 /* SimpleLineIcons.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00C302AB1ABCB8CE00DB3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTActionSheet;
+		};
+		00C302B91ABCB90400DB3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTGeolocation;
+		};
+		00C302BF1ABCB91800DB3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58B5115D1A9E6B3D00147676;
+			remoteInfo = RCTImage;
+		};
+		00C302DB1ABCB9D200DB3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58B511DB1A9E6C8500147676;
+			remoteInfo = RCTNetwork;
+		};
+		00C302E31ABCB9EE00DB3ED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 832C81801AAF6DEF007FA2F7;
+			remoteInfo = RCTVibration;
+		};
+		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
+			remoteInfo = Presidents;
+		};
+		139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTSettings;
+		};
+		139FDEF31B06529B00C62182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3C86DF461ADF2C930047B81A;
+			remoteInfo = RCTWebSocket;
+		};
+		146834031AC3E56700842450 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
+			remoteInfo = React;
+		};
+		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
+			remoteInfo = "Presidents-tvOS";
+		};
+		3DAD3E831DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A283A1D9B042B00D4039D;
+			remoteInfo = "RCTImage-tvOS";
+		};
+		3DAD3E871DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A28471D9B043800D4039D;
+			remoteInfo = "RCTLinking-tvOS";
+		};
+		3DAD3E8B1DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A28541D9B044C00D4039D;
+			remoteInfo = "RCTNetwork-tvOS";
+		};
+		3DAD3E8F1DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A28611D9B046600D4039D;
+			remoteInfo = "RCTSettings-tvOS";
+		};
+		3DAD3E931DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A287B1D9B048500D4039D;
+			remoteInfo = "RCTText-tvOS";
+		};
+		3DAD3E981DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A28881D9B049200D4039D;
+			remoteInfo = "RCTWebSocket-tvOS";
+		};
+		3DAD3EA21DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A28131D9B038B00D4039D;
+			remoteInfo = "React-tvOS";
+		};
+		3DAD3EA41DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3C059A1DE3340900C268FA;
+			remoteInfo = yoga;
+		};
+		3DAD3EA61DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3C06751DE3340C00C268FA;
+			remoteInfo = "yoga-tvOS";
+		};
+		3DAD3EA81DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD9251DE5FBEC00167DC4;
+			remoteInfo = cxxreact;
+		};
+		3DAD3EAA1DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD9321DE5FBEE00167DC4;
+			remoteInfo = "cxxreact-tvOS";
+		};
+		3DAD3EAC1DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD90B1DE5FBD600167DC4;
+			remoteInfo = jschelpers;
+		};
+		3DAD3EAE1DF850E9000B6D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD9181DE5FBD800167DC4;
+			remoteInfo = "jschelpers-tvOS";
+		};
+		5E9157321DD0AC6500FF2AA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTAnimation;
+		};
+		5E9157341DD0AC6500FF2AA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A28201D9B03D100D4039D;
+			remoteInfo = "RCTAnimation-tvOS";
+		};
+		78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTLinking;
+		};
+		832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
+			remoteInfo = RCTText;
+		};
+		8C69D5091F39317300137617 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FB2D6CC1351448F83F69379 /* ReactNativeConfig.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB2648DF1C7BE17A00B8F155;
+			remoteInfo = ReactNativeConfig;
+		};
+		8C69D50C1F39317300137617 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3227B830FF56445491F2D51A /* RNDeviceInfo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DA5891D81BA9A9FC002B4DB2;
+			remoteInfo = RNDeviceInfo;
+		};
+		8C69D50F1F39317300137617 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E49A40DD91048A087731B77 /* RNVectorIcons.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5DBEB1501B18CEA900B34395;
+			remoteInfo = RNVectorIcons;
+		};
+		8C9EA16F1F3A8DCF007047DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C323A1A5BD5B45229ACE9B03 /* RNSound.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 19825A1E1BD4A89800EE0337;
+			remoteInfo = RNSound;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
+		00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTActionSheet.xcodeproj; path = "../node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj"; sourceTree = "<group>"; };
+		00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTGeolocation.xcodeproj; path = "../node_modules/react-native/Libraries/Geolocation/RCTGeolocation.xcodeproj"; sourceTree = "<group>"; };
+		00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTImage.xcodeproj; path = "../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj"; sourceTree = "<group>"; };
+		00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTNetwork.xcodeproj; path = "../node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj"; sourceTree = "<group>"; };
+		00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVibration.xcodeproj; path = "../node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj"; sourceTree = "<group>"; };
+		00E356EE1AD99517003FC87E /* PresidentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresidentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* PresidentsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresidentsTests.m; sourceTree = "<group>"; };
+		0C2D9893545444708280EF06 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		0CAFE71625E949138A052A26 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		0E49A40DD91048A087731B77 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
+		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
+		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* Presidents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Presidents.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Presidents/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Presidents/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Presidents/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Presidents/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Presidents/main.m; sourceTree = "<group>"; };
+		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		1917F2E469484A8AAA7FFC90 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		1FB2D6CC1351448F83F69379 /* ReactNativeConfig.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeConfig.xcodeproj; path = "../node_modules/react-native-config/ios/ReactNativeConfig.xcodeproj"; sourceTree = "<group>"; };
+		204FDEEF7D194A739C011EEC /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* Presidents-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Presidents-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* Presidents-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Presidents-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3227B830FF56445491F2D51A /* RNDeviceInfo.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNDeviceInfo.xcodeproj; path = "../node_modules/react-native-device-info/RNDeviceInfo.xcodeproj"; sourceTree = "<group>"; };
+		364EE4AAB1A54721A505CD75 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		42654C220E424F078E21AF82 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		4B4C3AED7F314BA48CBB1C0D /* libRNDeviceInfo.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNDeviceInfo.a; sourceTree = "<group>"; };
+		4D0E0B7500DB48B398EE1698 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
+		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		6F1E403EB7C74E09BB9B675F /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
+		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		8C242A411F64DBAF003C69CD /* obama_financing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_financing.mp3; sourceTree = "<group>"; };
+		8C242A421F64DBAF003C69CD /* obama_at.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_at.mp3; sourceTree = "<group>"; };
+		8C242A431F64DBAF003C69CD /* obama_the_koch_brothers.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_the_koch_brothers.mp3; sourceTree = "<group>"; };
+		8C242A441F64DBAF003C69CD /* obama_actually.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_actually.mp3; sourceTree = "<group>"; };
+		8C242A451F64DBAF003C69CD /* obama_me.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_me.mp3; sourceTree = "<group>"; };
+		8C242A461F64DBAF003C69CD /* obama_consequence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_consequence.mp3; sourceTree = "<group>"; };
+		8C242A471F64DBAF003C69CD /* obama_of.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_of.mp3; sourceTree = "<group>"; };
+		8C242A481F64DBAF003C69CD /* obama_forty_five.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_forty_five.mp3; sourceTree = "<group>"; };
+		8C242A491F64DBAF003C69CD /* obama_twelve.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_twelve.mp3; sourceTree = "<group>"; };
+		8C242A4A1F64DBAF003C69CD /* obama_felt.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_felt.mp3; sourceTree = "<group>"; };
+		8C242A4B1F64DBAF003C69CD /* obama_always.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_always.mp3; sourceTree = "<group>"; };
+		8C242A4C1F64DBAF003C69CD /* obama_presidency.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_presidency.mp3; sourceTree = "<group>"; };
+		8C242A4D1F64DBAF003C69CD /* obama_the_united_states_senate.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_the_united_states_senate.mp3; sourceTree = "<group>"; };
+		8C242A4E1F64DBAF003C69CD /* obama_was.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_was.mp3; sourceTree = "<group>"; };
+		8C242A4F1F64DBAF003C69CD /* obama_support.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_support.mp3; sourceTree = "<group>"; };
+		8C242A501F64DBAF003C69CD /* obama_now.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_now.mp3; sourceTree = "<group>"; };
+		8C242A611F65BEDE003C69CD /* obama_leave.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_leave.mp3; sourceTree = "<group>"; };
+		8C242A621F65BEDE003C69CD /* obama_big.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_big.mp3; sourceTree = "<group>"; };
+		8C242A631F65BEDE003C69CD /* obama_to.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_to.mp3; sourceTree = "<group>"; };
+		8C242A641F65BEDE003C69CD /* obama_immediately.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_immediately.mp3; sourceTree = "<group>"; };
+		8C242A651F65BEDE003C69CD /* obama_campaign.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_campaign.mp3; sourceTree = "<group>"; };
+		8C242A661F65BEDE003C69CD /* obama_a.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_a.mp3; sourceTree = "<group>"; };
+		8C242A671F65BEDE003C69CD /* obama_think.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_think.mp3; sourceTree = "<group>"; };
+		8C242A681F65BEDE003C69CD /* obama_races.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_races.mp3; sourceTree = "<group>"; };
+		8C242A691F65BEDE003C69CD /* obama_public.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_public.mp3; sourceTree = "<group>"; };
+		8C242A731F65CACC003C69CD /* obama_swirl.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_swirl.mp3; sourceTree = "<group>"; };
+		8C242A741F65CACC003C69CD /* obama_lost.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_lost.mp3; sourceTree = "<group>"; };
+		8C242A751F65CACC003C69CD /* obama_her.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_her.mp3; sourceTree = "<group>"; };
+		8C242A761F65CACC003C69CD /* obama_a_lot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_a_lot.mp3; sourceTree = "<group>"; };
+		8C242A771F65CACC003C69CD /* obama_gossip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_gossip.mp3; sourceTree = "<group>"; };
+		8C242A781F65CACC003C69CD /* obama_were.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_were.mp3; sourceTree = "<group>"; };
+		8C242A791F65CACC003C69CD /* obama_contributed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_contributed.mp3; sourceTree = "<group>"; };
+		8C242A7A1F65CACC003C69CD /* obama_somebody.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_somebody.mp3; sourceTree = "<group>"; };
+		8C242A7B1F65CACC003C69CD /* obama_start.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_start.mp3; sourceTree = "<group>"; };
+		8C242A7C1F65CACC003C69CD /* obama_rise_up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_rise_up.mp3; sourceTree = "<group>"; };
+		8C242A7D1F65CACC003C69CD /* obama_them.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_them.mp3; sourceTree = "<group>"; };
+		8C242A7E1F65CACC003C69CD /* obama_help.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_help.mp3; sourceTree = "<group>"; };
+		8C242A7F1F65CACC003C69CD /* obama_whatever.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_whatever.mp3; sourceTree = "<group>"; };
+		8C242A801F65CACC003C69CD /* obama_climate_change.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_climate_change.mp3; sourceTree = "<group>"; };
+		8C242A811F65CACC003C69CD /* obama_passionate.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_passionate.mp3; sourceTree = "<group>"; };
+		8C242A821F65CACC003C69CD /* obama_generation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_generation.mp3; sourceTree = "<group>"; };
+		8C242A831F65CACC003C69CD /* obama_in.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_in.mp3; sourceTree = "<group>"; };
+		8C242A841F65CACC003C69CD /* obama_vacation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_vacation.mp3; sourceTree = "<group>"; };
+		8C242A981F65D00F003C69CD /* obama_substance.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_substance.mp3; sourceTree = "<group>"; };
+		8C242A991F65D00F003C69CD /* obama_npr.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_npr.mp3; sourceTree = "<group>"; };
+		8C242A9A1F65D00F003C69CD /* obama_fake_news.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_fake_news.mp3; sourceTree = "<group>"; };
+		8C242A9B1F65D00F003C69CD /* obama_and_and.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_and_and.mp3; sourceTree = "<group>"; };
+		8C242A9C1F65D00F003C69CD /* obama_doubt.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_doubt.mp3; sourceTree = "<group>"; };
+		8C242A9D1F65D00F003C69CD /* obama_have.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_have.mp3; sourceTree = "<group>"; };
+		8C242AA51F65D7B2003C69CD /* obama_controversial.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_controversial.mp3; sourceTree = "<group>"; };
+		8C242AA61F65D7B2003C69CD /* obama_consistently.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_consistently.mp3; sourceTree = "<group>"; };
+		8C242AA71F65D7B2003C69CD /* obama_the_dnc.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_the_dnc.mp3; sourceTree = "<group>"; };
+		8C242AA81F65D7B2003C69CD /* obama_if.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_if.mp3; sourceTree = "<group>"; };
+		8C242AA91F65D7B2003C69CD /* obama_any.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_any.mp3; sourceTree = "<group>"; };
+		8C242AAA1F65D7B2003C69CD /* obama_read.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_read.mp3; sourceTree = "<group>"; };
+		8C242AAB1F65D7B2003C69CD /* obama_the.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_the.mp3; sourceTree = "<group>"; };
+		8C242AAC1F65D7B2003C69CD /* obama_by.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_by.mp3; sourceTree = "<group>"; };
+		8C242AAD1F65D7B2003C69CD /* obama_manipulation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_manipulation.mp3; sourceTree = "<group>"; };
+		8C242AAE1F65D7B2003C69CD /* obama_vulnerable.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_vulnerable.mp3; sourceTree = "<group>"; };
+		8C242AAF1F65D7B2003C69CD /* obama_trumped_up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_trumped_up.mp3; sourceTree = "<group>"; };
+		8C242AB01F65D7B2003C69CD /* obama_call.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_call.mp3; sourceTree = "<group>"; };
+		8C242AB11F65D7B2003C69CD /* obama_deep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_deep.mp3; sourceTree = "<group>"; };
+		8C242AB21F65D7B2003C69CD /* obama_avoid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_avoid.mp3; sourceTree = "<group>"; };
+		8C242AB31F65D7B2003C69CD /* obama_political.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_political.mp3; sourceTree = "<group>"; };
+		8C242AC31F674215003C69CD /* obama_decade.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_decade.mp3; sourceTree = "<group>"; };
+		8C242AC41F674215003C69CD /* obama_steal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_steal.mp3; sourceTree = "<group>"; };
+		8C242AC51F674215003C69CD /* obama_british.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_british.mp3; sourceTree = "<group>"; };
+		8C242AC61F674215003C69CD /* obama_chinese.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_chinese.mp3; sourceTree = "<group>"; };
+		8C242AC71F674215003C69CD /* obama_officers.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_officers.mp3; sourceTree = "<group>"; };
+		8C242AC81F674215003C69CD /* obama_among.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_among.mp3; sourceTree = "<group>"; };
+		8C242AC91F674215003C69CD /* obama_explicit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_explicit.mp3; sourceTree = "<group>"; };
+		8C242ACA1F674215003C69CD /* obama_maybe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_maybe.mp3; sourceTree = "<group>"; };
+		8C242ACB1F674215003C69CD /* obama_impact.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_impact.mp3; sourceTree = "<group>"; };
+		8C242ACC1F674215003C69CD /* obama_the_cia.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_the_cia.mp3; sourceTree = "<group>"; };
+		8C242ACD1F674215003C69CD /* obama_federal_government.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_federal_government.mp3; sourceTree = "<group>"; };
+		8C242ACE1F674215003C69CD /* obama_agency.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_agency.mp3; sourceTree = "<group>"; };
+		8C242ACF1F674215003C69CD /* obama_after.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_after.mp3; sourceTree = "<group>"; };
+		8C242AD01F674215003C69CD /* obama_revelation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_revelation.mp3; sourceTree = "<group>"; };
+		8C242AD11F674215003C69CD /* obama_terrorism.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_terrorism.mp3; sourceTree = "<group>"; };
+		8C242AD21F674215003C69CD /* obama_islamic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_islamic.mp3; sourceTree = "<group>"; };
+		8C242AD31F674215003C69CD /* obama_relationship.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_relationship.mp3; sourceTree = "<group>"; };
+		8C242AE51F67451E003C69CD /* obama_like.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_like.mp3; sourceTree = "<group>"; };
+		8C3B766E1F6EE22700DC8965 /* trump_dollars.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_dollars.mp3; sourceTree = "<group>"; };
+		8C3B766F1F6EE22700DC8965 /* trump_trillion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_trillion.mp3; sourceTree = "<group>"; };
+		8C3B76701F6EE22700DC8965 /* trump_six.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_six.mp3; sourceTree = "<group>"; };
+		8C3B76711F6EE22700DC8965 /* trump_mess.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_mess.mp3; sourceTree = "<group>"; };
+		8C3B76721F6EE22700DC8965 /* trump_total.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_total.mp3; sourceTree = "<group>"; };
+		8C3B76731F6EE22700DC8965 /* trump_president_obama.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_president_obama.mp3; sourceTree = "<group>"; };
+		8C3B76741F6EE22700DC8965 /* trump_here.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_here.mp3; sourceTree = "<group>"; };
+		8C3B76751F6EE22700DC8965 /* trump_who.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_who.mp3; sourceTree = "<group>"; };
+		8C3B76761F6EE22700DC8965 /* trump_without.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_without.mp3; sourceTree = "<group>"; };
+		8C3B76771F6EE22700DC8965 /* trump_yes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_yes.mp3; sourceTree = "<group>"; };
+		8C7BCE321F67547A000478DB /* trump_primaries.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_primaries.mp3; sourceTree = "<group>"; };
+		8C7BCE511F675483000478DB /* trump_democrats.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_democrats.mp3; sourceTree = "<group>"; };
+		8C7BCE521F675483000478DB /* trump_from.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_from.mp3; sourceTree = "<group>"; };
+		8C7BCE531F675483000478DB /* trump_absolutely.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_absolutely.mp3; sourceTree = "<group>"; };
+		8C7BCE541F675483000478DB /* trump_mexico.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_mexico.mp3; sourceTree = "<group>"; };
+		8C7BCE551F675483000478DB /* trump_of.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_of.mp3; sourceTree = "<group>"; };
+		8C7BCE561F675483000478DB /* trump_correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_correct.mp3; sourceTree = "<group>"; };
+		8C7BCE571F675483000478DB /* trump_abe_lincoln.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_abe_lincoln.mp3; sourceTree = "<group>"; };
+		8C7BCE5F1F677C55000478DB /* trump_spoke.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_spoke.mp3; sourceTree = "<group>"; };
+		8C7BCE601F677C55000478DB /* trump_sean.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_sean.mp3; sourceTree = "<group>"; };
+		8C7BCE611F677C55000478DB /* trump_fox.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_fox.mp3; sourceTree = "<group>"; };
+		8C7BCE621F677C55000478DB /* trump_speech.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_speech.mp3; sourceTree = "<group>"; };
+		8C7BCE631F677C55000478DB /* trump_illegal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_illegal.mp3; sourceTree = "<group>"; };
+		8C7BCE641F677C55000478DB /* trump_legitamite.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_legitamite.mp3; sourceTree = "<group>"; };
+		8C7BCE651F677C55000478DB /* trump_now.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_now.mp3; sourceTree = "<group>"; };
+		8C7BCE661F677C55000478DB /* trump_dead.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_dead.mp3; sourceTree = "<group>"; };
+		8C7BCE671F677C55000478DB /* trump_states.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_states.mp3; sourceTree = "<group>"; };
+		8C7BCE681F677C55000478DB /* trump_vote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_vote.mp3; sourceTree = "<group>"; };
+		8C7BCE691F677C55000478DB /* trump_people.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_people.mp3; sourceTree = "<group>"; };
+		8C7BCE6A1F677C55000478DB /* trump_college.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_college.mp3; sourceTree = "<group>"; };
+		8C7BCE6B1F677C55000478DB /* trump_to.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_to.mp3; sourceTree = "<group>"; };
+		8C7BCE6C1F677C55000478DB /* trump_two.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_two.mp3; sourceTree = "<group>"; };
+		8C7BCE6D1F677C55000478DB /* trump_strongly.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_strongly.mp3; sourceTree = "<group>"; };
+		8C7BCE7D1F689272000478DB /* trump_audience.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_audience.mp3; sourceTree = "<group>"; };
+		8C7BCE7E1F689272000478DB /* trump_before.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_before.mp3; sourceTree = "<group>"; };
+		8C7BCE7F1F689272000478DB /* trump_wow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_wow.mp3; sourceTree = "<group>"; };
+		8C7BCE801F689272000478DB /* trump_unfairly.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_unfairly.mp3; sourceTree = "<group>"; };
+		8C7BCE811F689272000478DB /* trump_forgot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_forgot.mp3; sourceTree = "<group>"; };
+		8C7BCE821F689272000478DB /* trump_women.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_women.mp3; sourceTree = "<group>"; };
+		8C7BCE831F689272000478DB /* trump_victory.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_victory.mp3; sourceTree = "<group>"; };
+		8C7BCE861F689272000478DB /* trump_did.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_did.mp3; sourceTree = "<group>"; };
+		8C7BCE871F689272000478DB /* trump_you.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_you.mp3; sourceTree = "<group>"; };
+		8C7BCE931F68C3F7000478DB /* trump_years.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_years.mp3; sourceTree = "<group>"; };
+		8C7BCE941F68C3F7000478DB /* trump_bread.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_bread.mp3; sourceTree = "<group>"; };
+		8C7BCE951F68C3F7000478DB /* trump_smarter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_smarter.mp3; sourceTree = "<group>"; };
+		8C7BCE961F68C3F7000478DB /* trump_shot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_shot.mp3; sourceTree = "<group>"; };
+		8C7BCE971F68C3F7000478DB /* trump_problem.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_problem.mp3; sourceTree = "<group>"; };
+		8C7BCE981F68C3F7000478DB /* trump_chicago.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_chicago.mp3; sourceTree = "<group>"; };
+		8C7BCE991F68C3F7000478DB /* trump_help.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_help.mp3; sourceTree = "<group>"; };
+		8C7BCE9A1F68C3F7000478DB /* trump_catastrophe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_catastrophe.mp3; sourceTree = "<group>"; };
+		8C7BCE9B1F68C3F7000478DB /* trump_afghanistan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_afghanistan.mp3; sourceTree = "<group>"; };
+		8C7BCE9C1F68C3F7000478DB /* trump_they.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_they.mp3; sourceTree = "<group>"; };
+		8C7BCE9D1F68C3F7000478DB /* trump_demean.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_demean.mp3; sourceTree = "<group>"; };
+		8C7BCE9E1F68C3F7000478DB /* trump_you2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_you2.mp3; sourceTree = "<group>"; };
+		8C7BCE9F1F68C3F7000478DB /* trump_never.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_never.mp3; sourceTree = "<group>"; };
+		8C7BCEF81F6A0B5D000478DB /* trump_work.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_work.mp3; sourceTree = "<group>"; };
+		8C7BCEF91F6A0B5D000478DB /* trump_does.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_does.mp3; sourceTree = "<group>"; };
+		8C7BCEFA1F6A0B5D000478DB /* trump_phenonemal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_phenonemal.mp3; sourceTree = "<group>"; };
+		8C7BCEFB1F6A0B5D000478DB /* trump_waterboarding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_waterboarding.mp3; sourceTree = "<group>"; };
+		8C7BCEFC1F6A0B5D000478DB /* trump_in.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_in.mp3; sourceTree = "<group>"; };
+		8C7BCEFD1F6A0B5D000478DB /* trump_intelligence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_intelligence.mp3; sourceTree = "<group>"; };
+		8C7BCEFE1F6A0B5D000478DB /* trump_others.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_others.mp3; sourceTree = "<group>"; };
+		8C7BCEFF1F6A0B5D000478DB /* trump_fabulous.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_fabulous.mp3; sourceTree = "<group>"; };
+		8C7BCF001F6A0B5D000478DB /* trump_somebody.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_somebody.mp3; sourceTree = "<group>"; };
+		8C7BCF011F6A0B5D000478DB /* trump_the_cia.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_the_cia.mp3; sourceTree = "<group>"; };
+		8C7BCF021F6A0B5D000478DB /* trump_approve.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_approve.mp3; sourceTree = "<group>"; };
+		8C7BCF031F6A0B5D000478DB /* trump_approved.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_approved.mp3; sourceTree = "<group>"; };
+		8C7BCF041F6A0B5D000478DB /* trump_president.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_president.mp3; sourceTree = "<group>"; };
+		8CE556341F42816100C3CF96 /* obama_family.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_family.mp3; sourceTree = "<group>"; };
+		8CE556361F42816100C3CF96 /* obama_rhetoric.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_rhetoric.mp3; sourceTree = "<group>"; };
+		8CE556401F428A3400C3CF96 /* obama_mexico.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_mexico.mp3; sourceTree = "<group>"; };
+		8CE556421F428DB600C3CF96 /* obama_the_united_states.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_the_united_states.mp3; sourceTree = "<group>"; };
+		8CE556481F4295EC00C3CF96 /* obama_is.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_is.mp3; sourceTree = "<group>"; };
+		8CE556491F4295EC00C3CF96 /* obama_myself.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_myself.mp3; sourceTree = "<group>"; };
+		8CE5564A1F4295EC00C3CF96 /* obama_and.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_and.mp3; sourceTree = "<group>"; };
+		8CE5564E1F4296FF00C3CF96 /* obama_that.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_that.mp3; sourceTree = "<group>"; };
+		8CE556501F4297AD00C3CF96 /* obama_but.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_but.mp3; sourceTree = "<group>"; };
+		8CE556521F42996100C3CF96 /* obama_proud.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_proud.mp3; sourceTree = "<group>"; };
+		8CE556531F42996100C3CF96 /* obama_happy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_happy.mp3; sourceTree = "<group>"; };
+		8CE556541F42996100C3CF96 /* obama_what.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_what.mp3; sourceTree = "<group>"; };
+		8CE556551F42996100C3CF96 /* obama_ughhh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_ughhh.mp3; sourceTree = "<group>"; };
+		8CE5565A1F429D1900C3CF96 /* obama_mother_fuckers.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_mother_fuckers.mp3; sourceTree = "<group>"; };
+		8CE5565B1F429D1900C3CF96 /* obama_mother_fucker.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_mother_fucker.mp3; sourceTree = "<group>"; };
+		8CE5565C1F429D1900C3CF96 /* obama_nothing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_nothing.mp3; sourceTree = "<group>"; };
+		8CE5565D1F429D1900C3CF96 /* obama_fries.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_fries.mp3; sourceTree = "<group>"; };
+		8CE5565E1F429D1900C3CF96 /* obama_bitch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_bitch.mp3; sourceTree = "<group>"; };
+		8CE556651F43E9AF00C3CF96 /* obama_shit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_shit.mp3; sourceTree = "<group>"; };
+		8CE556681F43EFF400C3CF96 /* obama_complicated.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_complicated.mp3; sourceTree = "<group>"; };
+		8CE5566A1F43EFFD00C3CF96 /* obama_sorry_ass.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_sorry_ass.mp3; sourceTree = "<group>"; };
+		8CE5566B1F43EFFD00C3CF96 /* obama_damn_fries.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_damn_fries.mp3; sourceTree = "<group>"; };
+		8CE5566E1F43F31900C3CF96 /* obama_whos_ass.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_whos_ass.mp3; sourceTree = "<group>"; };
+		8CE5566F1F43F31900C3CF96 /* obama_ignorant.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_ignorant.mp3; sourceTree = "<group>"; };
+		8CE556721F43F6B300C3CF96 /* obama_pussy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_pussy.mp3; sourceTree = "<group>"; };
+		8CE556741F43F6B300C3CF96 /* obama_goddam.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_goddam.mp3; sourceTree = "<group>"; };
+		8CE556781F4657FD00C3CF96 /* obama_where.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_where.mp3; sourceTree = "<group>"; };
+		8CE556791F4657FD00C3CF96 /* obama_states.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_states.mp3; sourceTree = "<group>"; };
+		8CE5567A1F4657FD00C3CF96 /* obama_chunks.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_chunks.mp3; sourceTree = "<group>"; };
+		8CE5567B1F4657FD00C3CF96 /* obama_democrats.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_democrats.mp3; sourceTree = "<group>"; };
+		8CE5567C1F4657FD00C3CF96 /* obama_for.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_for.mp3; sourceTree = "<group>"; };
+		8CE5567D1F4657FD00C3CF96 /* obama_challenge.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_challenge.mp3; sourceTree = "<group>"; };
+		8CE5567E1F4657FD00C3CF96 /* obama_are.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_are.mp3; sourceTree = "<group>"; };
+		8CE5567F1F4657FD00C3CF96 /* obama_noo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_noo.mp3; sourceTree = "<group>"; };
+		8CE556801F4657FD00C3CF96 /* obama_so.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_so.mp3; sourceTree = "<group>"; };
+		8CE556811F4657FD00C3CF96 /* obama_donald_trump.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_donald_trump.mp3; sourceTree = "<group>"; };
+		8CE556821F4657FD00C3CF96 /* obama_who.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_who.mp3; sourceTree = "<group>"; };
+		8CE556831F4657FD00C3CF96 /* obama_because.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_because.mp3; sourceTree = "<group>"; };
+		8CE556841F4657FD00C3CF96 /* obama_hard.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_hard.mp3; sourceTree = "<group>"; };
+		8CE556851F4657FD00C3CF96 /* obama_wellll.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_wellll.mp3; sourceTree = "<group>"; };
+		8CE556941F4791B400C3CF96 /* obama_people.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_people.mp3; sourceTree = "<group>"; };
+		8CE556951F4791B400C3CF96 /* obama_on.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_on.mp3; sourceTree = "<group>"; };
+		8CE556961F4791B400C3CF96 /* obama_bathrooms.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_bathrooms.mp3; sourceTree = "<group>"; };
+		8CE556971F4791B400C3CF96 /* obama_promote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_promote.mp3; sourceTree = "<group>"; };
+		8CE556981F4791B400C3CF96 /* obama_give.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_give.mp3; sourceTree = "<group>"; };
+		8CE556991F4791B400C3CF96 /* obama_made.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_made.mp3; sourceTree = "<group>"; };
+		8CE5569A1F4791B400C3CF96 /* obama_has.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_has.mp3; sourceTree = "<group>"; };
+		8CE5569B1F4791B400C3CF96 /* obama_party.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_party.mp3; sourceTree = "<group>"; };
+		8CE5569C1F4791B400C3CF96 /* obama_well_uh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_well_uh.mp3; sourceTree = "<group>"; };
+		8CE5569D1F4791B400C3CF96 /* obama_then.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_then.mp3; sourceTree = "<group>"; };
+		8CE556A81F48B57300C3CF96 /* obama_issues.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_issues.mp3; sourceTree = "<group>"; };
+		8CE556A91F48B57300C3CF96 /* obama_talk.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_talk.mp3; sourceTree = "<group>"; };
+		8CE556AA1F48B57300C3CF96 /* obama_trust.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_trust.mp3; sourceTree = "<group>"; };
+		8CE556AB1F48B57300C3CF96 /* obama_builds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_builds.mp3; sourceTree = "<group>"; };
+		8CE556AC1F48B57300C3CF96 /* obama_it.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_it.mp3; sourceTree = "<group>"; };
+		8CE556AD1F48B57300C3CF96 /* obama_or.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_or.mp3; sourceTree = "<group>"; };
+		8CE556AE1F48B57300C3CF96 /* obama_dont.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_dont.mp3; sourceTree = "<group>"; };
+		8CE556AF1F48B57300C3CF96 /* obama_obama_care.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_obama_care.mp3; sourceTree = "<group>"; };
+		8CE556B01F48B57300C3CF96 /* obama_from.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_from.mp3; sourceTree = "<group>"; };
+		8CE556BA1F48BC9300C3CF96 /* obama_concerns.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_concerns.mp3; sourceTree = "<group>"; };
+		8CE556BB1F48BC9300C3CF96 /* obama_hearing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_hearing.mp3; sourceTree = "<group>"; };
+		8CE556BC1F48BC9300C3CF96 /* obama_spending.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_spending.mp3; sourceTree = "<group>"; };
+		8CE556BD1F48BC9300C3CF96 /* obama_months.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_months.mp3; sourceTree = "<group>"; };
+		8CE556BE1F48BC9300C3CF96 /* obama_fish_fries.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_fish_fries.mp3; sourceTree = "<group>"; };
+		8CE556BF1F48BC9300C3CF96 /* obama_chicagoans.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_chicagoans.mp3; sourceTree = "<group>"; };
+		8CE556C01F48BC9300C3CF96 /* obama_benefit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_benefit.mp3; sourceTree = "<group>"; };
+		8CE556C11F48BC9300C3CF96 /* obama_incredible.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_incredible.mp3; sourceTree = "<group>"; };
+		8CE556C21F48BC9300C3CF96 /* obama_had.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_had.mp3; sourceTree = "<group>"; };
+		8CE556C31F48BC9300C3CF96 /* obama_before.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_before.mp3; sourceTree = "<group>"; };
+		8CE556C41F48BC9300C3CF96 /* obama_meaningful.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_meaningful.mp3; sourceTree = "<group>"; };
+		8CE556C51F48BC9300C3CF96 /* obama_salient.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_salient.mp3; sourceTree = "<group>"; };
+		8CE556C61F48BC9300C3CF96 /* obama_feel.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_feel.mp3; sourceTree = "<group>"; };
+		A5242A2749F1459BA85A02AD /* libReactNativeConfig.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libReactNativeConfig.a; sourceTree = "<group>"; };
+		BCB72DC915C440FBA54551B5 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		C323A1A5BD5B45229ACE9B03 /* RNSound.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSound.xcodeproj; path = "../node_modules/react-native-sound/RNSound.xcodeproj"; sourceTree = "<group>"; };
+		C559D6E4A8E94D97A171CAAF /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		CD17EEBA9EE24AA48D7E028B /* libRNSound.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSound.a; sourceTree = "<group>"; };
+		F5B3BB86CB97459D8FBEE1C4 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00E356EB1AD99517003FC87E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146834051AC3E58100842450 /* libReact.a in Frameworks */,
+				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
+				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
+				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
+				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
+				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
+				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
+				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
+				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
+				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
+				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				14C0A5EEF71C4ECC8FAC6438 /* libReactNativeConfig.a in Frameworks */,
+				01DED5BE3BB04FA3BBBB2B1C /* libRNDeviceInfo.a in Frameworks */,
+				8E7D9DDECCB54EA8A8E6E7E0 /* libRNVectorIcons.a in Frameworks */,
+				8E35118593184310932BF67F /* libRNSound.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E4781E0B4A5D006451C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */,
+				2D02E4C21E0B4AEC006451C7 /* libRCTAnimation-tvOS.a in Frameworks */,
+				2D02E4C31E0B4AEC006451C7 /* libRCTImage-tvOS.a in Frameworks */,
+				2D02E4C41E0B4AEC006451C7 /* libRCTLinking-tvOS.a in Frameworks */,
+				2D02E4C51E0B4AEC006451C7 /* libRCTNetwork-tvOS.a in Frameworks */,
+				2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */,
+				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
+				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E48D1E0B4A5D006451C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00C302A81ABCB8CE00DB3ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00C302B61ABCB90400DB3ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00C302BC1ABCB91800DB3ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C302C01ABCB91800DB3ED1 /* libRCTImage.a */,
+				3DAD3E841DF850E9000B6D8A /* libRCTImage-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00C302D41ABCB9D200DB3ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */,
+				3DAD3E8C1DF850E9000B6D8A /* libRCTNetwork-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00C302E01ABCB9EE00DB3ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00E356EF1AD99517003FC87E /* PresidentsTests */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F21AD99517003FC87E /* PresidentsTests.m */,
+				00E356F01AD99517003FC87E /* Supporting Files */,
+			);
+			path = PresidentsTests;
+			sourceTree = "<group>";
+		};
+		00E356F01AD99517003FC87E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F11AD99517003FC87E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		139105B71AF99BAD00B5F7CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				139105C11AF99BAD00B5F7CC /* libRCTSettings.a */,
+				3DAD3E901DF850E9000B6D8A /* libRCTSettings-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		139FDEE71B06529A00C62182 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				139FDEF41B06529B00C62182 /* libRCTWebSocket.a */,
+				3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		13B07FAE1A68108700A75B9A /* Presidents */ = {
+			isa = PBXGroup;
+			children = (
+				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
+				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				13B07FB61A68108700A75B9A /* Info.plist */,
+				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
+				13B07FB71A68108700A75B9A /* main.m */,
+			);
+			name = Presidents;
+			sourceTree = "<group>";
+		};
+		146834001AC3E56700842450 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				146834041AC3E56700842450 /* libReact.a */,
+				3DAD3EA31DF850E9000B6D8A /* libReact.a */,
+				3DAD3EA51DF850E9000B6D8A /* libyoga.a */,
+				3DAD3EA71DF850E9000B6D8A /* libyoga.a */,
+				3DAD3EA91DF850E9000B6D8A /* libcxxreact.a */,
+				3DAD3EAB1DF850E9000B6D8A /* libcxxreact.a */,
+				3DAD3EAD1DF850E9000B6D8A /* libjschelpers.a */,
+				3DAD3EAF1DF850E9000B6D8A /* libjschelpers.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33FCFFF9764447319EAF4FAC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BCB72DC915C440FBA54551B5 /* Entypo.ttf */,
+				1917F2E469484A8AAA7FFC90 /* EvilIcons.ttf */,
+				42654C220E424F078E21AF82 /* FontAwesome.ttf */,
+				364EE4AAB1A54721A505CD75 /* Foundation.ttf */,
+				F5B3BB86CB97459D8FBEE1C4 /* Ionicons.ttf */,
+				0C2D9893545444708280EF06 /* MaterialCommunityIcons.ttf */,
+				6F1E403EB7C74E09BB9B675F /* MaterialIcons.ttf */,
+				C559D6E4A8E94D97A171CAAF /* Octicons.ttf */,
+				0CAFE71625E949138A052A26 /* SimpleLineIcons.ttf */,
+				204FDEEF7D194A739C011EEC /* Zocial.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */,
+				5E9157351DD0AC6500FF2AA8 /* libRCTAnimation-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78C398B11ACF4ADC00677621 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78C398B91ACF4ADC00677621 /* libRCTLinking.a */,
+				3DAD3E881DF850E9000B6D8A /* libRCTLinking-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
+				146833FF1AC3E56700842450 /* React.xcodeproj */,
+				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
+				00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */,
+				00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */,
+				78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */,
+				00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */,
+				139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */,
+				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
+				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
+				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
+				1FB2D6CC1351448F83F69379 /* ReactNativeConfig.xcodeproj */,
+				3227B830FF56445491F2D51A /* RNDeviceInfo.xcodeproj */,
+				0E49A40DD91048A087731B77 /* RNVectorIcons.xcodeproj */,
+				C323A1A5BD5B45229ACE9B03 /* RNSound.xcodeproj */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		832341B11AAA6A8300B99B32 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				832341B51AAA6A8300B99B32 /* libRCTText.a */,
+				3DAD3E941DF850E9000B6D8A /* libRCTText-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83CBB9F61A601CBA00E9B192 = {
+			isa = PBXGroup;
+			children = (
+				8C3B766E1F6EE22700DC8965 /* trump_dollars.mp3 */,
+				8C3B766F1F6EE22700DC8965 /* trump_trillion.mp3 */,
+				8C3B76701F6EE22700DC8965 /* trump_six.mp3 */,
+				8C3B76711F6EE22700DC8965 /* trump_mess.mp3 */,
+				8C3B76721F6EE22700DC8965 /* trump_total.mp3 */,
+				8C3B76731F6EE22700DC8965 /* trump_president_obama.mp3 */,
+				8C3B76741F6EE22700DC8965 /* trump_here.mp3 */,
+				8C3B76751F6EE22700DC8965 /* trump_who.mp3 */,
+				8C3B76761F6EE22700DC8965 /* trump_without.mp3 */,
+				8C3B76771F6EE22700DC8965 /* trump_yes.mp3 */,
+				8C7BCEF81F6A0B5D000478DB /* trump_work.mp3 */,
+				8C7BCEF91F6A0B5D000478DB /* trump_does.mp3 */,
+				8C7BCEFA1F6A0B5D000478DB /* trump_phenonemal.mp3 */,
+				8C7BCEFB1F6A0B5D000478DB /* trump_waterboarding.mp3 */,
+				8C7BCEFC1F6A0B5D000478DB /* trump_in.mp3 */,
+				8C7BCEFD1F6A0B5D000478DB /* trump_intelligence.mp3 */,
+				8C7BCEFE1F6A0B5D000478DB /* trump_others.mp3 */,
+				8C7BCEFF1F6A0B5D000478DB /* trump_fabulous.mp3 */,
+				8C7BCF001F6A0B5D000478DB /* trump_somebody.mp3 */,
+				8C7BCF011F6A0B5D000478DB /* trump_the_cia.mp3 */,
+				8C7BCF021F6A0B5D000478DB /* trump_approve.mp3 */,
+				8C7BCF031F6A0B5D000478DB /* trump_approved.mp3 */,
+				8C7BCF041F6A0B5D000478DB /* trump_president.mp3 */,
+				8C7BCE931F68C3F7000478DB /* trump_years.mp3 */,
+				8C7BCE941F68C3F7000478DB /* trump_bread.mp3 */,
+				8C7BCE951F68C3F7000478DB /* trump_smarter.mp3 */,
+				8C7BCE961F68C3F7000478DB /* trump_shot.mp3 */,
+				8C7BCE971F68C3F7000478DB /* trump_problem.mp3 */,
+				8C7BCE981F68C3F7000478DB /* trump_chicago.mp3 */,
+				8C7BCE991F68C3F7000478DB /* trump_help.mp3 */,
+				8C7BCE9A1F68C3F7000478DB /* trump_catastrophe.mp3 */,
+				8C7BCE9B1F68C3F7000478DB /* trump_afghanistan.mp3 */,
+				8C7BCE9C1F68C3F7000478DB /* trump_they.mp3 */,
+				8C7BCE9D1F68C3F7000478DB /* trump_demean.mp3 */,
+				8C7BCE9E1F68C3F7000478DB /* trump_you2.mp3 */,
+				8C7BCE9F1F68C3F7000478DB /* trump_never.mp3 */,
+				8C7BCE7D1F689272000478DB /* trump_audience.mp3 */,
+				8C7BCE7E1F689272000478DB /* trump_before.mp3 */,
+				8C7BCE7F1F689272000478DB /* trump_wow.mp3 */,
+				8C7BCE801F689272000478DB /* trump_unfairly.mp3 */,
+				8C7BCE811F689272000478DB /* trump_forgot.mp3 */,
+				8C7BCE821F689272000478DB /* trump_women.mp3 */,
+				8C7BCE831F689272000478DB /* trump_victory.mp3 */,
+				8C7BCE861F689272000478DB /* trump_did.mp3 */,
+				8C7BCE871F689272000478DB /* trump_you.mp3 */,
+				8C7BCE5F1F677C55000478DB /* trump_spoke.mp3 */,
+				8C7BCE601F677C55000478DB /* trump_sean.mp3 */,
+				8C7BCE611F677C55000478DB /* trump_fox.mp3 */,
+				8C7BCE621F677C55000478DB /* trump_speech.mp3 */,
+				8C7BCE631F677C55000478DB /* trump_illegal.mp3 */,
+				8C7BCE641F677C55000478DB /* trump_legitamite.mp3 */,
+				8C7BCE651F677C55000478DB /* trump_now.mp3 */,
+				8C7BCE661F677C55000478DB /* trump_dead.mp3 */,
+				8C7BCE671F677C55000478DB /* trump_states.mp3 */,
+				8C7BCE681F677C55000478DB /* trump_vote.mp3 */,
+				8C7BCE691F677C55000478DB /* trump_people.mp3 */,
+				8C7BCE6A1F677C55000478DB /* trump_college.mp3 */,
+				8C7BCE6B1F677C55000478DB /* trump_to.mp3 */,
+				8C7BCE6C1F677C55000478DB /* trump_two.mp3 */,
+				8C7BCE6D1F677C55000478DB /* trump_strongly.mp3 */,
+				8C7BCE511F675483000478DB /* trump_democrats.mp3 */,
+				8C7BCE521F675483000478DB /* trump_from.mp3 */,
+				8C7BCE531F675483000478DB /* trump_absolutely.mp3 */,
+				8C7BCE541F675483000478DB /* trump_mexico.mp3 */,
+				8C7BCE551F675483000478DB /* trump_of.mp3 */,
+				8C7BCE561F675483000478DB /* trump_correct.mp3 */,
+				8C7BCE571F675483000478DB /* trump_abe_lincoln.mp3 */,
+				8C7BCE321F67547A000478DB /* trump_primaries.mp3 */,
+				8C242AC31F674215003C69CD /* obama_decade.mp3 */,
+				8C242AC41F674215003C69CD /* obama_steal.mp3 */,
+				8C242AC51F674215003C69CD /* obama_british.mp3 */,
+				8C242AC61F674215003C69CD /* obama_chinese.mp3 */,
+				8C242AC71F674215003C69CD /* obama_officers.mp3 */,
+				8C242AC81F674215003C69CD /* obama_among.mp3 */,
+				8C242AC91F674215003C69CD /* obama_explicit.mp3 */,
+				8C242ACA1F674215003C69CD /* obama_maybe.mp3 */,
+				8C242AE51F67451E003C69CD /* obama_like.mp3 */,
+				8C242ACB1F674215003C69CD /* obama_impact.mp3 */,
+				8C242ACC1F674215003C69CD /* obama_the_cia.mp3 */,
+				8C242ACD1F674215003C69CD /* obama_federal_government.mp3 */,
+				8C242ACE1F674215003C69CD /* obama_agency.mp3 */,
+				8C242ACF1F674215003C69CD /* obama_after.mp3 */,
+				8C242AD01F674215003C69CD /* obama_revelation.mp3 */,
+				8C242AD11F674215003C69CD /* obama_terrorism.mp3 */,
+				8C242AD21F674215003C69CD /* obama_islamic.mp3 */,
+				8C242AD31F674215003C69CD /* obama_relationship.mp3 */,
+				8C242AA51F65D7B2003C69CD /* obama_controversial.mp3 */,
+				8C242AA61F65D7B2003C69CD /* obama_consistently.mp3 */,
+				8C242AA71F65D7B2003C69CD /* obama_the_dnc.mp3 */,
+				8C242AA81F65D7B2003C69CD /* obama_if.mp3 */,
+				8C242AA91F65D7B2003C69CD /* obama_any.mp3 */,
+				8C242AAA1F65D7B2003C69CD /* obama_read.mp3 */,
+				8C242AAB1F65D7B2003C69CD /* obama_the.mp3 */,
+				8C242AAC1F65D7B2003C69CD /* obama_by.mp3 */,
+				8C242AAD1F65D7B2003C69CD /* obama_manipulation.mp3 */,
+				8C242AAE1F65D7B2003C69CD /* obama_vulnerable.mp3 */,
+				8C242AAF1F65D7B2003C69CD /* obama_trumped_up.mp3 */,
+				8C242AB01F65D7B2003C69CD /* obama_call.mp3 */,
+				8C242AB11F65D7B2003C69CD /* obama_deep.mp3 */,
+				8C242AB21F65D7B2003C69CD /* obama_avoid.mp3 */,
+				8C242AB31F65D7B2003C69CD /* obama_political.mp3 */,
+				8C242A981F65D00F003C69CD /* obama_substance.mp3 */,
+				8C242A991F65D00F003C69CD /* obama_npr.mp3 */,
+				8C242A9A1F65D00F003C69CD /* obama_fake_news.mp3 */,
+				8C242A9B1F65D00F003C69CD /* obama_and_and.mp3 */,
+				8C242A9C1F65D00F003C69CD /* obama_doubt.mp3 */,
+				8C242A9D1F65D00F003C69CD /* obama_have.mp3 */,
+				8C242A731F65CACC003C69CD /* obama_swirl.mp3 */,
+				8C242A741F65CACC003C69CD /* obama_lost.mp3 */,
+				8C242A751F65CACC003C69CD /* obama_her.mp3 */,
+				8C242A761F65CACC003C69CD /* obama_a_lot.mp3 */,
+				8C242A771F65CACC003C69CD /* obama_gossip.mp3 */,
+				8C242A781F65CACC003C69CD /* obama_were.mp3 */,
+				8C242A791F65CACC003C69CD /* obama_contributed.mp3 */,
+				8C242A7A1F65CACC003C69CD /* obama_somebody.mp3 */,
+				8C242A7B1F65CACC003C69CD /* obama_start.mp3 */,
+				8C242A7C1F65CACC003C69CD /* obama_rise_up.mp3 */,
+				8C242A7D1F65CACC003C69CD /* obama_them.mp3 */,
+				8C242A7E1F65CACC003C69CD /* obama_help.mp3 */,
+				8C242A7F1F65CACC003C69CD /* obama_whatever.mp3 */,
+				8C242A801F65CACC003C69CD /* obama_climate_change.mp3 */,
+				8C242A811F65CACC003C69CD /* obama_passionate.mp3 */,
+				8C242A821F65CACC003C69CD /* obama_generation.mp3 */,
+				8C242A831F65CACC003C69CD /* obama_in.mp3 */,
+				8C242A841F65CACC003C69CD /* obama_vacation.mp3 */,
+				8C242A611F65BEDE003C69CD /* obama_leave.mp3 */,
+				8C242A621F65BEDE003C69CD /* obama_big.mp3 */,
+				8C242A631F65BEDE003C69CD /* obama_to.mp3 */,
+				8C242A641F65BEDE003C69CD /* obama_immediately.mp3 */,
+				8C242A651F65BEDE003C69CD /* obama_campaign.mp3 */,
+				8C242A661F65BEDE003C69CD /* obama_a.mp3 */,
+				8C242A671F65BEDE003C69CD /* obama_think.mp3 */,
+				8C242A681F65BEDE003C69CD /* obama_races.mp3 */,
+				8C242A691F65BEDE003C69CD /* obama_public.mp3 */,
+				8C242A411F64DBAF003C69CD /* obama_financing.mp3 */,
+				8C242A421F64DBAF003C69CD /* obama_at.mp3 */,
+				8C242A431F64DBAF003C69CD /* obama_the_koch_brothers.mp3 */,
+				8C242A441F64DBAF003C69CD /* obama_actually.mp3 */,
+				8C242A451F64DBAF003C69CD /* obama_me.mp3 */,
+				8C242A461F64DBAF003C69CD /* obama_consequence.mp3 */,
+				8C242A471F64DBAF003C69CD /* obama_of.mp3 */,
+				8C242A481F64DBAF003C69CD /* obama_forty_five.mp3 */,
+				8C242A491F64DBAF003C69CD /* obama_twelve.mp3 */,
+				8C242A4A1F64DBAF003C69CD /* obama_felt.mp3 */,
+				8C242A4B1F64DBAF003C69CD /* obama_always.mp3 */,
+				8C242A4C1F64DBAF003C69CD /* obama_presidency.mp3 */,
+				8C242A4D1F64DBAF003C69CD /* obama_the_united_states_senate.mp3 */,
+				8C242A4E1F64DBAF003C69CD /* obama_was.mp3 */,
+				8C242A4F1F64DBAF003C69CD /* obama_support.mp3 */,
+				8C242A501F64DBAF003C69CD /* obama_now.mp3 */,
+				8CE556781F4657FD00C3CF96 /* obama_where.mp3 */,
+				8CE556791F4657FD00C3CF96 /* obama_states.mp3 */,
+				8CE556941F4791B400C3CF96 /* obama_people.mp3 */,
+				8CE556A81F48B57300C3CF96 /* obama_issues.mp3 */,
+				8CE556BA1F48BC9300C3CF96 /* obama_concerns.mp3 */,
+				8CE556BB1F48BC9300C3CF96 /* obama_hearing.mp3 */,
+				8CE556BC1F48BC9300C3CF96 /* obama_spending.mp3 */,
+				8CE556BD1F48BC9300C3CF96 /* obama_months.mp3 */,
+				8CE556BE1F48BC9300C3CF96 /* obama_fish_fries.mp3 */,
+				8CE556BF1F48BC9300C3CF96 /* obama_chicagoans.mp3 */,
+				8CE556C01F48BC9300C3CF96 /* obama_benefit.mp3 */,
+				8CE556C11F48BC9300C3CF96 /* obama_incredible.mp3 */,
+				8CE556C21F48BC9300C3CF96 /* obama_had.mp3 */,
+				8CE556C31F48BC9300C3CF96 /* obama_before.mp3 */,
+				8CE556C41F48BC9300C3CF96 /* obama_meaningful.mp3 */,
+				8CE556C51F48BC9300C3CF96 /* obama_salient.mp3 */,
+				8CE556C61F48BC9300C3CF96 /* obama_feel.mp3 */,
+				8CE556A91F48B57300C3CF96 /* obama_talk.mp3 */,
+				8CE556AA1F48B57300C3CF96 /* obama_trust.mp3 */,
+				8CE556AB1F48B57300C3CF96 /* obama_builds.mp3 */,
+				8CE556AC1F48B57300C3CF96 /* obama_it.mp3 */,
+				8CE556AD1F48B57300C3CF96 /* obama_or.mp3 */,
+				8CE556AE1F48B57300C3CF96 /* obama_dont.mp3 */,
+				8CE556AF1F48B57300C3CF96 /* obama_obama_care.mp3 */,
+				8CE556B01F48B57300C3CF96 /* obama_from.mp3 */,
+				8CE556951F4791B400C3CF96 /* obama_on.mp3 */,
+				8CE556961F4791B400C3CF96 /* obama_bathrooms.mp3 */,
+				8CE556971F4791B400C3CF96 /* obama_promote.mp3 */,
+				8CE556981F4791B400C3CF96 /* obama_give.mp3 */,
+				8CE556991F4791B400C3CF96 /* obama_made.mp3 */,
+				8CE5569A1F4791B400C3CF96 /* obama_has.mp3 */,
+				8CE5569B1F4791B400C3CF96 /* obama_party.mp3 */,
+				8CE5569C1F4791B400C3CF96 /* obama_well_uh.mp3 */,
+				8CE5569D1F4791B400C3CF96 /* obama_then.mp3 */,
+				8CE5567A1F4657FD00C3CF96 /* obama_chunks.mp3 */,
+				8CE5567B1F4657FD00C3CF96 /* obama_democrats.mp3 */,
+				8CE5567C1F4657FD00C3CF96 /* obama_for.mp3 */,
+				8CE5567D1F4657FD00C3CF96 /* obama_challenge.mp3 */,
+				8CE5567E1F4657FD00C3CF96 /* obama_are.mp3 */,
+				8CE5567F1F4657FD00C3CF96 /* obama_noo.mp3 */,
+				8CE556801F4657FD00C3CF96 /* obama_so.mp3 */,
+				8CE556811F4657FD00C3CF96 /* obama_donald_trump.mp3 */,
+				8CE556821F4657FD00C3CF96 /* obama_who.mp3 */,
+				8CE556831F4657FD00C3CF96 /* obama_because.mp3 */,
+				8CE556841F4657FD00C3CF96 /* obama_hard.mp3 */,
+				8CE556851F4657FD00C3CF96 /* obama_wellll.mp3 */,
+				8CE556721F43F6B300C3CF96 /* obama_pussy.mp3 */,
+				8CE556741F43F6B300C3CF96 /* obama_goddam.mp3 */,
+				8CE5565A1F429D1900C3CF96 /* obama_mother_fuckers.mp3 */,
+				8CE5566A1F43EFFD00C3CF96 /* obama_sorry_ass.mp3 */,
+				8CE5566E1F43F31900C3CF96 /* obama_whos_ass.mp3 */,
+				8CE5566F1F43F31900C3CF96 /* obama_ignorant.mp3 */,
+				8CE5566B1F43EFFD00C3CF96 /* obama_damn_fries.mp3 */,
+				8CE556651F43E9AF00C3CF96 /* obama_shit.mp3 */,
+				8CE5565B1F429D1900C3CF96 /* obama_mother_fucker.mp3 */,
+				8CE556681F43EFF400C3CF96 /* obama_complicated.mp3 */,
+				8CE5565C1F429D1900C3CF96 /* obama_nothing.mp3 */,
+				8CE5565D1F429D1900C3CF96 /* obama_fries.mp3 */,
+				8CE5565E1F429D1900C3CF96 /* obama_bitch.mp3 */,
+				8CE556521F42996100C3CF96 /* obama_proud.mp3 */,
+				8CE556531F42996100C3CF96 /* obama_happy.mp3 */,
+				8CE556541F42996100C3CF96 /* obama_what.mp3 */,
+				8CE556551F42996100C3CF96 /* obama_ughhh.mp3 */,
+				8CE556501F4297AD00C3CF96 /* obama_but.mp3 */,
+				8CE5564E1F4296FF00C3CF96 /* obama_that.mp3 */,
+				8CE556481F4295EC00C3CF96 /* obama_is.mp3 */,
+				8CE556491F4295EC00C3CF96 /* obama_myself.mp3 */,
+				8CE5564A1F4295EC00C3CF96 /* obama_and.mp3 */,
+				8CE556421F428DB600C3CF96 /* obama_the_united_states.mp3 */,
+				8CE556401F428A3400C3CF96 /* obama_mexico.mp3 */,
+				8CE556341F42816100C3CF96 /* obama_family.mp3 */,
+				8CE556361F42816100C3CF96 /* obama_rhetoric.mp3 */,
+				13B07FAE1A68108700A75B9A /* Presidents */,
+				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				00E356EF1AD99517003FC87E /* PresidentsTests */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+				33FCFFF9764447319EAF4FAC /* Resources */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+		};
+		83CBBA001A601CBA00E9B192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B07F961A680F5B00A75B9A /* Presidents.app */,
+				00E356EE1AD99517003FC87E /* PresidentsTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* Presidents-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* Presidents-tvOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C69D4E91F39317300137617 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C69D50A1F39317300137617 /* libReactNativeConfig.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C69D4EB1F39317300137617 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C69D50D1F39317300137617 /* libRNDeviceInfo.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C69D4ED1F39317300137617 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C69D5101F39317300137617 /* libRNVectorIcons.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C9EA1511F3A8DCF007047DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C9EA1701F3A8DCF007047DC /* libRNSound.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00E356ED1AD99517003FC87E /* PresidentsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "PresidentsTests" */;
+			buildPhases = (
+				00E356EA1AD99517003FC87E /* Sources */,
+				00E356EB1AD99517003FC87E /* Frameworks */,
+				00E356EC1AD99517003FC87E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00E356F51AD99517003FC87E /* PBXTargetDependency */,
+			);
+			name = PresidentsTests;
+			productName = PresidentsTests;
+			productReference = 00E356EE1AD99517003FC87E /* PresidentsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13B07F861A680F5B00A75B9A /* Presidents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Presidents" */;
+			buildPhases = (
+				13B07F871A680F5B00A75B9A /* Sources */,
+				13B07F8C1A680F5B00A75B9A /* Frameworks */,
+				13B07F8E1A680F5B00A75B9A /* Resources */,
+				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Presidents;
+			productName = "Hello World";
+			productReference = 13B07F961A680F5B00A75B9A /* Presidents.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2D02E47A1E0B4A5D006451C7 /* Presidents-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Presidents-tvOS" */;
+			buildPhases = (
+				2D02E4771E0B4A5D006451C7 /* Sources */,
+				2D02E4781E0B4A5D006451C7 /* Frameworks */,
+				2D02E4791E0B4A5D006451C7 /* Resources */,
+				2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Presidents-tvOS";
+			productName = "Presidents-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* Presidents-tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2D02E48F1E0B4A5D006451C7 /* Presidents-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Presidents-tvOSTests" */;
+			buildPhases = (
+				2D02E48C1E0B4A5D006451C7 /* Sources */,
+				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
+				2D02E48E1E0B4A5D006451C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
+			);
+			name = "Presidents-tvOSTests";
+			productName = "Presidents-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* Presidents-tvOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CBB9F71A601CBA00E9B192 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 610;
+				ORGANIZATIONNAME = Facebook;
+				TargetAttributes = {
+					00E356ED1AD99517003FC87E = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 8Q8CD5JWQJ;
+					};
+					2D02E47A1E0B4A5D006451C7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					2D02E48F1E0B4A5D006451C7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2D02E47A1E0B4A5D006451C7;
+					};
+				};
+			};
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Presidents" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83CBB9F61A601CBA00E9B192;
+			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
+					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
+				},
+				{
+					ProductGroup = 5E91572E1DD0AC6500FF2AA8 /* Products */;
+					ProjectRef = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
+				},
+				{
+					ProductGroup = 00C302B61ABCB90400DB3ED1 /* Products */;
+					ProjectRef = 00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */;
+				},
+				{
+					ProductGroup = 00C302BC1ABCB91800DB3ED1 /* Products */;
+					ProjectRef = 00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */;
+				},
+				{
+					ProductGroup = 78C398B11ACF4ADC00677621 /* Products */;
+					ProjectRef = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
+				},
+				{
+					ProductGroup = 00C302D41ABCB9D200DB3ED1 /* Products */;
+					ProjectRef = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
+				},
+				{
+					ProductGroup = 139105B71AF99BAD00B5F7CC /* Products */;
+					ProjectRef = 139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */;
+				},
+				{
+					ProductGroup = 832341B11AAA6A8300B99B32 /* Products */;
+					ProjectRef = 832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */;
+				},
+				{
+					ProductGroup = 00C302E01ABCB9EE00DB3ED1 /* Products */;
+					ProjectRef = 00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */;
+				},
+				{
+					ProductGroup = 139FDEE71B06529A00C62182 /* Products */;
+					ProjectRef = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
+				},
+				{
+					ProductGroup = 146834001AC3E56700842450 /* Products */;
+					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = 8C69D4E91F39317300137617 /* Products */;
+					ProjectRef = 1FB2D6CC1351448F83F69379 /* ReactNativeConfig.xcodeproj */;
+				},
+				{
+					ProductGroup = 8C69D4EB1F39317300137617 /* Products */;
+					ProjectRef = 3227B830FF56445491F2D51A /* RNDeviceInfo.xcodeproj */;
+				},
+				{
+					ProductGroup = 8C9EA1511F3A8DCF007047DC /* Products */;
+					ProjectRef = C323A1A5BD5B45229ACE9B03 /* RNSound.xcodeproj */;
+				},
+				{
+					ProductGroup = 8C69D4ED1F39317300137617 /* Products */;
+					ProjectRef = 0E49A40DD91048A087731B77 /* RNVectorIcons.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				13B07F861A680F5B00A75B9A /* Presidents */,
+				00E356ED1AD99517003FC87E /* PresidentsTests */,
+				2D02E47A1E0B4A5D006451C7 /* Presidents-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* Presidents-tvOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTActionSheet.a;
+			remoteRef = 00C302AB1ABCB8CE00DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTGeolocation.a;
+			remoteRef = 00C302B91ABCB90400DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00C302C01ABCB91800DB3ED1 /* libRCTImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTImage.a;
+			remoteRef = 00C302BF1ABCB91800DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTNetwork.a;
+			remoteRef = 00C302DB1ABCB9D200DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTVibration.a;
+			remoteRef = 00C302E31ABCB9EE00DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		139105C11AF99BAD00B5F7CC /* libRCTSettings.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTSettings.a;
+			remoteRef = 139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		139FDEF41B06529B00C62182 /* libRCTWebSocket.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTWebSocket.a;
+			remoteRef = 139FDEF31B06529B00C62182 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		146834041AC3E56700842450 /* libReact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReact.a;
+			remoteRef = 146834031AC3E56700842450 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3E841DF850E9000B6D8A /* libRCTImage-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTImage-tvOS.a";
+			remoteRef = 3DAD3E831DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3E881DF850E9000B6D8A /* libRCTLinking-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTLinking-tvOS.a";
+			remoteRef = 3DAD3E871DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3E8C1DF850E9000B6D8A /* libRCTNetwork-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTNetwork-tvOS.a";
+			remoteRef = 3DAD3E8B1DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3E901DF850E9000B6D8A /* libRCTSettings-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTSettings-tvOS.a";
+			remoteRef = 3DAD3E8F1DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3E941DF850E9000B6D8A /* libRCTText-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTText-tvOS.a";
+			remoteRef = 3DAD3E931DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTWebSocket-tvOS.a";
+			remoteRef = 3DAD3E981DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3EA31DF850E9000B6D8A /* libReact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReact.a;
+			remoteRef = 3DAD3EA21DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3EA51DF850E9000B6D8A /* libyoga.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libyoga.a;
+			remoteRef = 3DAD3EA41DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3EA71DF850E9000B6D8A /* libyoga.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libyoga.a;
+			remoteRef = 3DAD3EA61DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3EA91DF850E9000B6D8A /* libcxxreact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcxxreact.a;
+			remoteRef = 3DAD3EA81DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3EAB1DF850E9000B6D8A /* libcxxreact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcxxreact.a;
+			remoteRef = 3DAD3EAA1DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3EAD1DF850E9000B6D8A /* libjschelpers.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjschelpers.a;
+			remoteRef = 3DAD3EAC1DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DAD3EAF1DF850E9000B6D8A /* libjschelpers.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjschelpers.a;
+			remoteRef = 3DAD3EAE1DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTAnimation.a;
+			remoteRef = 5E9157321DD0AC6500FF2AA8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E9157351DD0AC6500FF2AA8 /* libRCTAnimation-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTAnimation-tvOS.a";
+			remoteRef = 5E9157341DD0AC6500FF2AA8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		78C398B91ACF4ADC00677621 /* libRCTLinking.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTLinking.a;
+			remoteRef = 78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		832341B51AAA6A8300B99B32 /* libRCTText.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTText.a;
+			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8C69D50A1F39317300137617 /* libReactNativeConfig.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReactNativeConfig.a;
+			remoteRef = 8C69D5091F39317300137617 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8C69D50D1F39317300137617 /* libRNDeviceInfo.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNDeviceInfo.a;
+			remoteRef = 8C69D50C1F39317300137617 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8C69D5101F39317300137617 /* libRNVectorIcons.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNVectorIcons.a;
+			remoteRef = 8C69D50F1F39317300137617 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8C9EA1701F3A8DCF007047DC /* libRNSound.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNSound.a;
+			remoteRef = 8C9EA16F1F3A8DCF007047DC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00E356EC1AD99517003FC87E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C242A951F65CACC003C69CD /* obama_in.mp3 in Resources */,
+				8CE556A51F4791B400C3CF96 /* obama_party.mp3 in Resources */,
+				8C7BCE581F675483000478DB /* trump_democrats.mp3 in Resources */,
+				8C7BCE751F677C55000478DB /* trump_dead.mp3 in Resources */,
+				8C242A921F65CACC003C69CD /* obama_climate_change.mp3 in Resources */,
+				8C7BCF0D1F6A0B5D000478DB /* trump_somebody.mp3 in Resources */,
+				8CE5564C1F4295EC00C3CF96 /* obama_myself.mp3 in Resources */,
+				8CE556511F4297AD00C3CF96 /* obama_but.mp3 in Resources */,
+				8C242A8B1F65CACC003C69CD /* obama_contributed.mp3 in Resources */,
+				8C242A5C1F64DBAF003C69CD /* obama_presidency.mp3 in Resources */,
+				8C242AB91F65D7B2003C69CD /* obama_read.mp3 in Resources */,
+				8CE556D11F48BC9300C3CF96 /* obama_meaningful.mp3 in Resources */,
+				8CE556921F4657FD00C3CF96 /* obama_hard.mp3 in Resources */,
+				8C242A881F65CACC003C69CD /* obama_a_lot.mp3 in Resources */,
+				8C242A511F64DBAF003C69CD /* obama_financing.mp3 in Resources */,
+				8C3B76801F6EE22700DC8965 /* trump_without.mp3 in Resources */,
+				8C242A6B1F65BEDE003C69CD /* obama_big.mp3 in Resources */,
+				8CE556601F429D1900C3CF96 /* obama_mother_fucker.mp3 in Resources */,
+				8CE556B51F48B57300C3CF96 /* obama_it.mp3 in Resources */,
+				8C242A581F64DBAF003C69CD /* obama_forty_five.mp3 in Resources */,
+				8CE556B71F48B57300C3CF96 /* obama_dont.mp3 in Resources */,
+				8C7BCF0C1F6A0B5D000478DB /* trump_fabulous.mp3 in Resources */,
+				8C242A6D1F65BEDE003C69CD /* obama_immediately.mp3 in Resources */,
+				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				8CE556A61F4791B400C3CF96 /* obama_well_uh.mp3 in Resources */,
+				8CE556A71F4791B400C3CF96 /* obama_then.mp3 in Resources */,
+				8C7BCE5C1F675483000478DB /* trump_of.mp3 in Resources */,
+				8CE556B11F48B57300C3CF96 /* obama_issues.mp3 in Resources */,
+				8CE556CD1F48BC9300C3CF96 /* obama_benefit.mp3 in Resources */,
+				8C242A561F64DBAF003C69CD /* obama_consequence.mp3 in Resources */,
+				8C242A711F65BEDE003C69CD /* obama_races.mp3 in Resources */,
+				8CE556CC1F48BC9300C3CF96 /* obama_chicagoans.mp3 in Resources */,
+				8CE556CE1F48BC9300C3CF96 /* obama_incredible.mp3 in Resources */,
+				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				8C7BCE731F677C55000478DB /* trump_legitamite.mp3 in Resources */,
+				8C242A8D1F65CACC003C69CD /* obama_start.mp3 in Resources */,
+				8CE556691F43EFF400C3CF96 /* obama_complicated.mp3 in Resources */,
+				8C7BCEA61F68C3F7000478DB /* trump_help.mp3 in Resources */,
+				8CE556671F43E9AF00C3CF96 /* obama_shit.mp3 in Resources */,
+				8CE5564F1F4296FF00C3CF96 /* obama_that.mp3 in Resources */,
+				8C7BCE701F677C55000478DB /* trump_fox.mp3 in Resources */,
+				8CE5563A1F42816200C3CF96 /* obama_rhetoric.mp3 in Resources */,
+				BC65300D44EF4B8A91FE9418 /* Entypo.ttf in Resources */,
+				8C242A9F1F65D00F003C69CD /* obama_substance.mp3 in Resources */,
+				8C7BCEA91F68C3F7000478DB /* trump_they.mp3 in Resources */,
+				8C7BCEAB1F68C3F7000478DB /* trump_you2.mp3 in Resources */,
+				8C242A521F64DBAF003C69CD /* obama_at.mp3 in Resources */,
+				8C242A861F65CACC003C69CD /* obama_lost.mp3 in Resources */,
+				8C242ADE1F674215003C69CD /* obama_federal_government.mp3 in Resources */,
+				8CE556B91F48B57300C3CF96 /* obama_from.mp3 in Resources */,
+				8CE5566D1F43EFFD00C3CF96 /* obama_damn_fries.mp3 in Resources */,
+				8C7BCE761F677C55000478DB /* trump_states.mp3 in Resources */,
+				8C242AD71F674215003C69CD /* obama_chinese.mp3 in Resources */,
+				8C242A961F65CACC003C69CD /* obama_vacation.mp3 in Resources */,
+				8CE5568B1F4657FD00C3CF96 /* obama_challenge.mp3 in Resources */,
+				8C242AB41F65D7B2003C69CD /* obama_controversial.mp3 in Resources */,
+				8C7BCE711F677C55000478DB /* trump_speech.mp3 in Resources */,
+				8C242AD41F674215003C69CD /* obama_decade.mp3 in Resources */,
+				8C7BCE5D1F675483000478DB /* trump_correct.mp3 in Resources */,
+				8C7BCE891F689272000478DB /* trump_before.mp3 in Resources */,
+				8CE556CA1F48BC9300C3CF96 /* obama_months.mp3 in Resources */,
+				8CE556911F4657FD00C3CF96 /* obama_because.mp3 in Resources */,
+				8CE5569F1F4791B400C3CF96 /* obama_on.mp3 in Resources */,
+				8C242ADD1F674215003C69CD /* obama_the_cia.mp3 in Resources */,
+				8C7BCF081F6A0B5D000478DB /* trump_waterboarding.mp3 in Resources */,
+				8C7BCE5E1F675483000478DB /* trump_abe_lincoln.mp3 in Resources */,
+				8CE556901F4657FD00C3CF96 /* obama_who.mp3 in Resources */,
+				8C7BCE791F677C55000478DB /* trump_college.mp3 in Resources */,
+				8C7BCE781F677C55000478DB /* trump_people.mp3 in Resources */,
+				8C242ADF1F674215003C69CD /* obama_agency.mp3 in Resources */,
+				8C242A8E1F65CACC003C69CD /* obama_rise_up.mp3 in Resources */,
+				8CE556861F4657FD00C3CF96 /* obama_where.mp3 in Resources */,
+				8CE556B41F48B57300C3CF96 /* obama_builds.mp3 in Resources */,
+				8C7BCE881F689272000478DB /* trump_audience.mp3 in Resources */,
+				8CE556701F43F31900C3CF96 /* obama_whos_ass.mp3 in Resources */,
+				8C242A591F64DBAF003C69CD /* obama_twelve.mp3 in Resources */,
+				8C7BCEA21F68C3F7000478DB /* trump_smarter.mp3 in Resources */,
+				8C7BCEA71F68C3F7000478DB /* trump_catastrophe.mp3 in Resources */,
+				8C7BCEA01F68C3F7000478DB /* trump_years.mp3 in Resources */,
+				8C3B76791F6EE22700DC8965 /* trump_trillion.mp3 in Resources */,
+				8C7BCE5A1F675483000478DB /* trump_absolutely.mp3 in Resources */,
+				8CE556B31F48B57300C3CF96 /* obama_trust.mp3 in Resources */,
+				4AD0CA5016FB44F08E5845A7 /* EvilIcons.ttf in Resources */,
+				8C7BCF051F6A0B5D000478DB /* trump_work.mp3 in Resources */,
+				8C7BCEA11F68C3F7000478DB /* trump_bread.mp3 in Resources */,
+				8C7BCE741F677C55000478DB /* trump_now.mp3 in Resources */,
+				8C7BCF0B1F6A0B5D000478DB /* trump_others.mp3 in Resources */,
+				8C242AD81F674215003C69CD /* obama_officers.mp3 in Resources */,
+				8CE5568E1F4657FD00C3CF96 /* obama_so.mp3 in Resources */,
+				8C242ABF1F65D7B2003C69CD /* obama_call.mp3 in Resources */,
+				8C242AA21F65D00F003C69CD /* obama_and_and.mp3 in Resources */,
+				8C3B767E1F6EE22700DC8965 /* trump_here.mp3 in Resources */,
+				8C7BCEA31F68C3F7000478DB /* trump_shot.mp3 in Resources */,
+				8C7BCF0A1F6A0B5D000478DB /* trump_intelligence.mp3 in Resources */,
+				8C242A8C1F65CACC003C69CD /* obama_somebody.mp3 in Resources */,
+				8C242A5E1F64DBAF003C69CD /* obama_was.mp3 in Resources */,
+				8C242AC11F65D7B2003C69CD /* obama_avoid.mp3 in Resources */,
+				116597176DE04FC2AF34E809 /* FontAwesome.ttf in Resources */,
+				8CE556631F429D1900C3CF96 /* obama_bitch.mp3 in Resources */,
+				8C7BCE5B1F675483000478DB /* trump_mexico.mp3 in Resources */,
+				8C242A541F64DBAF003C69CD /* obama_actually.mp3 in Resources */,
+				8CE556C71F48BC9300C3CF96 /* obama_concerns.mp3 in Resources */,
+				8C242AB81F65D7B2003C69CD /* obama_any.mp3 in Resources */,
+				8C7BCF091F6A0B5D000478DB /* trump_in.mp3 in Resources */,
+				5B971813972B4201A4D9D9CA /* Foundation.ttf in Resources */,
+				8C242A5A1F64DBAF003C69CD /* obama_felt.mp3 in Resources */,
+				8CE556A41F4791B400C3CF96 /* obama_has.mp3 in Resources */,
+				8C7BCEAA1F68C3F7000478DB /* trump_demean.mp3 in Resources */,
+				8C242AC01F65D7B2003C69CD /* obama_deep.mp3 in Resources */,
+				8C7BCE7C1F677C55000478DB /* trump_strongly.mp3 in Resources */,
+				8C7BCE7A1F677C55000478DB /* trump_to.mp3 in Resources */,
+				8C242AA41F65D00F003C69CD /* obama_have.mp3 in Resources */,
+				8C242A6A1F65BEDE003C69CD /* obama_leave.mp3 in Resources */,
+				8C242ABB1F65D7B2003C69CD /* obama_by.mp3 in Resources */,
+				8C3B767A1F6EE22700DC8965 /* trump_six.mp3 in Resources */,
+				8C3B767C1F6EE22700DC8965 /* trump_total.mp3 in Resources */,
+				8C242ADC1F674215003C69CD /* obama_impact.mp3 in Resources */,
+				8C242ABD1F65D7B2003C69CD /* obama_vulnerable.mp3 in Resources */,
+				8CE5568F1F4657FD00C3CF96 /* obama_donald_trump.mp3 in Resources */,
+				8C242A531F64DBAF003C69CD /* obama_the_koch_brothers.mp3 in Resources */,
+				8C242AB71F65D7B2003C69CD /* obama_if.mp3 in Resources */,
+				8C242A5F1F64DBAF003C69CD /* obama_support.mp3 in Resources */,
+				8C242AC21F65D7B2003C69CD /* obama_political.mp3 in Resources */,
+				8C7BCF111F6A0B5D000478DB /* trump_president.mp3 in Resources */,
+				8C7BCE6F1F677C55000478DB /* trump_sean.mp3 in Resources */,
+				8CE556CF1F48BC9300C3CF96 /* obama_had.mp3 in Resources */,
+				8C242AE61F67451E003C69CD /* obama_like.mp3 in Resources */,
+				8C242A601F64DBAF003C69CD /* obama_now.mp3 in Resources */,
+				8CE5566C1F43EFFD00C3CF96 /* obama_sorry_ass.mp3 in Resources */,
+				8C242A6F1F65BEDE003C69CD /* obama_a.mp3 in Resources */,
+				8C242AA01F65D00F003C69CD /* obama_npr.mp3 in Resources */,
+				8C242AB61F65D7B2003C69CD /* obama_the_dnc.mp3 in Resources */,
+				8CE556571F42996200C3CF96 /* obama_happy.mp3 in Resources */,
+				8C3B767D1F6EE22700DC8965 /* trump_president_obama.mp3 in Resources */,
+				8C242A6E1F65BEDE003C69CD /* obama_campaign.mp3 in Resources */,
+				8C3B767B1F6EE22700DC8965 /* trump_mess.mp3 in Resources */,
+				8C242ADB1F674215003C69CD /* obama_maybe.mp3 in Resources */,
+				8C7BCEAC1F68C3F7000478DB /* trump_never.mp3 in Resources */,
+				8CE556751F43F6B300C3CF96 /* obama_pussy.mp3 in Resources */,
+				8C7BCF0F1F6A0B5D000478DB /* trump_approve.mp3 in Resources */,
+				8C242AE11F674215003C69CD /* obama_revelation.mp3 in Resources */,
+				1ED77D5071B64F698DB1FA5A /* Ionicons.ttf in Resources */,
+				8CE556431F428DB600C3CF96 /* obama_the_united_states.mp3 in Resources */,
+				827A79D9BB0544C6A2DC41D0 /* MaterialCommunityIcons.ttf in Resources */,
+				8C242AE01F674215003C69CD /* obama_after.mp3 in Resources */,
+				8C242AD61F674215003C69CD /* obama_british.mp3 in Resources */,
+				8CE556B81F48B57300C3CF96 /* obama_obama_care.mp3 in Resources */,
+				8C7BCEA81F68C3F7000478DB /* trump_afghanistan.mp3 in Resources */,
+				8CE556B21F48B57300C3CF96 /* obama_talk.mp3 in Resources */,
+				8C7BCE721F677C55000478DB /* trump_illegal.mp3 in Resources */,
+				8C3B76781F6EE22700DC8965 /* trump_dollars.mp3 in Resources */,
+				8C242AE21F674215003C69CD /* obama_terrorism.mp3 in Resources */,
+				8C7BCE911F689272000478DB /* trump_did.mp3 in Resources */,
+				8C3B767F1F6EE22700DC8965 /* trump_who.mp3 in Resources */,
+				8CE556411F428A3400C3CF96 /* obama_mexico.mp3 in Resources */,
+				8CE556881F4657FD00C3CF96 /* obama_chunks.mp3 in Resources */,
+				8C7BCF0E1F6A0B5D000478DB /* trump_the_cia.mp3 in Resources */,
+				8CE556D01F48BC9300C3CF96 /* obama_before.mp3 in Resources */,
+				8C7BCE8A1F689272000478DB /* trump_wow.mp3 in Resources */,
+				8C7BCE771F677C55000478DB /* trump_vote.mp3 in Resources */,
+				8C242A941F65CACC003C69CD /* obama_generation.mp3 in Resources */,
+				8CE5564B1F4295EC00C3CF96 /* obama_is.mp3 in Resources */,
+				8CE556D21F48BC9300C3CF96 /* obama_salient.mp3 in Resources */,
+				8CE556A21F4791B400C3CF96 /* obama_give.mp3 in Resources */,
+				8CE556891F4657FD00C3CF96 /* obama_democrats.mp3 in Resources */,
+				8C242AB51F65D7B2003C69CD /* obama_consistently.mp3 in Resources */,
+				8C242AA11F65D00F003C69CD /* obama_fake_news.mp3 in Resources */,
+				8C242A8F1F65CACC003C69CD /* obama_them.mp3 in Resources */,
+				8C7BCE6E1F677C55000478DB /* trump_spoke.mp3 in Resources */,
+				8C7BCE8E1F689272000478DB /* trump_victory.mp3 in Resources */,
+				8CE556591F42996200C3CF96 /* obama_ughhh.mp3 in Resources */,
+				8C242A721F65BEDE003C69CD /* obama_public.mp3 in Resources */,
+				8CE556931F4657FD00C3CF96 /* obama_wellll.mp3 in Resources */,
+				8CE556581F42996200C3CF96 /* obama_what.mp3 in Resources */,
+				8CE556611F429D1900C3CF96 /* obama_nothing.mp3 in Resources */,
+				8C7BCE591F675483000478DB /* trump_from.mp3 in Resources */,
+				8C7BCE8C1F689272000478DB /* trump_forgot.mp3 in Resources */,
+				8C7BCE7B1F677C55000478DB /* trump_two.mp3 in Resources */,
+				8C242A701F65BEDE003C69CD /* obama_think.mp3 in Resources */,
+				8CE5564D1F4295EC00C3CF96 /* obama_and.mp3 in Resources */,
+				8C7BCE8D1F689272000478DB /* trump_women.mp3 in Resources */,
+				8C242ABC1F65D7B2003C69CD /* obama_manipulation.mp3 in Resources */,
+				8C242A901F65CACC003C69CD /* obama_help.mp3 in Resources */,
+				8CE556D31F48BC9300C3CF96 /* obama_feel.mp3 in Resources */,
+				8C242ADA1F674215003C69CD /* obama_explicit.mp3 in Resources */,
+				8C242A8A1F65CACC003C69CD /* obama_were.mp3 in Resources */,
+				8CE5568D1F4657FD00C3CF96 /* obama_noo.mp3 in Resources */,
+				8CE556381F42816200C3CF96 /* obama_family.mp3 in Resources */,
+				8CE5565F1F429D1900C3CF96 /* obama_mother_fuckers.mp3 in Resources */,
+				8CE556C81F48BC9300C3CF96 /* obama_hearing.mp3 in Resources */,
+				8C242ABA1F65D7B2003C69CD /* obama_the.mp3 in Resources */,
+				8CE556621F429D1900C3CF96 /* obama_fries.mp3 in Resources */,
+				8C242A6C1F65BEDE003C69CD /* obama_to.mp3 in Resources */,
+				8C7BCF061F6A0B5D000478DB /* trump_does.mp3 in Resources */,
+				8C7BCE331F67547A000478DB /* trump_primaries.mp3 in Resources */,
+				8CE556CB1F48BC9300C3CF96 /* obama_fish_fries.mp3 in Resources */,
+				8CE556871F4657FD00C3CF96 /* obama_states.mp3 in Resources */,
+				8CE5569E1F4791B400C3CF96 /* obama_people.mp3 in Resources */,
+				8C242AE31F674215003C69CD /* obama_islamic.mp3 in Resources */,
+				8C242A571F64DBAF003C69CD /* obama_of.mp3 in Resources */,
+				8C242A851F65CACC003C69CD /* obama_swirl.mp3 in Resources */,
+				8C242A551F64DBAF003C69CD /* obama_me.mp3 in Resources */,
+				8C242AD91F674215003C69CD /* obama_among.mp3 in Resources */,
+				64B69FE21F5C46F798D5703E /* MaterialIcons.ttf in Resources */,
+				8C7BCEA41F68C3F7000478DB /* trump_problem.mp3 in Resources */,
+				8C3B76811F6EE22700DC8965 /* trump_yes.mp3 in Resources */,
+				8C7BCE921F689272000478DB /* trump_you.mp3 in Resources */,
+				8C242ABE1F65D7B2003C69CD /* obama_trumped_up.mp3 in Resources */,
+				8CE556A01F4791B400C3CF96 /* obama_bathrooms.mp3 in Resources */,
+				8C242AA31F65D00F003C69CD /* obama_doubt.mp3 in Resources */,
+				A387FA77CEF54C87AD9A92DC /* Octicons.ttf in Resources */,
+				8CE556C91F48BC9300C3CF96 /* obama_spending.mp3 in Resources */,
+				8C242A5B1F64DBAF003C69CD /* obama_always.mp3 in Resources */,
+				8C7BCF071F6A0B5D000478DB /* trump_phenonemal.mp3 in Resources */,
+				8CE556771F43F6B300C3CF96 /* obama_goddam.mp3 in Resources */,
+				8CE556A11F4791B400C3CF96 /* obama_promote.mp3 in Resources */,
+				8C242A5D1F64DBAF003C69CD /* obama_the_united_states_senate.mp3 in Resources */,
+				8CE556711F43F31900C3CF96 /* obama_ignorant.mp3 in Resources */,
+				8CE5568C1F4657FD00C3CF96 /* obama_are.mp3 in Resources */,
+				8CE5568A1F4657FD00C3CF96 /* obama_for.mp3 in Resources */,
+				8C7BCF101F6A0B5D000478DB /* trump_approved.mp3 in Resources */,
+				F097B300726242D78E5408CB /* SimpleLineIcons.ttf in Resources */,
+				8C242AE41F674215003C69CD /* obama_relationship.mp3 in Resources */,
+				8C242A891F65CACC003C69CD /* obama_gossip.mp3 in Resources */,
+				8C242AD51F674215003C69CD /* obama_steal.mp3 in Resources */,
+				8C242A871F65CACC003C69CD /* obama_her.mp3 in Resources */,
+				550DE0D5DBD748ECAEACDF9D /* Zocial.ttf in Resources */,
+				8CE556B61F48B57300C3CF96 /* obama_or.mp3 in Resources */,
+				8C7BCEA51F68C3F7000478DB /* trump_chicago.mp3 in Resources */,
+				8C242A911F65CACC003C69CD /* obama_whatever.mp3 in Resources */,
+				8CE556A31F4791B400C3CF96 /* obama_made.mp3 in Resources */,
+				8C242A931F65CACC003C69CD /* obama_passionate.mp3 in Resources */,
+				8C7BCE8B1F689272000478DB /* trump_unfairly.mp3 in Resources */,
+				8CE556561F42996200C3CF96 /* obama_proud.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E4791E0B4A5D006451C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E48E1E0B4A5D006451C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/packager/react-native-xcode.sh";
+		};
+		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native Code And Images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/packager/react-native-xcode.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00E356EA1AD99517003FC87E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00E356F31AD99517003FC87E /* PresidentsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F871A680F5B00A75B9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				13B07FC11A68108700A75B9A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E4771E0B4A5D006451C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */,
+				2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E48C1E0B4A5D006451C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DCD954D1E0B4F2C00145EB5 /* PresidentsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13B07F861A680F5B00A75B9A /* Presidents */;
+			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+		};
+		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D02E47A1E0B4A5D006451C7 /* Presidents-tvOS */;
+			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		13B07FB11A68108700A75B9A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13B07FB21A68108700A75B9A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			path = Presidents;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		00E356F61AD99517003FC87E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
+					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
+				);
+				INFOPLIST_FILE = PresidentsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Presidents.app/Presidents";
+			};
+			name = Debug;
+		};
+		00E356F71AD99517003FC87E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COPY_PHASE_STRIP = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
+					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
+				);
+				INFOPLIST_FILE = PresidentsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Presidents.app/Presidents";
+			};
+			name = Release;
+		};
+		13B07F941A680F5B00A75B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = 8Q8CD5JWQJ;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
+					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
+				);
+				INFOPLIST_FILE = Presidents/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_NAME = Presidents;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		13B07F951A680F5B00A75B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8Q8CD5JWQJ;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
+					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
+				);
+				INFOPLIST_FILE = Presidents/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_NAME = Presidents;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		2D02E4971E0B4A5E006451C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
+					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
+				);
+				INFOPLIST_FILE = "Presidents-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Presidents-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		2D02E4981E0B4A5E006451C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
+					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
+				);
+				INFOPLIST_FILE = "Presidents-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Presidents-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Release;
+		};
+		2D02E4991E0B4A5E006451C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Presidents-tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Presidents-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Presidents-tvOS.app/Presidents-tvOS";
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+			};
+			name = Debug;
+		};
+		2D02E49A1E0B4A5E006451C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Presidents-tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Presidents-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Presidents-tvOS.app/Presidents-tvOS";
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+			};
+			name = Release;
+		};
+		83CBBA201A601CBA00E9B192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		83CBBA211A601CBA00E9B192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "PresidentsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00E356F61AD99517003FC87E /* Debug */,
+				00E356F71AD99517003FC87E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Presidents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B07F941A680F5B00A75B9A /* Debug */,
+				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Presidents-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D02E4971E0B4A5E006451C7 /* Debug */,
+				2D02E4981E0B4A5E006451C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Presidents-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D02E4991E0B4A5E006451C7 /* Debug */,
+				2D02E49A1E0B4A5E006451C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Presidents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBBA201A601CBA00E9B192 /* Debug */,
+				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
+}
