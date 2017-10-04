@@ -128,27 +128,28 @@ export default class ZTestScreen extends React.Component {
     const { showHelp } = this.state
     if (showHelp) {
       return (
-        <View style={{width: width, height: height, position: 'absolute', zIndex: 500, backgroundColor: 'rgba(0, 0, 0, 0.8)'}}>
+        <View style={{width: width, height: height, position: 'absolute', zIndex: 500, backgroundColor: 'rgba(255, 255, 255, 0.82)'}}>
           <View style={{width: width, height: 100, top: 0, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
-            <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold', marginTop: 30}}>1: Select Speaker</Text>
-            <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold', marginTop: 2}}><Icon3 name='ios-person-add' size={30} style={{paddingTop: 20}} /></Text>
+            <Text style={[styles.helpText, {marginTop: 30}]}>1: Select Speaker</Text>
+            <Text style={[styles.helpText, {marginTop: 2}]}><Icon3 name='ios-person-add' size={30} style={{paddingTop: 20}} /></Text>
           </View>
-          <View style={{width: width, height: 100, top: 80, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
-            <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}>2: Select Category</Text>
-            <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}><Icon2 name='gesture-swipe-left' size={30} /></Text>
+          <View style={{width: width, height: 100, top: 85, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
+            <Text style={[styles.helpText, {}]}>2: Select Category</Text>
+            <Text style={[styles.helpText, {}]}><Icon2 name='gesture-swipe-left' size={30} /></Text>
           </View>
           <View style={{width: width, height: 100, top: 280, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
-            <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}>3: Tap words to preview</Text>
-            <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}><Icon2 name='gesture-tap' size={30} /></Text>
-            <Text style={{color: 'white', fontSize: 10, fontWeight: 'bold', paddingTop: 13}}>(Press and hold to add to word tray)</Text>
-            <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}><Icon2 name='gesture-double-tap' size={30} /></Text>
+            <Text style={[styles.helpText, {}]}>3: Tap words to preview</Text>
+            <Text style={[styles.helpText, {}]}><Icon2 name='gesture-tap' size={30} /></Text>
+            <Text style={[styles.helpText, {paddingTop: 13}]}>(Press and hold to add to word tray)</Text>
+            {/* <Text style={[styles.helpText, {}]}><Icon2 name='gesture-double-tap' size={30} /></Text> */}
           </View>
           <View style={{width: width, height: 100, bottom: 80, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
-            <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}>4: Phrase words</Text>
-            <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}><Icon4 name='bucket' size={30} /></Text>
+            <Text style={[styles.helpText, {}]}>4: Word Bucket</Text>
+            <Text style={[styles.helpText, {}]}><Icon4 name='bucket' size={30} /></Text>
           </View>
           <View style={{width: width, height: 100, bottom: 0, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
-            <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold', marginTop: 30}}>5: Tap 'Build Phrase'</Text>
+            <Text style={[styles.helpText, {marginTop: 30}]}>5: Tap 'Build Phrase'</Text>
+            <Text style={[styles.helpText, {}]}><Icon name='magic' size={30} /></Text>
           </View>
         </View>
       )

@@ -30,5 +30,10 @@ export default StyleSheet.create({
     marginVertical: Metrics.baseMargin,
     backgroundColor: Colors.fire,
     justifyContent: 'center'
+  },
+  helpText: {
+    color: 'black',
+    fontSize: 15,
+    fontWeight: 'bold'
   }
 })
