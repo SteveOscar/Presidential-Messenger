@@ -58,7 +58,7 @@ export default class ZTestScreen extends React.Component {
       fileNames: [],
       showLoadPhrases: false,
       showHelpHeight: 0,
-      showHelp: true
+      showHelp: false
     }
   }
 
@@ -151,6 +151,7 @@ export default class ZTestScreen extends React.Component {
             <Text style={[styles.helpText, {marginTop: 30}]}>5: Tap 'Build Phrase'</Text>
             <Text style={[styles.helpText, {}]}><Icon name='magic' size={30} /></Text>
           </View>
+          <Text onPress={this.toggleHelp.bind(this)} style={[styles.helpText, {position: 'absolute', left: 12, bottom: 12, fontSize: 45}]}>X</Text>
         </View>
       )
     } else {
@@ -179,7 +180,7 @@ export default class ZTestScreen extends React.Component {
   }
 
   render () {
-    const { phrase } = this.state
+    const { phrase, showHelp } = this.state
     const navButtonColors = phrase.length ? '#333332' : 'grey'
     const nextColor = phrase.length ? '#1352A2' : 'grey'
     return (
@@ -219,12 +220,14 @@ export default class ZTestScreen extends React.Component {
             myContext={this}
           />
           <View style={{height: 100, bottom: -85, position: 'absolute', width: '100%', backgroundColor: '#FB6964', zIndex: 9, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', flex: 1}}>
+
             <TouchableOpacity
-              onPress={this.clearPhrase.bind(this)}
-              style={{flex: 3, alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
-              <Text style={{color: navButtonColors}}><Icon name='signing' size={40} /></Text>
-              <Text style={{color: navButtonColors, fontSize: 12, fontWeight: 'bold'}}>Reset</Text>
+              onPress={this.toggleHelp.bind(this)}
+              style={{flex: 4, alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
+              <Text style={{color: '#333332'}}><Icon2 name='help-circle' size={40} /></Text>
+              <Text style={{color: '#333332', fontSize: 12, fontWeight: 'bold'}}>Help</Text>
             </TouchableOpacity>
+
             <TouchableOpacity
               onPress={this.loadPhrases.bind(this)}
               style={{flex: 3, alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
@@ -232,12 +235,12 @@ export default class ZTestScreen extends React.Component {
               <Text style={{color: '#333332', fontSize: 12, fontWeight: 'bold'}}>Load</Text>
             </TouchableOpacity>
 
-            {/* <TouchableOpacity
-              onPress={phrase.length ? this.autoPlayPhrase.bind(this) : () => {}}
-              style={{flex: 4, alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
-              <Text style={{color: navButtonColors}}><Icon name='play' size={40} /></Text>
-              <Text style={{color: navButtonColors, fontSize: 12, fontWeight: 'bold'}}>Auto Play</Text>
-            </TouchableOpacity> */}
+            <TouchableOpacity
+              onPress={this.clearPhrase.bind(this)}
+              style={{flex: 3, alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
+              <Text style={{color: navButtonColors}}><Icon name='signing' size={40} /></Text>
+              <Text style={{color: navButtonColors, fontSize: 12, fontWeight: 'bold'}}>Reset</Text>
+            </TouchableOpacity>
 
             <TouchableOpacity
               onPress={this.toggleModeSwitch.bind(this)}
@@ -282,6 +285,11 @@ export default class ZTestScreen extends React.Component {
 
   clearPhrase () {
     this.setState({ phrase: [], selected: null })
+  }
+
+  toggleHelp () {
+    const prev = this.state.showHelp
+    this.setState({ showHelp: !prev })
   }
 
   personPressed (person, context) {

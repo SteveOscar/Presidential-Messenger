@@ -34,6 +34,11 @@ export default StyleSheet.create({
   helpText: {
     color: 'black',
     fontSize: 15,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.7,
+    shadowRadius: 2,
+    shadowColor: 'red',
+    elevation: 1
   }
 })
