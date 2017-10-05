@@ -16,7 +16,6 @@ export default class ZPhrasePlayer extends Component {
       startTime: '',
       playSpinValue: new Animated.Value(0),
       saveSpinValue: new Animated.Value(0),
-      showPostRecording: false,
       postRecordingHeight: 0,
       showSave: false,
       saveHeight: 0,
@@ -27,7 +26,7 @@ export default class ZPhrasePlayer extends Component {
   }
 
   componentWillUpdate (nextProps, nextState) {
-    const a = this.state.showPostRecording !== nextState.showPostRecording
+    const a = this.state.postRecordingHeight !== nextState.postRecordingHeight
     const b = this.state.showSave !== nextState.showSave
     if (a || b) {
       // LayoutAnimation.spring()
@@ -45,7 +44,7 @@ export default class ZPhrasePlayer extends Component {
       }
       // LayoutAnimation.spring()
       LayoutAnimation.configureNext(CustomLayoutSpring)
-      if (a) { this.setState({ postRecordingHeight: height }) }
+      if (a) { this.setState({ postRecordingHeight: nextState.postRecordingHeight }) }
       if (b) { this.setState({ saveHeight: nextState.saveHeight }) }
 
       const that = this
@@ -96,7 +95,7 @@ export default class ZPhrasePlayer extends Component {
       this.setState({ recording: newVal, startTime: time, record: [] })
     } else {
       if (this.state.record.length) {
-        this.setState({ showPostRecording: true })
+        this.setState({ postRecordingHeight: height })
       }
       this.setState({ recording: newVal, startTime: '' })
     }
@@ -129,7 +128,7 @@ export default class ZPhrasePlayer extends Component {
 
   showSaveScreen (context) {
     this.saveSpin(1000)
-    this.setState({ showSave: true, saveHeight: height / 2, showPostRecording: false, postRecordingHeight: 0 })
+    this.setState({ showSave: true, saveHeight: height / 2, postRecordingHeight: 0 })
   }
 
   recordButtonColor () {
@@ -142,7 +141,6 @@ export default class ZPhrasePlayer extends Component {
     this.setState({
       showSave: false,
       saveHeight: 0,
-      showPostRecording: true,
       postRecordingHeight: height
     })
   }
@@ -189,7 +187,6 @@ export default class ZPhrasePlayer extends Component {
         this.setState({
           showSave: false,
           // saveHeight: 0,
-          showPostRecording: false,
           postRecordingHeight: 0,
           saveNotice: 'Your recording was saved'
         })
@@ -262,7 +259,7 @@ export default class ZPhrasePlayer extends Component {
   }
 
   renderPostRecording () {
-    const { showPostRecording, postRecordingHeight, playSpinValue, saveSpinValue } = this.state
+    const { postRecordingHeight, playSpinValue, saveSpinValue } = this.state
     const { playing } = this.props
     let playIcon = playing ? 'stop-circle' : 'play-circle-o'
     let playText = playing ? 'Stop' : 'Play'
@@ -273,9 +270,9 @@ export default class ZPhrasePlayer extends Component {
     const rotateSave = saveSpinValue.interpolate({ inputRange: [0, 1],
                                                outputRange: ['0deg', '360deg']
                                              })
-    if (showPostRecording) {
+    if (true) {
       return (
-        <View style={{ width: width, height: postRecordingHeight, position: 'absolute', zIndex: 15, backgroundColor: 'rgba(0, 0, 0, 0.7)', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
+        <View style={{ width: width, height: postRecordingHeight, overflow: 'hidden', zIndex: 15, backgroundColor: 'rgba(0, 0, 0, 0.7)', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
 
           <TouchableOpacity
             style={{margin: 20, alignItems: 'center', justifyContent: 'center', width: 90, height: 100}}>
