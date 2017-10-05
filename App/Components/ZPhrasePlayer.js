@@ -17,7 +17,6 @@ export default class ZPhrasePlayer extends Component {
       playSpinValue: new Animated.Value(0),
       saveSpinValue: new Animated.Value(0),
       postRecordingHeight: 0,
-      showSave: false,
       saveHeight: 0,
       context: this.props.context,
       fileName: '',
@@ -27,7 +26,7 @@ export default class ZPhrasePlayer extends Component {
 
   componentWillUpdate (nextProps, nextState) {
     const a = this.state.postRecordingHeight !== nextState.postRecordingHeight
-    const b = this.state.showSave !== nextState.showSave
+    const b = this.state.saveHeight !== nextState.saveHeight
     if (a || b) {
       // LayoutAnimation.spring()
       const CustomLayoutSpring = {
@@ -128,7 +127,7 @@ export default class ZPhrasePlayer extends Component {
 
   showSaveScreen (context) {
     this.saveSpin(1000)
-    this.setState({ showSave: true, saveHeight: height / 2, postRecordingHeight: 0 })
+    this.setState({ saveHeight: height / 2, postRecordingHeight: 0 })
   }
 
   recordButtonColor () {
@@ -139,7 +138,6 @@ export default class ZPhrasePlayer extends Component {
 
   cancelSave () {
     this.setState({
-      showSave: false,
       saveHeight: 0,
       postRecordingHeight: height
     })
@@ -185,15 +183,15 @@ export default class ZPhrasePlayer extends Component {
       const name = `@messenger:${fileName}`
       await AsyncStorage.setItem(name, JSON.stringify(record)).then((success) => {
         this.setState({
-          showSave: false,
-          // saveHeight: 0,
+          saveHeight: 0,
           postRecordingHeight: 0,
-          saveNotice: 'Your recording was saved'
+          saveNotice: 'Your recording was saved',
+          fileName: ''
         })
         const that = this
         setTimeout(function () {
           that.setState({ saveNotice: '' })
-        }, 2000)
+        }, 3000)
       })
     } catch (error) {
       const error = `There was a problem, try restarting the app.`
@@ -207,7 +205,7 @@ export default class ZPhrasePlayer extends Component {
     if (saveNotice.length) {
       return (
         <View style={{flex: 1, alignItems: 'center', backgroundColor: 'transparent', width: width, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', position: 'absolute', top: height * .2, zIndex: 100}}>
-          <Text style={{color: 'yellow', fontSize: 12}}>{saveNotice}</Text>
+          <Text style={styles.saveText}>{saveNotice}</Text>
         </View>
       )
     } else {
@@ -218,8 +216,8 @@ export default class ZPhrasePlayer extends Component {
   }
 
   renderSaveView () {
-    const { fileName, showSave, saveHeight } = this.state
-    if (showSave) {
+    const { fileName, saveHeight } = this.state
+    if (saveHeight > 0) {
       return (
         <View style={{width: width, height: height, position: 'absolute', zIndex: 14, backgroundColor: 'rgba(0, 0, 0, 0.7)'}}>
           <View style={{ width: width, height: saveHeight, top: height / 4, position: 'absolute', zIndex: 15, backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>

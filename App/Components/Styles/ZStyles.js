@@ -106,5 +106,15 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 3
+  },
+  saveText: {
+    color: 'white',
+    fontSize: 25,
+    fontWeight: 'bold',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.7,
+    shadowRadius: 2,
+    shadowColor: 'blue',
+    elevation: 1
   }
 })
