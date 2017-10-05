@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { View, Text, TouchableOpacity, Easing, LayoutAnimation, Dimensions, ScrollView, Animated, Alert, TextInput, AsyncStorage } from 'react-native'
 import styles from './Styles/ZStyles'
 import Icon from 'react-native-vector-icons/FontAwesome'
+import Icon2 from 'react-native-vector-icons/Ionicons'
+
 
 const { height, width } = Dimensions.get('window')
 
@@ -347,10 +349,10 @@ export default class ZPhrasePlayer extends Component {
             <View style={{height: 100, flex: 1, flexDirection: 'column', zIndex: 14}} />
 
             <TouchableOpacity
-              onPress={() => this.autoPlayPressed(this.props.myContext)}
+              onPress={() => this.state.recording ? () => {} : this.props.closeWindow(this.props.myContext)}
               style={{flex: 2, alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
-              <Text style={{color: '#333332'}}><Icon name={autoPlayIcon} size={40} /></Text>
-              <Text style={{color: '#333332', fontSize: 15, fontWeight: 'bold'}}>{autoPlayText}</Text>
+              <Text style={{color: '#333332'}}><Icon2 name='md-arrow-round-back' size={40} /></Text>
+              <Text style={{color: '#333332', fontSize: 15, fontWeight: 'bold'}}> Back</Text>
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => this.onRecordPress()}
@@ -363,11 +365,12 @@ export default class ZPhrasePlayer extends Component {
             <View style={{height: 100, flex: 4, flexDirection: 'column', zIndex: 14}} />
 
             <TouchableOpacity
-              onPress={() => this.state.recording ? () => {} : this.props.closeWindow(this.props.myContext)}
+              onPress={() => this.autoPlayPressed(this.props.myContext)}
               style={{flex: 2, alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
-              <Text style={{color: '#333332'}}><Icon name='backward' size={40} /></Text>
-              <Text style={{color: '#333332', fontSize: 15, fontWeight: 'bold'}}> Back</Text>
+              <Text style={{color: '#333332'}}><Icon name={autoPlayIcon} size={40} /></Text>
+              <Text style={{color: '#333332', fontSize: 15, fontWeight: 'bold'}}>{autoPlayText}</Text>
             </TouchableOpacity>
+
 
             <View style={{height: 100, flex: 1, flexDirection: 'column', zIndex: 14}} />
           </View>

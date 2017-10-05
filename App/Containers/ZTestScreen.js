@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, Alert, TouchableOpacity, AsyncStorage, Dimensions } from 'react-native'
+import { Text, View, Alert, TouchableOpacity, AsyncStorage, Dimensions, StatusBar } from 'react-native'
 import ZGridContainer from '../Components/ZGridContainer'
 import ZCategorySelector from '../Components/ZCategorySelector'
 import ZPhraseView from '../Components/ZPhraseView'
@@ -186,6 +186,7 @@ export default class ZTestScreen extends React.Component {
     const nextColor = phrase.length ? '#1352A2' : 'grey'
     return (
       <View style={styles.mainContainer}>
+        <StatusBar hidden={true} />
         <View style={styles.container}>
 
           {this.renderHelp()}
