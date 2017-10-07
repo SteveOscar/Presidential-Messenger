@@ -184,9 +184,10 @@ export default class ZTestScreen extends React.Component {
     const { phrase, showHelp } = this.state
     const navButtonColors = phrase.length ? '#333332' : 'grey'
     const nextColor = phrase.length ? '#1352A2' : 'grey'
+    isIphoneX = (height / width).toFixed(2) == 2.17
     return (
       <View style={styles.mainContainer}>
-        <StatusBar hidden={true} />
+        <StatusBar hidden={!isIphoneX} />
         <View style={styles.container}>
 
           {this.renderHelp()}

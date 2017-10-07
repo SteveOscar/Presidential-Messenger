@@ -1219,6 +1219,7 @@
 				00E356EF1AD99517003FC87E /* PresidentsTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				33FCFFF9764447319EAF4FAC /* Resources */,
+				8CACE0F81F8962CD004C33B5 /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -1265,6 +1266,17 @@
 				8C9EA1701F3A8DCF007047DC /* libRNSound.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8CACE0F81F8962CD004C33B5 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				A5242A2749F1459BA85A02AD /* libReactNativeConfig.a */,
+				4B4C3AED7F314BA48CBB1C0D /* libRNDeviceInfo.a */,
+				4D0E0B7500DB48B398EE1698 /* libRNVectorIcons.a */,
+				CD17EEBA9EE24AA48D7E028B /* libRNSound.a */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
