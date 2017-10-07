@@ -184,7 +184,8 @@ export default class ZTestScreen extends React.Component {
     const { phrase, showHelp } = this.state
     const navButtonColors = phrase.length ? '#333332' : 'grey'
     const nextColor = phrase.length ? '#1352A2' : 'grey'
-    isIphoneX = (height / width).toFixed(2) == 2.17
+    const isIphoneX = (height / width).toFixed(2) == 2.17
+    const bottomHeight = isIphoneX ? 140 : 100
     return (
       <View style={styles.mainContainer}>
         <StatusBar hidden={!isIphoneX} />
@@ -203,6 +204,7 @@ export default class ZTestScreen extends React.Component {
             people={People}
             onPersonPress={this.personPressed}
             myContext={this}
+            isIphoneX={isIphoneX}
           />
 
           <ZCategorySelector
@@ -221,8 +223,9 @@ export default class ZTestScreen extends React.Component {
             deleteWord={this.deleteWord}
             onWordPress={this.phraseWordPressed}
             myContext={this}
+            isIphoneX={isIphoneX}
           />
-          <View style={{height: 100, bottom: -85, position: 'absolute', width: '100%', backgroundColor: '#FB6964', zIndex: 9, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', flex: 1}}>
+          <View style={{height: bottomHeight, bottom: -85, position: 'absolute', width: '100%', backgroundColor: '#FB6964', zIndex: 9, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', flex: 1}}>
 
             <TouchableOpacity
               onPress={this.toggleHelp.bind(this)}

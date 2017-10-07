@@ -24,11 +24,12 @@ export default class ZPhraseView extends Component {
   }
 /* eslint-disable */
   render () {
+    const bottomHeight = this.props.isIphoneX ? 40 : 0
     return (
       <ScrollView
         ref="scrollView"
         horizontal={true}
-        style={{ height: 45, backgroundColor: '#333332', borderTopWidth: 2, borderColor: '#FB6964', borderRadius: 5 }}
+        style={{ height: 45, bottom: bottomHeight, backgroundColor: '#333332', borderTopWidth: 2, borderColor: '#FB6964', borderRadius: 5 }}
         onContentSizeChange={(contentWidth, contentHeight) => {this.refs.scrollView.scrollToEnd({animated: true})}}>
         <View style={{flex: 1, flexDirection: 'row', flexWrap: 'wrap'}}>
           { this.phrase() }

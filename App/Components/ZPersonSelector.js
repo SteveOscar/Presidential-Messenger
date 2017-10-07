@@ -74,8 +74,9 @@ export default class ZPersonSelector extends Component {
   }
 /* eslint-disable */
   render () {
+    const topMargin = this.props.isIphoneX ? (Metrics.screenWidth / 12) : 15
     return (
-      <ScrollView ref="scrollView" horizontal={true} style={{ height: 100, backgroundColor: '#333332', marginTop: 15 }}>
+      <ScrollView ref="scrollView" horizontal={true} style={{ height: 100, backgroundColor: '#333332', marginTop: topMargin }}>
         <View style={{flex: 1, flexDirection: 'row', flexWrap: 'wrap',  justifyContent: 'center', width: Metrics.screenWidth}}>
           { this.people() }
         </View>
