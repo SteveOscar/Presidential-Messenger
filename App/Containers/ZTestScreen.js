@@ -14,6 +14,9 @@ import Icon4 from 'react-native-vector-icons/Entypo'
 // Styles
 import styles from './Styles/ZTestScreenStyles'
 
+import { NativeModules } from 'react-native'
+const { InAppUtils } = NativeModules
+
 // Import the react-native-sound module
 const Sound = require('react-native-sound')
 
@@ -44,6 +47,10 @@ const Words = {
   }
 }
 
+const products = [
+   'com.stevenolson.presidentialmessenger',
+];
+
 export default class ZTestScreen extends React.Component {
   constructor (props) {
     super(props)
@@ -69,6 +76,9 @@ export default class ZTestScreen extends React.Component {
 
   componentDidMount () {
     this.getData()
+    InAppUtils.loadProducts(products, (error, products) => {
+      debugger
+    });
   }
 
   async getData (context) {
