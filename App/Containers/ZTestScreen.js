@@ -65,7 +65,8 @@ export default class ZTestScreen extends React.Component {
       fileNames: [],
       showLoadPhrases: false,
       showHelpHeight: 0,
-      showHelp: false
+      showHelp: false,
+      potusMode: false
     }
   }
 
@@ -76,9 +77,19 @@ export default class ZTestScreen extends React.Component {
 
   componentDidMount () {
     this.getData()
-    InAppUtils.loadProducts(products, (error, products) => {
-      debugger
-    });
+    this.checkPurchaseState()
+  }
+
+  async checkPurchaseState() {
+    const values = await AsyncStorage.getAllKeys()
+    if(values.indexOf('potusMode') == -1) {
+      await AsyncStorage.setItem('potusMode', 'disabled')
+    }
+    const potusMode = await AsyncStorage.getItem('potusMode')
+    const potusModeEnabled = potusMode == 'enabled'
+    this.setState({ potusMode: potusModeEnabled })
+    debugger
+
   }
 
   async getData (context) {
@@ -275,7 +286,17 @@ export default class ZTestScreen extends React.Component {
   }
 
   loadPhrases () {
-    this.setState({ showLoadPhrases: true })
+    InAppUtils.loadProducts(products, (error, products) => {
+      console.log('Load products result: ', products)
+    });
+    InAppUtils.canMakePayments((canMakePayments) => {
+      if(canMakePayments) { Alert.alert('IAP enabled'); }
+      if(!canMakePayments) {
+          Alert.alert('Not Allowed', 'This device is not allowed to make purchases. Please check restrictions on device');
+        }
+      })
+
+    // this.setState({ showLoadPhrases: true })
   }
 
   playingCustomPhrase () {
