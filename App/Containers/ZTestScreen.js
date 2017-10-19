@@ -88,8 +88,28 @@ export default class ZTestScreen extends React.Component {
     const potusMode = await AsyncStorage.getItem('potusMode')
     const potusModeEnabled = potusMode == 'enabled'
     this.setState({ potusMode: potusModeEnabled })
-    debugger
+  }
 
+  async restorePurchases() {
+    InAppUtils.restorePurchases((error, response) => {
+       if(error) {
+          Alert.alert('itunes Error', 'Could not connect to itunes store.');
+       } else {
+          Alert.alert('Restore Successful', 'Successfully restores all your purchases.');
+
+          if (response.length === 0) {
+            Alert.alert('No Purchases', "We didn't find any purchases to restore.");
+            return;
+          }
+
+          response.forEach((purchase) => {
+            Alert.alert('Purchase found', purchase);
+            if (purchase.productIdentifier === 'com.xyz.abc') {
+              // Handle purchased product.
+            }
+          });
+       }
+    });
   }
 
   async getData (context) {
@@ -286,15 +306,29 @@ export default class ZTestScreen extends React.Component {
   }
 
   loadPhrases () {
-    InAppUtils.loadProducts(products, (error, products) => {
-      console.log('Load products result: ', products)
-    });
-    InAppUtils.canMakePayments((canMakePayments) => {
-      if(canMakePayments) { Alert.alert('IAP enabled'); }
-      if(!canMakePayments) {
-          Alert.alert('Not Allowed', 'This device is not allowed to make purchases. Please check restrictions on device');
-        }
-      })
+
+    if(!this.state.potusMode) {
+      InAppUtils.loadProducts(products, (error, products) => {
+        console.log('Load products result: ', products)
+        product = products[0]
+        Alert.alert(
+          'Potus Mode Required',
+          `Unlocks all restricted words and the ability to save and load recorded phrases. Price: ${product.priceString}/month`,
+          [
+            {text: 'Get Potus Mode', onPress: () => console.log('But Pressed')},
+            {text: 'Maybe Later', onPress: () => console.log('Cancel Pressed'), style: 'cancel'}
+          ],
+          { cancelable: false }
+        )
+      });
+    }
+
+    // InAppUtils.canMakePayments((canMakePayments) => {
+    //   if(canMakePayments) { Alert.alert('IAP enabled'); }
+    //   if(!canMakePayments) {
+    //       Alert.alert('Not Allowed', 'This device is not allowed to make purchases. Please check restrictions on device');
+    //     }
+    //   })
 
     // this.setState({ showLoadPhrases: true })
   }
