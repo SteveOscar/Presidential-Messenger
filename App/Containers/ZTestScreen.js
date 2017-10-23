@@ -25,6 +25,7 @@ Sound.setCategory('Playback')
 const People = [ { name: 'trump', color: '#FB6964' }, { name: 'obama', color: '#71abf2' } ]
 const { height, width } = Dimensions.get('window')
 // const { width } = Dimensions.get('window')
+const check = require('isiphonex');
 
 const Words = {
   obama: {
@@ -78,6 +79,7 @@ export default class ZTestScreen extends React.Component {
   componentDidMount () {
     this.getData()
     this.checkPurchaseState()
+    console.log('IPHONEX PACKAGE TEST: isPhoneX?: ', check.isIphoneX())
   }
 
   async checkPurchaseState() {
@@ -315,12 +317,14 @@ export default class ZTestScreen extends React.Component {
           'Potus Mode Required',
           `Unlocks all restricted words and the ability to save and load recorded phrases. Price: ${product.priceString}/month`,
           [
-            {text: 'Get Potus Mode', onPress: () => console.log('But Pressed')},
+            {text: 'Buy with 1 month free trial', onPress: () => this.buyProduct(product)},
             {text: 'Maybe Later', onPress: () => console.log('Cancel Pressed'), style: 'cancel'}
           ],
           { cancelable: false }
         )
       });
+    } else {
+      alert('POTUS MODE ENABLED!!!')
     }
 
     // InAppUtils.canMakePayments((canMakePayments) => {
@@ -331,6 +335,22 @@ export default class ZTestScreen extends React.Component {
     //   })
 
     // this.setState({ showLoadPhrases: true })
+  }
+
+  buyProduct(product) {
+    var productIdentifier = product.identifier
+    InAppUtils.purchaseProduct(productIdentifier, (error, response) => {
+       if(response && response.productIdentifier) {
+          debugger
+          Alert.alert('Purchase Successful', 'Your Transaction ID is ' + response.transactionIdentifier);
+          // setState of potusmode true
+          AsyncStorage.setItem('potusMode', 'enabled')
+          this.setState({ potusMode: true })
+       } else if(error) {
+         console.log(error.message)
+         alert(error.message)
+       }
+    });
   }
 
   playingCustomPhrase () {
