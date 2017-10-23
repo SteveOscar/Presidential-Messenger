@@ -223,6 +223,19 @@ export default class ZTestScreen extends React.Component {
     }
   }
 
+  renderLoadText() {
+    const { potusMode } = this.state
+    if(!potusMode) {
+      return (
+        <Text style={{color: '#333332'}}>Load  <Icon name='lock' size={15} /></Text>
+      )
+    } else {
+      return (
+        'Load'
+      )
+    }
+  }
+
   render () {
     const { phrase, showHelp } = this.state
     const navButtonColors = phrase.length ? '#333332' : 'grey'
@@ -281,7 +294,7 @@ export default class ZTestScreen extends React.Component {
               onPress={this.loadPhrases.bind(this)}
               style={{flex: 3, alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
               <Text style={{color: '#333332'}}><Icon name='save' size={40} /></Text>
-              <Text style={{color: '#333332', fontSize: 12, fontWeight: 'bold'}}>Load</Text>
+              <Text style={{color: '#333332', fontSize: 12, fontWeight: 'bold'}}>{this.renderLoadText()}</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
@@ -325,6 +338,7 @@ export default class ZTestScreen extends React.Component {
       });
     } else {
       alert('POTUS MODE ENABLED!!!')
+      this.setState({ showLoadPhrases: true })
     }
 
     // InAppUtils.canMakePayments((canMakePayments) => {
