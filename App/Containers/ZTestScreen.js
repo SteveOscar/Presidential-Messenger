@@ -35,7 +35,7 @@ const Words = {
     Verbs: ['concerns', 'have', 'steal', 'impact', 'call', 'like', 'read', 'avoid', 'doubt', 'contributed', 'lost', 'swirl', 'were', 'help', 'rise_up', 'start', 'campaign', 'leave', 'financing', 'think', 'races', 'hearing', 'felt', 'support', 'was', 'feel', 'had', 'spending', 'benefit', 'challenge', 'are', 'is', 'promote', 'give', 'made', 'has', 'party', 'talk', 'trust', 'builds'],
     Time: ['months', 'before', 'decade', 'among', 'now', 'after', 'always', 'twelve', 'forty_five', 'immediately', 'where'],
     Misc: ['and', 'on', 'in', 'a', 'maybe', 'of', 'by', 'to', 'the', 'any', 'if', 'at', 'actually', 'from', 'well_uh', 'or', 'dont', 'that', 'then', 'but', 'ughhh', 'for', 'so', 'who', 'because', 'wellll'],
-    Vulgarity: ['bitch', 'mother_fucker', 'and_and', 'trumped_up', 'fake_news', 'mother_fuckers', 'sorry_ass', 'shit', 'damn_fries', 'whos_ass', 'noo', 'pussy', 'goddam', 'whatever']
+    Bonus: ['bitch', 'mother_fucker', 'and_and', 'trumped_up', 'fake_news', 'mother_fuckers', 'sorry_ass', 'shit', 'damn_fries', 'whos_ass', 'noo', 'pussy', 'goddam', 'whatever']
   },
   trump: {
     Who: ['mexico', 'chicago', 'president_obama', 'abe_lincoln', 'the_cia', 'others', 'somebody', 'you', 'president', 'they', 'you2', 'afghanistan', 'democrats', 'women', 'people', 'fox', 'sean'],
@@ -44,7 +44,7 @@ const Words = {
     Verbs: ['vote', 'spoke', 'work', 'does', 'shot', 'help', 'approve', 'forgot', 'did', 'demean'],
     Time: ['two', 'now', 'six', 'trillion', 'before', 'years', 'never', 'here'],
     Misc: ['of', 'from', 'yes', 'without', 'who', 'to', 'wow', 'in'],
-    Vulgarity: ['waterboarding']
+    Bonus: ['waterboarding']
   }
 }
 
@@ -237,7 +237,7 @@ export default class ZTestScreen extends React.Component {
   }
 
   render () {
-    const { phrase, showHelp } = this.state
+    const { phrase, showHelp, potusMode } = this.state
     const navButtonColors = phrase.length ? '#333332' : 'grey'
     const nextColor = phrase.length ? '#1352A2' : 'grey'
     const isIphoneX = (height / width).toFixed(2) == 2.17
@@ -267,6 +267,7 @@ export default class ZTestScreen extends React.Component {
             updateCategory={this.updateCategory}
             selected={this.state.category}
             myContext={this}
+            potusMode={potusMode}
           />
           <ZGridContainer
             words={Words[this.state.person.name][this.state.category]}
@@ -325,16 +326,23 @@ export default class ZTestScreen extends React.Component {
     if(!this.state.potusMode) {
       InAppUtils.loadProducts(products, (error, products) => {
         console.log('Load products result: ', products)
-        product = products[0]
-        Alert.alert(
-          'Potus Mode Required',
-          `Unlocks all restricted words and the ability to save and load recorded phrases. Price: ${product.priceString}/month`,
-          [
-            {text: 'Buy with 1 month free trial', onPress: () => this.buyProduct(product)},
-            {text: 'Maybe Later', onPress: () => console.log('Cancel Pressed'), style: 'cancel'}
-          ],
-          { cancelable: false }
-        )
+        product = products ? products[0] : null
+        if(!product) {
+          Alert.alert(
+            'This feature is locked',
+            'Unable to connect to iTunes, check your connection or try restarting the app'
+          )
+        } else {
+          Alert.alert(
+            'Potus Mode Required',
+            `Unlocks all restricted words and the ability to save and load recorded phrases. Price: ${product.priceString}/month`,
+            [
+              {text: 'Buy with 1 month free trial', onPress: () => this.buyProduct(product)},
+              {text: 'Maybe Later', onPress: () => console.log('Cancel Pressed'), style: 'cancel'}
+            ],
+            { cancelable: false }
+          )
+        }
       });
     } else {
       alert('POTUS MODE ENABLED!!!')
