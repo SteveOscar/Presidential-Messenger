@@ -12,8 +12,8 @@ export default class ZGridContainer extends Component {
       return (
         <TouchableOpacity style={styles.wordButton2}
           key={i}
-          onPress={() => this.props.onWordPress(word, this.props.myContext)}
-          onLongPress={() => this.props.onAddWord(word, this.props.myContext)} >
+          onPress={() => this.props.onWordPress(word)}
+          onLongPress={() => this.props.onAddWord(word)} >
           <Text style={[styles.wordText, { color: 'white' }]}>{word.replace(/_/g, ' ')}</Text>
         </TouchableOpacity>
       )

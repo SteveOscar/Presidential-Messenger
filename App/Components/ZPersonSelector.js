@@ -56,7 +56,7 @@ export default class ZPersonSelector extends Component {
       return (
         <TouchableOpacity style={[styles.personButton, { backgroundColor: 'rgba(0, 0, 0, 0)', shadowColor: borderColor }]}
           key={i}
-          onPress={() => this.props.onPersonPress(selectedPerson, this.props.myContext)} >
+          onPress={() => this.props.onPersonPress(selectedPerson)} >
           <View>
             <Animated.Image
               source={imageFile}

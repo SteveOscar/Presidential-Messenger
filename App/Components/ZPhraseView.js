@@ -14,8 +14,8 @@ export default class ZPhraseView extends Component {
       return (
         <TouchableOpacity style={[styles.phraseButton, { width: width, borderColor: '#333332' }]}
           key={i}
-          onPress={() => this.props.onWordPress(wordData, this.props.myContext)}
-          onLongPress={() => this.props.deleteWord(word, i, this.props.myContext)} >
+          onPress={() => this.props.onWordPress(wordData)}
+          onLongPress={() => this.props.deleteWord(word, i)} >
           <Text style={[styles.wordText, { color: '#F0F1EE', marginTop: -5 }]}>{word.replace(/_/g, ' ')}</Text>
           <Text style={[styles.identifierText, {color: wordData.person.color}]}>{wordData.person.name.toUpperCase()}</Text>
         </TouchableOpacity>

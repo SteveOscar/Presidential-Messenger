@@ -38,13 +38,13 @@ const Words = {
     Bonus: ['bitch', 'mother_fucker', 'and_and', 'trumped_up', 'fake_news', 'mother_fuckers', 'sorry_ass', 'shit', 'damn_fries', 'whos_ass', 'noo', 'pussy', 'goddam', 'whatever']
   },
   trump: {
-    Who: ['mexico', 'chicago', 'president_obama', 'abe_lincoln', 'the_cia', 'others', 'somebody', 'you', 'president', 'they', 'you2', 'afghanistan', 'democrats', 'women', 'people', 'fox', 'sean'],
-    What: ['primaries', 'bread', 'dollars', 'mess', 'college', 'work', 'audience', 'intelligence', 'problem', 'catastrophe', 'victory', 'states'],
-    Descriptions: ['correct', 'phenomenal', 'total', 'absolutely', 'fabulous', 'approved', 'smarter', 'unfairly', 'legitamite', 'illegal', 'strongly', 'dead'],
-    Verbs: ['vote', 'spoke', 'work', 'does', 'shot', 'help', 'approve', 'forgot', 'did', 'demean'],
+    Who: ['mexico', 'ISIS', 'chicago', 'president_obama', 'abe_lincoln', 'the_cia', 'others', 'somebody', 'you', 'president', 'they', 'you2', 'afghanistan', 'democrats', 'women', 'people', 'fox', 'sean'],
+    What: ['primaries', 'terror', 'bread', 'dollars', 'mess', 'college', 'work', 'audience', 'intelligence', 'problem', 'catastrophe', 'victory', 'states'],
+    Descriptions: ['correct', 'tremendous', 'legally', 'phenomenal', 'total', 'absolutely', 'fabulous', 'approved', 'smarter', 'unfairly', 'legitamite', 'illegal', 'strongly', 'dead'],
+    Verbs: ['vote', 'think', 'spoke', 'work', 'does', 'shot', 'help', 'approve', 'forgot', 'did', 'demean'],
     Time: ['two', 'now', 'six', 'trillion', 'before', 'years', 'never', 'here'],
-    Misc: ['of', 'from', 'yes', 'without', 'who', 'to', 'wow', 'in'],
-    Bonus: ['waterboarding']
+    Misc: ['of', 'and', 'but', 'without', 'from', 'yes', 'without', 'who', 'to', 'wow', 'in'],
+    Bonus: ['waterboarding', 'at_all', 'heee']
   }
 }
 
@@ -99,7 +99,7 @@ export default class ZTestScreen extends React.Component {
     if(canMakePayments) {
       InAppUtils.purchaseProduct(productIdentifier, (error, response) => {
          if(response && response.productIdentifier) {
-            Alert.alert('Purchase Successful', 'Your Transaction ID is ' + response.transactionIdentifier);
+            // Alert.alert('Purchase Successful', 'Your Transaction ID is ' + response.transactionIdentifier);
             // setState of potusmode true
             AsyncStorage.setItem('potusMode', 'enabled')
             this.setState({ potusMode: true })
@@ -148,11 +148,11 @@ export default class ZTestScreen extends React.Component {
       } else {
         Alert.alert(
           'Potus Mode Required',
-          `Unlocks all restricted words and the ability to save and load recorded phrases. Price: ${product.priceString}/month`,
+          `Unlocks all restricted words and the ability to save and load recorded phrases. One week free trial, and then: ${product.priceString}/month`,
           [
-            {text: 'Buy with 1 month free trial', onPress: () => this.buyProduct(product)},
+            {text: 'Buy with 1 week free trial', onPress: () => this.buyProduct(product), style: 'destructive'},
             {text: 'Restore previous purchase', onPress: () => this.restorePurchases()},
-            {text: 'Maybe Later', onPress: () => console.log('Cancel Pressed'), style: 'cancel'}
+            {text: 'Maybe Later', onPress: () => console.log('Cancel Pressed')}
           ],
           { cancelable: false }
         )
@@ -190,8 +190,8 @@ export default class ZTestScreen extends React.Component {
       return (
         <ZPhrasePlayer
           phrase={this.state.phrase}
-          deleteWord={this.deleteWord}
-          onWordPress={this.phraseWordPressed}
+          deleteWord={this.deleteWord.bind(this)}
+          onWordPress={this.phraseWordPressed.bind(this)}
           selected={this.state.selected}
           myContext={this}
           closeWindow={this.closePhraseWindow}
@@ -297,15 +297,10 @@ export default class ZTestScreen extends React.Component {
           {this.renderPhrasePlayer()}
           {this.renderPhraseLoader()}
 
-          {/* <View style={styles.section} >
-            <Image source={Images.ready} />
-          </View> */}
-
           <ZPersonSelector
             person={this.state.person.name}
             people={People}
-            onPersonPress={this.personPressed}
-            myContext={this}
+            onPersonPress={this.personPressed.bind(this)}
             isIphoneX={isIphoneX}
           />
 
@@ -317,17 +312,15 @@ export default class ZTestScreen extends React.Component {
           />
           <ZGridContainer
             words={Words[this.state.person.name][this.state.category]}
-            onWordPress={this.wordPressed}
-            onAddWord={this.addWord}
-            myContext={this}
+            onWordPress={this.wordPressed.bind(this)}
+            onAddWord={this.addWord.bind(this)}
             potusMode={potusMode}
             category={this.state.category}
           />
           <ZPhraseView
             phrase={this.state.phrase}
-            deleteWord={this.deleteWord}
-            onWordPress={this.phraseWordPressed}
-            myContext={this}
+            deleteWord={this.deleteWord.bind(this)}
+            onWordPress={this.phraseWordPressed.bind(this)}
             isIphoneX={isIphoneX}
           />
           <View style={{height: bottomHeight, bottom: -85, position: 'absolute', width: '100%', backgroundColor: '#FB6964', zIndex: 9, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', flex: 1}}>
@@ -407,33 +400,33 @@ export default class ZTestScreen extends React.Component {
     this.setState({ showHelp: !prev })
   }
 
-  personPressed (person, context) {
-    context.setState({ person: person })
+  personPressed (person) {
+    this.setState({ person: person })
   }
 
-  wordPressed (word, context) {
-    let wordData = { word: word, person: { name: context.state.person.name } }
-    context.playSound(wordData)
+  wordPressed (word) {
+    let wordData = { word: word, person: { name: this.state.person.name } }
+    this.playSound(wordData)
   }
 
-  phraseWordPressed (wordData, context) {
-    context.playSound(wordData)
+  phraseWordPressed (wordData) {
+    this.playSound(wordData)
   }
 
-  addWord (word, context) {
-    let originalPhrase = context.state.phrase
-    originalPhrase.push({ word: word, person: context.state.person })
+  addWord (word) {
+    let originalPhrase = this.state.phrase
+    originalPhrase.push({ word: word, person: this.state.person })
     console.log('Phrase state: ', originalPhrase)
-    context.setState({ phrase: originalPhrase })
+    this.setState({ phrase: originalPhrase })
   }
 
-  deleteWord (word, index, context) {
+  deleteWord (word, index) {
     Alert.alert(
       'Remove this word?',
       word,
       [
         {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
-        {text: 'OK', onPress: function () { context.deleteWordConfirmed(word, index) }}
+        {text: 'OK', onPress: function () { this.deleteWordConfirmed(word, index) }}
       ],
       { cancelable: false }
     )
