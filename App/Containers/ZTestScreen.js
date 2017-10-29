@@ -92,24 +92,45 @@ export default class ZTestScreen extends React.Component {
     this.setState({ potusMode: potusModeEnabled })
   }
 
+  buyProduct(product) {
+    var productIdentifier = product.identifier
+    InAppUtils.canMakePayments((canMakePayments) => {
+    if(canMakePayments) {
+      InAppUtils.purchaseProduct(productIdentifier, (error, response) => {
+         if(response && response.productIdentifier) {
+            Alert.alert('Purchase Successful', 'Your Transaction ID is ' + response.transactionIdentifier);
+            // setState of potusmode true
+            AsyncStorage.setItem('potusMode', 'enabled')
+            this.setState({ potusMode: true })
+         } else if(error) {
+           console.log(error.message)
+           alert(error.message)
+         }
+      })
+    }
+    if(!canMakePayments) {
+        Alert.alert('Not Allowed', 'This device is not allowed to make purchases. Please check your iTunes account.');
+      }
+    })
+  }
+
   async restorePurchases() {
     InAppUtils.restorePurchases((error, response) => {
        if(error) {
-          Alert.alert('itunes Error', 'Could not connect to itunes store.');
+          Alert.alert('itunes Error', 'Could not connect to itunes store.')
        } else {
-          Alert.alert('Restore Successful', 'Successfully restores all your purchases.');
-
           if (response.length === 0) {
-            Alert.alert('No Purchases', "We didn't find any purchases to restore.");
-            return;
+            Alert.alert('No Purchases', "We didn't find any purchases to restore.")
+            return
           }
 
-          response.forEach((purchase) => {
-            Alert.alert('Purchase found', purchase);
-            if (purchase.productIdentifier === 'com.xyz.abc') {
-              // Handle purchased product.
+          response.some((purchase) => {
+            if (purchase.productIdentifier === 'com.stevenolson.presidentialmessenger') {
+              this.setState({ potusMode: true })
+              Alert.alert('Successful', "Potus Mode has been restored!")
+              return true
             }
-          });
+          }, this)
        }
     });
   }
@@ -338,6 +359,7 @@ export default class ZTestScreen extends React.Component {
             `Unlocks all restricted words and the ability to save and load recorded phrases. Price: ${product.priceString}/month`,
             [
               {text: 'Buy with 1 month free trial', onPress: () => this.buyProduct(product)},
+              {text: 'Restore previous purchase', onPress: () => this.restorePurchases()},
               {text: 'Maybe Later', onPress: () => console.log('Cancel Pressed'), style: 'cancel'}
             ],
             { cancelable: false }
@@ -345,34 +367,8 @@ export default class ZTestScreen extends React.Component {
         }
       });
     } else {
-      alert('POTUS MODE ENABLED!!!')
       this.setState({ showLoadPhrases: true })
     }
-
-    // InAppUtils.canMakePayments((canMakePayments) => {
-    //   if(canMakePayments) { Alert.alert('IAP enabled'); }
-    //   if(!canMakePayments) {
-    //       Alert.alert('Not Allowed', 'This device is not allowed to make purchases. Please check restrictions on device');
-    //     }
-    //   })
-
-    // this.setState({ showLoadPhrases: true })
-  }
-
-  buyProduct(product) {
-    var productIdentifier = product.identifier
-    InAppUtils.purchaseProduct(productIdentifier, (error, response) => {
-       if(response && response.productIdentifier) {
-          debugger
-          Alert.alert('Purchase Successful', 'Your Transaction ID is ' + response.transactionIdentifier);
-          // setState of potusmode true
-          AsyncStorage.setItem('potusMode', 'enabled')
-          this.setState({ potusMode: true })
-       } else if(error) {
-         console.log(error.message)
-         alert(error.message)
-       }
-    });
   }
 
   playingCustomPhrase () {
