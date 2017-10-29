@@ -89,7 +89,8 @@ export default class ZTestScreen extends React.Component {
     }
     const potusMode = await AsyncStorage.getItem('potusMode')
     const potusModeEnabled = potusMode == 'enabled'
-    this.setState({ potusMode: potusModeEnabled })
+    this.setState({ potusMode: false })
+    // this.setState({ potusMode: potusModeEnabled })
   }
 
   buyProduct(product) {
@@ -114,7 +115,7 @@ export default class ZTestScreen extends React.Component {
     })
   }
 
-  async restorePurchases() {
+  restorePurchases() {
     InAppUtils.restorePurchases((error, response) => {
        if(error) {
           Alert.alert('itunes Error', 'Could not connect to itunes store.')
@@ -132,7 +133,31 @@ export default class ZTestScreen extends React.Component {
             }
           }, this)
        }
-    });
+    })
+  }
+
+  offerPurchase() {
+    InAppUtils.loadProducts(products, (error, products) => {
+      console.log('Load products result: ', products)
+      product = products ? products[0] : null
+      if(!product) {
+        Alert.alert(
+          'This feature is locked',
+          'Unable to connect to iTunes, check your connection or try restarting the app'
+        )
+      } else {
+        Alert.alert(
+          'Potus Mode Required',
+          `Unlocks all restricted words and the ability to save and load recorded phrases. Price: ${product.priceString}/month`,
+          [
+            {text: 'Buy with 1 month free trial', onPress: () => this.buyProduct(product)},
+            {text: 'Restore previous purchase', onPress: () => this.restorePurchases()},
+            {text: 'Maybe Later', onPress: () => console.log('Cancel Pressed'), style: 'cancel'}
+          ],
+          { cancelable: false }
+        )
+      }
+    })
   }
 
   async getData (context) {
@@ -285,7 +310,7 @@ export default class ZTestScreen extends React.Component {
           />
 
           <ZCategorySelector
-            updateCategory={this.updateCategory}
+            updateCategory={this.updateCategory.bind(this)}
             selected={this.state.category}
             myContext={this}
             potusMode={potusMode}
@@ -295,6 +320,8 @@ export default class ZTestScreen extends React.Component {
             onWordPress={this.wordPressed}
             onAddWord={this.addWord}
             myContext={this}
+            potusMode={potusMode}
+            category={this.state.category}
           />
           <ZPhraseView
             phrase={this.state.phrase}
@@ -343,29 +370,8 @@ export default class ZTestScreen extends React.Component {
   }
 
   loadPhrases () {
-
     if(!this.state.potusMode) {
-      InAppUtils.loadProducts(products, (error, products) => {
-        console.log('Load products result: ', products)
-        product = products ? products[0] : null
-        if(!product) {
-          Alert.alert(
-            'This feature is locked',
-            'Unable to connect to iTunes, check your connection or try restarting the app'
-          )
-        } else {
-          Alert.alert(
-            'Potus Mode Required',
-            `Unlocks all restricted words and the ability to save and load recorded phrases. Price: ${product.priceString}/month`,
-            [
-              {text: 'Buy with 1 month free trial', onPress: () => this.buyProduct(product)},
-              {text: 'Restore previous purchase', onPress: () => this.restorePurchases()},
-              {text: 'Maybe Later', onPress: () => console.log('Cancel Pressed'), style: 'cancel'}
-            ],
-            { cancelable: false }
-          )
-        }
-      });
+      this.offerPurchase()
     } else {
       this.setState({ showLoadPhrases: true })
     }
@@ -439,8 +445,10 @@ export default class ZTestScreen extends React.Component {
     this.setState({ phrase: phrase })
   }
 
-  updateCategory (cat, context) {
-    context.setState({ category: cat })
+  updateCategory (cat) {
+    const { potusMode } = this.state
+    this.setState({ category: cat })
+    if(!potusMode && (cat === 'Bonus')) { this.offerPurchase() }
   }
 
   playSound (wordData, recordingTrigger) {

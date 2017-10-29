@@ -37,7 +37,7 @@ export default class ZCategorySelector extends Component {
       const color = this.props.selected === cat ? '#FB6964' : '#F0F1EE'
       const text = (cat === 'Bonus') ? this.renderCat(cat) : cat
       return (
-        <TouchableOpacity style={[styles.categoryButton, { backgroundColor: color }]} key={i} onPress={() => this.props.updateCategory(cat, this.props.myContext)} >
+        <TouchableOpacity style={[styles.categoryButton, { backgroundColor: color }]} key={i} onPress={() => this.props.updateCategory(cat)} >
           <Text style={styles.wordText}>{text}</Text>
         </TouchableOpacity>
       )
