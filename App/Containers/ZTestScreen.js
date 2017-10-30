@@ -89,8 +89,8 @@ export default class ZTestScreen extends React.Component {
     }
     const potusMode = await AsyncStorage.getItem('potusMode')
     const potusModeEnabled = potusMode == 'enabled'
-    this.setState({ potusMode: true })
-    // this.setState({ potusMode: potusModeEnabled })
+    // this.setState({ potusMode: true })
+    this.setState({ potusMode: potusModeEnabled })
   }
 
   buyProduct(product) {
@@ -392,7 +392,16 @@ export default class ZTestScreen extends React.Component {
   }
 
   clearPhrase () {
-    this.setState({ phrase: [], selected: null })
+    const component = this
+    Alert.alert(
+      'Hey',
+      'Clear the word bucket?',
+      [
+        {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+        {text: 'OK', onPress: function () { component.setState({ phrase: [], selected: null }) }}
+      ],
+      { cancelable: false }
+    )
   }
 
   toggleHelp () {
@@ -421,12 +430,13 @@ export default class ZTestScreen extends React.Component {
   }
 
   deleteWord (word, index) {
+    const component = this
     Alert.alert(
       'Remove this word?',
       word,
       [
         {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
-        {text: 'OK', onPress: function () { this.deleteWordConfirmed(word, index) }}
+        {text: 'OK', onPress: function () { component.deleteWordConfirmed(word, index) }}
       ],
       { cancelable: false }
     )

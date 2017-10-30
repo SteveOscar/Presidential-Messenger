@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import { View, ScrollView, Text, TouchableOpacity } from 'react-native'
+import { View, ScrollView, Text, TouchableOpacity, Dimensions } from 'react-native'
 import styles from './Styles/ZStyles'
+import Icon4 from 'react-native-vector-icons/Entypo'
 
-// const { height } = Dimensions.get('window')
+const { width } = Dimensions.get('window')
 
 export default class ZPhraseView extends Component {
   phrase () {
@@ -22,9 +23,18 @@ export default class ZPhraseView extends Component {
       )
     })
   }
+
+  renderBucket() {
+    return (
+      <View style={{ justifyContent: 'center', opacity: .7, width: width }}>
+        <Text style={styles.bucketHelp}><Icon4 name='bucket' size={15} color={'#1352A2'}/>  Press and hold words too add to phrase bucket  <Icon4 name='bucket' size={15} color={'#FB6964'}/></Text>
+      </View>
+    )
+  }
 /* eslint-disable */
   render () {
     const bottomHeight = this.props.isIphoneX ? 40 : 0
+    const phraseRendered = this.phrase()
     return (
       <ScrollView
         ref="scrollView"
@@ -32,7 +42,7 @@ export default class ZPhraseView extends Component {
         style={{ height: 45, bottom: bottomHeight, backgroundColor: '#333332', borderTopWidth: 2, borderColor: '#FB6964', borderRadius: 5 }}
         onContentSizeChange={(contentWidth, contentHeight) => {this.refs.scrollView.scrollToEnd({animated: true})}}>
         <View style={{flex: 1, flexDirection: 'row', flexWrap: 'wrap'}}>
-          { this.phrase() }
+          { phraseRendered.length ? phraseRendered : this.renderBucket() }
         </View>
       </ScrollView>
     )

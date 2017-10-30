@@ -129,5 +129,12 @@ export default StyleSheet.create({
     shadowColor: 'red',
     elevation: 1,
     alignSelf: 'center'
+  },
+  bucketHelp: {
+    color: 'white',
+    textAlign: 'center',
+    alignSelf: 'center',
+    fontSize: 13,
+    fontFamily: 'AppleSDGothicNeo-Bold'
   }
 })
