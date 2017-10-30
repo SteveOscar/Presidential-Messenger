@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, Alert, TouchableOpacity, AsyncStorage, Dimensions, StatusBar } from 'react-native'
+import { Text, View, Alert, TouchableOpacity, AsyncStorage, Dimensions, StatusBar, ActivityIndicator } from 'react-native'
 import ZGridContainer from '../Components/ZGridContainer'
 import ZCategorySelector from '../Components/ZCategorySelector'
 import ZPhraseView from '../Components/ZPhraseView'
@@ -67,7 +67,8 @@ export default class ZTestScreen extends React.Component {
       showLoadPhrases: false,
       showHelpHeight: 0,
       showHelp: false,
-      potusMode: false
+      potusMode: false,
+      animating: true
     }
   }
 
@@ -251,6 +252,25 @@ export default class ZTestScreen extends React.Component {
     }
   }
 
+  renderSpinner () {
+    const { animating } = this.state
+    if(animating) {
+      return(
+        <View style={{alignItems: 'center', justifyContent: 'center', width: width, height: height, backgroundColor: 'transparent', position: 'absolute', zIndex: 999999}}>
+          <ActivityIndicator
+           animating = {animating}
+           color = '#bc2b78'
+           size = "large"
+           style = {styles.activityIndicator}/>
+        </View>
+      )
+    } else {
+      return (
+        <View/>
+      )
+    }
+  }
+
   renderPhraseLoader () {
     if (this.state.showLoadPhrases) {
       return (
@@ -296,6 +316,7 @@ export default class ZTestScreen extends React.Component {
           {this.renderHelp()}
           {this.renderPhrasePlayer()}
           {this.renderPhraseLoader()}
+          {this.renderSpinner()}
 
           <ZPersonSelector
             person={this.state.person.name}
