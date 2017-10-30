@@ -129,7 +129,7 @@
 		8C242AE41F674215003C69CD /* obama_relationship.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AD31F674215003C69CD /* obama_relationship.mp3 */; };
 		8C242AE61F67451E003C69CD /* obama_like.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242AE51F67451E003C69CD /* obama_like.mp3 */; };
 		8C26FABF1FA6695F00FD36AC /* trump_and.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C26FABE1FA667E600FD36AC /* trump_and.mp3 */; };
-		8C26FAC91FA673AA00FD36AC /* trump_ISIS.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C26FAC61FA671E400FD36AC /* trump_ISIS.mp3 */; };
+		8C26FAC91FA673AA00FD36AC /* trump_isis.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C26FAC61FA671E400FD36AC /* trump_isis.mp3 */; };
 		8C26FACA1FA673AC00FD36AC /* trump_at_all.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C26FAC81FA671E500FD36AC /* trump_at_all.mp3 */; };
 		8C26FACB1FA673AF00FD36AC /* trump_but.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C26FAC41FA671E300FD36AC /* trump_but.mp3 */; };
 		8C26FACC1FA673B100FD36AC /* trump_heee.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C26FAC21FA671E200FD36AC /* trump_heee.mp3 */; };
@@ -646,7 +646,7 @@
 		8C26FAC31FA671E200FD36AC /* trump_think.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_think.mp3; sourceTree = "<group>"; };
 		8C26FAC41FA671E300FD36AC /* trump_but.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_but.mp3; sourceTree = "<group>"; };
 		8C26FAC51FA671E300FD36AC /* trump_terror.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_terror.mp3; sourceTree = "<group>"; };
-		8C26FAC61FA671E400FD36AC /* trump_ISIS.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_ISIS.mp3; sourceTree = "<group>"; };
+		8C26FAC61FA671E400FD36AC /* trump_isis.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_isis.mp3; sourceTree = "<group>"; };
 		8C26FAC71FA671E400FD36AC /* trump_without.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_without.mp3; path = ../../../../Desktop/PresidentialSounds/trump_without.mp3; sourceTree = "<group>"; };
 		8C26FAC81FA671E500FD36AC /* trump_at_all.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_at_all.mp3; sourceTree = "<group>"; };
 		8C3B766E1F6EE22700DC8965 /* trump_dollars.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trump_dollars.mp3; sourceTree = "<group>"; };
@@ -1034,7 +1034,7 @@
 				8C26FAC81FA671E500FD36AC /* trump_at_all.mp3 */,
 				8C26FAC41FA671E300FD36AC /* trump_but.mp3 */,
 				8C26FAC21FA671E200FD36AC /* trump_heee.mp3 */,
-				8C26FAC61FA671E400FD36AC /* trump_ISIS.mp3 */,
+				8C26FAC61FA671E400FD36AC /* trump_isis.mp3 */,
 				8C26FAC11FA671E100FD36AC /* trump_legally.mp3 */,
 				8C26FAC51FA671E300FD36AC /* trump_terror.mp3 */,
 				8C26FAC31FA671E200FD36AC /* trump_think.mp3 */,
@@ -1958,7 +1958,7 @@
 				8CE556381F42816200C3CF96 /* obama_family.mp3 in Resources */,
 				8CE5565F1F429D1900C3CF96 /* obama_mother_fuckers.mp3 in Resources */,
 				8CE556C81F48BC9300C3CF96 /* obama_hearing.mp3 in Resources */,
-				8C26FAC91FA673AA00FD36AC /* trump_ISIS.mp3 in Resources */,
+				8C26FAC91FA673AA00FD36AC /* trump_isis.mp3 in Resources */,
 				8C242ABA1F65D7B2003C69CD /* obama_the.mp3 in Resources */,
 				8CE556621F429D1900C3CF96 /* obama_fries.mp3 in Resources */,
 				8C242A6C1F65BEDE003C69CD /* obama_to.mp3 in Resources */,
