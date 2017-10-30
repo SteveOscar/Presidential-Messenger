@@ -29,7 +29,7 @@ const check = require('isiphonex');
 
 const Words = {
   obama: {
-    Who: ['myself', 'me', 'them', 'officers', 'federal_government', 'the_cia', 'chinese', 'british', 'npr', 'her', 'the_dnc', 'somebody', 'you', 'the_koch_brothers', 'the_united_states_senate', 'chicagoans', 'democrats', 'donald_trump', 'people'],
+    Who: ['myself', 'me', 'them', 'officers', 'federal_government', 'the_CIA', 'Chinese', 'British', 'NPR', 'her', 'the_DNC', 'somebody', 'you', 'the_Koch_brothers', 'the_United_States_senate', 'Chicagoans', 'democrats', 'Donald_Trump', 'people'],
     What: ['concerns', 'relationship', 'agency', 'terrorism', 'revelation', 'vacation', 'what', 'substance', 'manipulation', 'consequence', 'climate_change', 'generation', 'races', 'presidency', 'fish_fries', 'party', 'bathrooms', 'obama_care', 'fries', 'it', 'states', 'chunks', 'challenge', 'issues', 'trust'],
     Descriptions: ['incredible', 'explicit', 'islamic', 'political', 'vulnerable', 'consitently', 'controversial', 'deep', 'passionate', 'lost', 'a_lot', 'meaningful', 'big', 'public', 'salient', 'happy', 'proud', 'complicated', 'ignorant', 'hard'],
     Verbs: ['concerns', 'have', 'steal', 'impact', 'call', 'like', 'read', 'avoid', 'doubt', 'contributed', 'lost', 'swirl', 'were', 'help', 'rise_up', 'start', 'campaign', 'leave', 'financing', 'think', 'races', 'hearing', 'felt', 'support', 'was', 'feel', 'had', 'spending', 'benefit', 'challenge', 'are', 'is', 'promote', 'give', 'made', 'has', 'party', 'talk', 'trust', 'builds'],
@@ -38,7 +38,7 @@ const Words = {
     Bonus: ['bitch', 'mother_fucker', 'and_and', 'trumped_up', 'fake_news', 'mother_fuckers', 'sorry_ass', 'shit', 'damn_fries', 'whos_ass', 'noo', 'pussy', 'goddam', 'whatever']
   },
   trump: {
-    Who: ['mexico', 'ISIS', 'chicago', 'president_obama', 'abe_lincoln', 'the_cia', 'others', 'somebody', 'you', 'president', 'they', 'you2', 'afghanistan', 'democrats', 'women', 'people', 'fox', 'sean'],
+    Who: ['Mexico', 'ISIS', 'Chicago', 'president_Obama', 'Abe_Lincoln', 'the_CIA', 'others', 'somebody', 'you', 'president', 'they', 'you2', 'Afghanistan', 'democrats', 'women', 'people', 'fox', 'Sean'],
     What: ['primaries', 'terror', 'bread', 'dollars', 'mess', 'college', 'work', 'audience', 'intelligence', 'problem', 'catastrophe', 'victory', 'states'],
     Descriptions: ['correct', 'tremendous', 'legally', 'phenomenal', 'total', 'absolutely', 'fabulous', 'approved', 'smarter', 'unfairly', 'legitamite', 'illegal', 'strongly', 'dead'],
     Verbs: ['vote', 'think', 'spoke', 'work', 'does', 'shot', 'help', 'approve', 'forgot', 'did', 'demean'],
@@ -451,7 +451,7 @@ export default class ZTestScreen extends React.Component {
       return
     }
     const person = wordData.person.name
-    const word = wordData.word
+    const word = wordData.word.toLowerCase()
     // console.log('Playing ', `${person}_${word}.mp3`)
     const file = `${person}_${word}.mp3`
     const click = new Sound(file, Sound.MAIN_BUNDLE, (error) => {

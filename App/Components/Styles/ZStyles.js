@@ -7,12 +7,13 @@ const calcWidth = (width / 3) - 4
 export default StyleSheet.create({
   wordText: {
     fontFamily: Fonts.type.base,
-    fontSize: 14,
-    fontWeight: 'bold'
+    fontSize: 13,
+    fontWeight: 'bold',
+    textAlign: 'center'
   },
   wordButton: {
     width: calcWidth,
-    height: 35,
+    height: 39,
     backgroundColor: '#FB6964',
     margin: 2,
     alignItems: 'center',
@@ -29,7 +30,7 @@ export default StyleSheet.create({
   },
   wordButton2: {
     width: calcWidth,
-    height: 35,
+    height: 39,
     backgroundColor: '#333332',
     margin: 2,
     alignItems: 'center',
