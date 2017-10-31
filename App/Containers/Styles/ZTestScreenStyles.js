@@ -32,7 +32,7 @@ export default StyleSheet.create({
     justifyContent: 'center'
   },
   helpText: {
-    color: 'black',
+    color: 'white',
     fontSize: 15,
     fontWeight: 'bold',
     shadowOffset: { width: 0, height: 2 },

@@ -98,7 +98,7 @@ export default StyleSheet.create({
     color: 'white',
     alignSelf: 'center',
     textAlign: 'center',
-    margin: 5
+    margin: 15
   },
   categoryButton: {
     width: width / 4.3,
@@ -115,11 +115,11 @@ export default StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.7,
     shadowRadius: 2,
-    shadowColor: 'blue',
+    shadowColor: '#71abf2',
     elevation: 1
   },
   phraseMagic: {
-    color: 'blue',
+    color: '#71abf2',
     fontSize: 15,
     fontWeight: 'bold',
     shadowOffset: { width: 0, height: 2 },

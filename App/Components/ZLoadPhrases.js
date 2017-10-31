@@ -89,11 +89,11 @@ export default class ZLoadPhrases extends Component {
 
   noFiles () {
     return (
-      <View style={{marginTop: height / 4}}>
+      <View style={{marginTop: height / 6}}>
         <Text style={styles.noFilesText}>You have no saved phrases</Text>
         <Text style={styles.noFilesText}>First, go back and build a phrase by adding words to the word bucket</Text>
         <Text style={styles.noFilesText}>Then click 'Build Phrase'</Text>
-        <Text style={[styles.phraseMagic, {shadowColor: 'blue'}]}><Icon name='magic' size={30} /></Text>
+        <Text style={[styles.phraseMagic, {shadowColor: 'black'}]}><Icon name='magic' size={30} /></Text>
         <Text style={styles.noFilesText}>From there you can record and save a phrase</Text>
       </View>
     )
