@@ -208,7 +208,7 @@ export default class ZTestScreen extends React.Component {
           playRecording={this.playRecording.bind(this)}
           playing={this.state.playingCustomPhrase}
           autoPlaying={this.state.playingAutoPhrase}
-          remount={this.remount}
+          remount={this.remount.bind(this)}
           fileNames={this.state.fileNames}
           autoPlay={this.autoPlayPhrase}
           stopAutoPlay={this.stopAutoPlay}
@@ -412,11 +412,11 @@ export default class ZTestScreen extends React.Component {
     this.setState({ autoMode: newVal })
   }
 
-  remount (context) {
-    const oldVal = context.autoMode
-    const newVal = !context.autoMode
-    context.setState({ autoMode: newVal })
-    context.setState({ autoMode: oldVal })
+  remount () {
+    const oldVal = this.autoMode
+    const newVal = !this.autoMode
+    this.setState({ autoMode: newVal })
+    this.setState({ autoMode: oldVal })
   }
 
   closePhraseWindow () {

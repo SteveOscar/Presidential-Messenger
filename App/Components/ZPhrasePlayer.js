@@ -107,14 +107,14 @@ export default class ZPhrasePlayer extends Component {
     this.props.playRecording(record)
   }
 
-  clearPostRecordScreen (context) {
+  clearPostRecordScreen () {
     Alert.alert(
       'Clear Recording?',
       'You will be starting over',
       [
         { text: 'Confirm',
           onPress: () => {
-            this.props.remount(context)
+            this.props.remount()
           }
         },
         { text: 'Cancel',
@@ -125,7 +125,7 @@ export default class ZPhrasePlayer extends Component {
     )
   }
 
-  showSaveScreen (context) {
+  showSaveScreen () {
     this.saveSpin(1000)
     this.setState({ saveHeight: height / 2, postRecordingHeight: 0 })
   }
@@ -232,7 +232,7 @@ export default class ZPhrasePlayer extends Component {
               <TouchableOpacity
                 style={{margin: 20, alignItems: 'center', justifyContent: 'center', width: 90, height: 100}}>
                 <Text style={{ color: '#1352A2', fontSize: 20, fontWeight: 'bold', backgroundColor: 'transparent'}}
-                      onPress={() => this.savePhrase(this.props.myContext)}>
+                      onPress={() => this.savePhrase()}>
                   <Icon name='save' size={60} />
                 </Text>
                 <Text style={{color: 'white', fontSize: 25, fontWeight: 'bold', backgroundColor: 'transparent'}}>Save</Text>
@@ -276,7 +276,7 @@ export default class ZPhrasePlayer extends Component {
             style={{margin: 20, alignItems: 'center', justifyContent: 'center', width: 90, height: 100}}>
             <Animated.Text style={{ transform: [{perspective: perspectiveAmount}, {rotateY: rotateSave}],
                                     color: '#1352A2', fontSize: 20, fontWeight: 'bold', backgroundColor: 'transparent'}}
-                                    onPress={() => this.showSaveScreen(this.props.myContext)}>
+                                    onPress={() => this.showSaveScreen()}>
               <Icon name='save' size={80} />
             </Animated.Text>
             <Text style={{color: 'white', fontSize: 35, fontWeight: 'bold', backgroundColor: 'transparent'}}>Save</Text>
@@ -293,7 +293,7 @@ export default class ZPhrasePlayer extends Component {
           </TouchableOpacity>
 
           <TouchableOpacity
-            onPress={() => this.clearPostRecordScreen(this.props.myContext)}
+            onPress={() => this.clearPostRecordScreen()}
             style={{margin: 20, alignItems: 'center', justifyContent: 'center', width: 100, height: 100}}>
             <Text style={{color: '#FB6964', fontSize: 20, fontWeight: 'bold'}}>
               <Icon name='trash' size={80} />
