@@ -79,7 +79,7 @@ export default class ZLoadPhrases extends Component {
       const that = this
       await AsyncStorage.removeItem(name).then((success) => {
         console.log('FILE DELETED')
-        that.props.removeFile(fileName, this.props.myContext)
+        that.props.removeFile(fileName)
       })
     } catch (error) {
       console.log(`There was a problem, try restarting the app.`)

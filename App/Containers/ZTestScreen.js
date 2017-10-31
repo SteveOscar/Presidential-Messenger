@@ -170,8 +170,8 @@ export default class ZTestScreen extends React.Component {
     })
   }
 
-  async getData (context) {
-    const that = context || this
+  async getData () {
+    const that = this
     try {
       const values = await AsyncStorage.getAllKeys()
       if (values !== null) {
@@ -185,13 +185,13 @@ export default class ZTestScreen extends React.Component {
     }
   }
 
-  removeFile (file, context) {
-    const existing = context.state.fileNames
+  removeFile (file) {
+    const existing = this.state.fileNames
     const index = existing.indexOf(file)
     if (index !== -1) {
       existing.splice(index, 1)
     }
-    context.setState({ fileNames: existing })
+    this.setState({ fileNames: existing })
     console.log('fileNames: ', existing)
   }
 
@@ -213,7 +213,7 @@ export default class ZTestScreen extends React.Component {
           autoPlay={this.autoPlayPhrase}
           stopAutoPlay={this.stopAutoPlay}
           stopCustomPhrase={this.stopCustomPhrase}
-          refreshData={this.getData}
+          refreshData={this.getData.bind(this)}
         />
       )
     } else {
@@ -288,7 +288,7 @@ export default class ZTestScreen extends React.Component {
           myContext={this}
           closeLoadScreen={this.closeLoadScreen}
           playSavedPhrase={this.playSavedPhrase}
-          removeFile={this.removeFile}
+          removeFile={this.removeFile.bind(this)}
         />
       )
     } else {

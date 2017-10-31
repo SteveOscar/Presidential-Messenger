@@ -53,7 +53,7 @@ export default class ZPhrasePlayer extends Component {
       }, 400)
 
       if (this.state.saveNotice !== 'Your recording was saved' && nextState.saveNotice === 'Your recording was saved') {
-        this.props.refreshData(this.props.myContext)
+        this.props.refreshData()
       }
     }
   }
