@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { View, Dimensions, ScrollView, Text, TouchableOpacity } from 'react-native'
 import styles from './Styles/ZStyles'
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 const { height, width } = Dimensions.get('window')
 
@@ -36,7 +37,9 @@ export default class ZGridContainer extends Component {
     if(!potusMode && (category === 'Bonus')) {
       console.log('SHOULD BLOCK!')
       return (
-        <View style={{ height: height - 300, width: width, position: 'absolute', zIndex: 14, backgroundColor: 'rgba(0, 0, 0, 0.7)' }}></View>
+        <View style={{ height: height - 300, alignItems: 'center', justifyContent: 'center', width: width, position: 'absolute', zIndex: 14, backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
+          <Icon name='lock' color={'rgba(255, 255, 255, 0.25)'} style={{fontSize: width}} />
+        </View>
       )
     } else {
       return(
