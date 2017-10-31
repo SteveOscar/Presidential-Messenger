@@ -8,10 +8,11 @@ const { height, width } = Dimensions.get('window')
 export default class ZGridContainer extends Component {
 
   wordList () {
-    const sorted = this.props.words.sort()
+    const { words, person } = this.props
+    const sorted = words.sort()
     return sorted.map((word, i) => {
       return (
-        <TouchableOpacity style={styles.wordButton2}
+        <TouchableOpacity style={[styles.wordButton2, {shadowColor: person.color }]}
           key={i}
           onPress={() => this.props.onWordPress(word)}
           onLongPress={() => this.props.onAddWord(word)} >

@@ -39,7 +39,6 @@ export default StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.7,
     shadowRadius: 2,
-    shadowColor: 'yellow',
     elevation: 1
   },
   phrasePlayerButton: {

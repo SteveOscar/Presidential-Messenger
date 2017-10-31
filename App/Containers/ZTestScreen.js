@@ -341,6 +341,7 @@ export default class ZTestScreen extends React.Component {
             potusMode={potusMode}
           />
           <ZGridContainer
+            person={this.state.person}
             words={Words[this.state.person.name][this.state.category]}
             onWordPress={this.wordPressed.bind(this)}
             onAddWord={this.addWord.bind(this)}
@@ -423,6 +424,7 @@ export default class ZTestScreen extends React.Component {
 
   clearPhrase () {
     const component = this
+    if(!this.state.phrase.length) { return }
     Alert.alert(
       'Hey',
       'Clear the word bucket?',
