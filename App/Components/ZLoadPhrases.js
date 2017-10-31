@@ -39,7 +39,7 @@ export default class ZLoadPhrases extends Component {
           <TouchableOpacity
             style={[styles.loaderButton, { width: width * 0.8, shadowColor: 'yellow', flexDirection: 'column' }]}
             key={i}
-            onPress={() => this.props.playSavedPhrase(file, this.props.myContext)} >
+            onPress={() => this.props.playSavedPhrase(file)} >
             <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
               <Text style={{color: 'white', paddingRight: 15}}><Icon name={'play'} size={30} /></Text>
               <Text style={[styles.wordText, { color: '#F0F1EE' }]}>{file}</Text>

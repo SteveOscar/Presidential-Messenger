@@ -205,14 +205,14 @@ export default class ZTestScreen extends React.Component {
           selected={this.state.selected}
           myContext={this}
           closeWindow={this.closePhraseWindow.bind(this)}
-          playRecording={this.playRecording}
+          playRecording={this.playRecording.bind(this)}
           playing={this.state.playingCustomPhrase}
           autoPlaying={this.state.playingAutoPhrase}
           remount={this.remount}
           fileNames={this.state.fileNames}
           autoPlay={this.autoPlayPhrase}
           stopAutoPlay={this.stopAutoPlay}
-          stopCustomPhrase={this.stopCustomPhrase}
+          stopCustomPhrase={this.stopCustomPhrase.bind(this)}
           refreshData={this.getData.bind(this)}
         />
       )
@@ -287,7 +287,7 @@ export default class ZTestScreen extends React.Component {
           fileNames={this.state.fileNames}
           myContext={this}
           closeLoadScreen={this.closeLoadScreen}
-          playSavedPhrase={this.playSavedPhrase}
+          playSavedPhrase={this.playSavedPhrase.bind(this)}
           removeFile={this.removeFile.bind(this)}
         />
       )
@@ -517,8 +517,8 @@ export default class ZTestScreen extends React.Component {
     window.phraseCount = 1000
   }
 
-  stopCustomPhrase (context) {
-    context.setState({ playingCustomPhrase: false })
+  stopCustomPhrase () {
+    this.setState({ playingCustomPhrase: false })
   }
 
   autoPlayPhrase (context) {
@@ -543,20 +543,20 @@ export default class ZTestScreen extends React.Component {
     })
   }
 
-  async playSavedPhrase (fileName, context) {
+  async playSavedPhrase (fileName) {
     const name = `@messenger:${fileName}`
     const values = await AsyncStorage.getItem(name)
     if (values !== null) {
       const wordData = JSON.parse(values)
-      context.playRecording(wordData, context)
+      this.playRecording(wordData)
     }
   }
 
-  playRecording (wordData, context) {
-    context.setState({playingCustomPhrase: true})
+  playRecording (wordData) {
+    this.setState({playingCustomPhrase: true})
     const timings = wordData.map((data) => data.time)
     timings.map((num, i, arr) => {
-      let that = context
+      let that = this
       window[i] = wordData[i]
       setTimeout(function () {
         console.log('firing play sound: ', window[i])

@@ -66,8 +66,8 @@ export default class ZPhrasePlayer extends Component {
       return (
         <TouchableOpacity style={[styles.phrasePlayerButton, { width: width, shadowColor: shadowColor }]}
           key={i}
-          onPress={() => this.onWordPress(wordData, this.props.myContext)}
-          onLongPress={() => this.props.deleteWord(word, i, this.props.myContext)} >
+          onPress={() => this.onWordPress(wordData)}
+          onLongPress={() => this.props.deleteWord(word, i)} >
           <Text style={[styles.wordText, { color: '#F0F1EE' }]}>{word}</Text>
           <Text style={[styles.identifierText, {color: wordData.person.color}]}>{wordData.person.name.toUpperCase()}</Text>
         </TouchableOpacity>
@@ -75,9 +75,9 @@ export default class ZPhrasePlayer extends Component {
     })
   }
 
-  onWordPress (wordData, context) {
+  onWordPress (wordData) {
     const { startTime, record } = this.state
-    this.props.onWordPress(wordData, context)
+    this.props.onWordPress(wordData)
     const originalPhrase = record
     const newTime = new Date().getTime()
     const elapsedTime = newTime - startTime
@@ -100,11 +100,11 @@ export default class ZPhrasePlayer extends Component {
     }
   }
 
-  playSavedPhrase (context) {
+  playSavedPhrase () {
     const { record } = this.state
     if (!record.length) { return }
     this.playSpin(2000)
-    this.props.playRecording(record, context)
+    this.props.playRecording(record)
   }
 
   clearPostRecordScreen (context) {
@@ -283,7 +283,7 @@ export default class ZPhrasePlayer extends Component {
           </TouchableOpacity>
 
           <TouchableOpacity
-            onPress={() => playing ? this.props.stopCustomPhrase(this.props.myContext) : this.playSavedPhrase(this.props.myContext)}
+            onPress={() => playing ? this.props.stopCustomPhrase() : this.playSavedPhrase()}
             style={{margin: 20, alignItems: 'center', justifyContent: 'center', width: 90, height: 100}}>
             <Animated.Text style={{ transform: [{perspective: perspectiveAmount}, {rotateY: rotatePlay}],
                                     color: 'white', fontSize: 20, fontWeight: 'bold'}}>
