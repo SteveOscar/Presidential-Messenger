@@ -90,8 +90,8 @@ export default class ZTestScreen extends React.Component {
     }
     const potusMode = await AsyncStorage.getItem('potusMode')
     const potusModeEnabled = potusMode == 'enabled'
-    // this.setState({ potusMode: true })
-    this.setState({ potusMode: potusModeEnabled })
+    this.setState({ potusMode: true })
+    // this.setState({ potusMode: potusModeEnabled })
   }
 
   buyProduct(product) {
@@ -204,7 +204,7 @@ export default class ZTestScreen extends React.Component {
           onWordPress={this.phraseWordPressed.bind(this)}
           selected={this.state.selected}
           myContext={this}
-          closeWindow={this.closePhraseWindow}
+          closeWindow={this.closePhraseWindow.bind(this)}
           playRecording={this.playRecording}
           playing={this.state.playingCustomPhrase}
           autoPlaying={this.state.playingAutoPhrase}
@@ -406,7 +406,8 @@ export default class ZTestScreen extends React.Component {
   }
 
   toggleModeSwitch () {
-    if (!this.state.phrase.length) { return }
+    const { phrase, autoMode } = this.state
+    if (!phrase.length && autoMode) { return }
     const newVal = !this.state.autoMode
     this.setState({ autoMode: newVal })
   }
@@ -418,8 +419,8 @@ export default class ZTestScreen extends React.Component {
     context.setState({ autoMode: oldVal })
   }
 
-  closePhraseWindow (context) {
-    context.toggleModeSwitch()
+  closePhraseWindow () {
+    this.toggleModeSwitch()
   }
 
   clearPhrase () {
