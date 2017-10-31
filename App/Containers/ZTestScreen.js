@@ -68,7 +68,7 @@ export default class ZTestScreen extends React.Component {
       showHelpHeight: 0,
       showHelp: false,
       potusMode: false,
-      animating: true
+      animating: false
     }
   }
 
@@ -96,28 +96,35 @@ export default class ZTestScreen extends React.Component {
 
   buyProduct(product) {
     var productIdentifier = product.identifier
+    this.setState({ animating: true })
     InAppUtils.canMakePayments((canMakePayments) => {
-    if(canMakePayments) {
-      InAppUtils.purchaseProduct(productIdentifier, (error, response) => {
-         if(response && response.productIdentifier) {
-            // Alert.alert('Purchase Successful', 'Your Transaction ID is ' + response.transactionIdentifier);
-            // setState of potusmode true
-            AsyncStorage.setItem('potusMode', 'enabled')
-            this.setState({ potusMode: true })
-         } else if(error) {
-           console.log(error.message)
-           alert(error.message)
-         }
-      })
-    }
-    if(!canMakePayments) {
+      this.setState({ animating: false })
+      if(canMakePayments) {
+        this.setState({ animating: true })
+        InAppUtils.purchaseProduct(productIdentifier, (error, response) => {
+          this.setState({ animating: false })
+           if(response && response.productIdentifier) {
+              // Alert.alert('Purchase Successful', 'Your Transaction ID is ' + response.transactionIdentifier);
+              // setState of potusmode true
+              AsyncStorage.setItem('potusMode', 'enabled')
+              this.setState({ potusMode: true })
+           } else if(error) {
+             console.log(error.message)
+             alert(error.message)
+           }
+        })
+      }
+      if(!canMakePayments) {
+        this.setState({ animating: false })
         Alert.alert('Not Allowed', 'This device is not allowed to make purchases. Please check your iTunes account.');
       }
     })
   }
 
   restorePurchases() {
+    this.setState({ animating: true })
     InAppUtils.restorePurchases((error, response) => {
+      this.setState({ animating: false })
        if(error) {
           Alert.alert('itunes Error', 'Could not connect to itunes store.')
        } else {
@@ -138,7 +145,9 @@ export default class ZTestScreen extends React.Component {
   }
 
   offerPurchase() {
+    this.setState({ animating: true })
     InAppUtils.loadProducts(products, (error, products) => {
+      this.setState({ animating: false })
       console.log('Load products result: ', products)
       product = products ? products[0] : null
       if(!product) {
