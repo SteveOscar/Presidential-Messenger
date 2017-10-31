@@ -203,14 +203,13 @@ export default class ZTestScreen extends React.Component {
           deleteWord={this.deleteWord.bind(this)}
           onWordPress={this.phraseWordPressed.bind(this)}
           selected={this.state.selected}
-          myContext={this}
           closeWindow={this.closePhraseWindow.bind(this)}
           playRecording={this.playRecording.bind(this)}
           playing={this.state.playingCustomPhrase}
           autoPlaying={this.state.playingAutoPhrase}
           remount={this.remount.bind(this)}
           fileNames={this.state.fileNames}
-          autoPlay={this.autoPlayPhrase}
+          autoPlay={this.autoPlayPhrase.bind(this)}
           stopAutoPlay={this.stopAutoPlay}
           stopCustomPhrase={this.stopCustomPhrase.bind(this)}
           refreshData={this.getData.bind(this)}
@@ -521,14 +520,14 @@ export default class ZTestScreen extends React.Component {
     this.setState({ playingCustomPhrase: false })
   }
 
-  autoPlayPhrase (context) {
-    const phrase = context.state.phrase
+  autoPlayPhrase () {
+    const phrase = this.state.phrase
     if ((window.phraseCount + 1) > phrase.length) {
       window.phraseCount = 0
-      context.setState({ selected: null, playingAutoPhrase: false })
+      this.setState({ selected: null, playingAutoPhrase: false })
       return
     }
-    context.setState({ selected: window.phraseCount, playingAutoPhrase: true })
+    this.setState({ selected: window.phraseCount, playingAutoPhrase: true })
     const person = phrase[window.phraseCount].person.name
     const word = phrase[window.phraseCount].word
     console.log('Playing ', `${person}_${word}.mp3`)
@@ -538,7 +537,7 @@ export default class ZTestScreen extends React.Component {
       sound.play((success) => {
         let count = window.phraseCount
         window.phraseCount = count + 1
-        window.autoPlayPhrase(context)
+        window.autoPlayPhrase()
       })
     })
   }

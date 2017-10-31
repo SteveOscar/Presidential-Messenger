@@ -18,7 +18,6 @@ export default class ZPhrasePlayer extends Component {
       saveSpinValue: new Animated.Value(0),
       postRecordingHeight: 0,
       saveHeight: 0,
-      context: this.props.context,
       fileName: '',
       saveNotice: ''
     }
@@ -309,13 +308,13 @@ export default class ZPhrasePlayer extends Component {
     }
   }
 
-  autoPlayPressed (context) {
+  autoPlayPressed () {
     const { autoPlaying } = this.props
     if (this.state.recording) { return }
     if(autoPlaying) {
-      this.props.stopAutoPlay(this.props.myContext)
+      this.props.stopAutoPlay()
     } else {
-      this.props.autoPlay(this.props.myContext)
+      this.props.autoPlay()
     }
   }
 
@@ -344,7 +343,7 @@ export default class ZPhrasePlayer extends Component {
             <View style={{height: 100, flex: 1, flexDirection: 'column', zIndex: 14}} />
 
             <TouchableOpacity
-              onPress={() => this.state.recording ? () => {} : this.props.closeWindow(this.props.myContext)}
+              onPress={() => this.state.recording ? () => {} : this.props.closeWindow()}
               style={{flex: 2, alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
               <Text style={{color: '#333332'}}><Icon2 name='md-arrow-round-back' size={40} /></Text>
               <Text style={{color: '#333332', fontSize: 15, fontWeight: 'bold'}}> Back</Text>
@@ -360,7 +359,7 @@ export default class ZPhrasePlayer extends Component {
             <View style={{height: 100, flex: 4, flexDirection: 'column', zIndex: 14}} />
 
             <TouchableOpacity
-              onPress={() => this.autoPlayPressed(this.props.myContext)}
+              onPress={() => this.autoPlayPressed()}
               style={{flex: 2, alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
               <Text style={{color: '#333332'}}><Icon name={autoPlayIcon} size={40} /></Text>
               <Text style={{color: '#333332', fontSize: 15, fontWeight: 'bold'}}>{autoPlayText}</Text>
