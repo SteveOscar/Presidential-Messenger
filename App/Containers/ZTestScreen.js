@@ -284,8 +284,7 @@ export default class ZTestScreen extends React.Component {
       return (
         <ZLoadPhrases
           fileNames={this.state.fileNames}
-          myContext={this}
-          closeLoadScreen={this.closeLoadScreen}
+          closeLoadScreen={this.closeLoadScreen.bind(this)}
           playSavedPhrase={this.playSavedPhrase.bind(this)}
           removeFile={this.removeFile.bind(this)}
         />
@@ -336,7 +335,6 @@ export default class ZTestScreen extends React.Component {
           <ZCategorySelector
             updateCategory={this.updateCategory.bind(this)}
             selected={this.state.category}
-            myContext={this}
             potusMode={potusMode}
           />
           <ZGridContainer
@@ -388,8 +386,8 @@ export default class ZTestScreen extends React.Component {
     )
   }
 
-  closeLoadScreen (context) {
-    context.setState({ showLoadPhrases: false })
+  closeLoadScreen () {
+    this.setState({ showLoadPhrases: false })
   }
 
   loadPhrases () {
@@ -512,7 +510,7 @@ export default class ZTestScreen extends React.Component {
     })
   }
 
-  stopAutoPlay (context) {
+  stopAutoPlay () {
     window.phraseCount = 1000
   }
 

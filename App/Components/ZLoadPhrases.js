@@ -112,7 +112,7 @@ export default class ZLoadPhrases extends Component {
           style={{bottom: 20, right: 20, width: 50, height: 50, position: 'absolute'}}
           >
             <Text style={{ color: '#FB6964', fontSize: 20, fontWeight: 'bold', backgroundColor: 'transparent', shadowOffset: { width: 1, height: 3 }, shadowOpacity: 0.7, shadowRadius: 2, shadowColor: 'white'}}
-              onPress={() => this.props.closeLoadScreen(this.props.myContext)}>
+              onPress={() => this.props.closeLoadScreen()}>
               <Icon name='backward' size={60} />
             </Text>
           </TouchableOpacity>
