@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, TouchableOpacity, Easing, LayoutAnimation, Dimensions, ScrollView, Animated, Alert, TextInput, AsyncStorage } from 'react-native'
+import { View, Text, TouchableOpacity, Easing, LayoutAnimation, Dimensions, ScrollView, Animated, Alert, TextInput, AsyncStorage, Image } from 'react-native'
 import styles from './Styles/ZStyles'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Icon2 from 'react-native-vector-icons/Ionicons'
@@ -255,11 +255,37 @@ export default class ZPhrasePlayer extends Component {
     }
   }
 
+  renderPlayingScreen () {
+    const { playing } = this.props
+    const trumpFace = require('../Images/trump.png')
+    const obamaFace = require('../Images/obama.png')
+    if(!playing) { return (<View/>) }
+    return (
+      <View style={{ width: width, height: height, overflow: 'hidden', zIndex: 9999, backgroundColor: 'rgba(0, 0, 0, 0.7)', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', position: 'absolute'}}>
+        <Image
+          source={trumpFace}
+          style={{
+            margin: 15,
+            width: 150,
+            height: 200
+          }}
+        />
+        <Image
+          source={obamaFace}
+          style={{
+            margin: 15,
+            width: 150,
+            height: 200
+          }}
+        />
+      </View>
+    )
+  }
+
   renderPostRecording () {
     const { postRecordingHeight, playSpinValue, saveSpinValue } = this.state
     const { playing } = this.props
-    let playIcon = playing ? 'stop-circle' : 'play-circle-o'
-    let playText = playing ? 'Stop' : 'Play'
+    let playText = playing ? 'Playing' : 'Play'
     const perspectiveAmount = (Math.random() * (0.3 - 0.15) + 0.15) * width
     const rotatePlay = playSpinValue.interpolate({ inputRange: [0, 1],
                                                outputRange: ['0deg', '360deg']
@@ -270,9 +296,9 @@ export default class ZPhrasePlayer extends Component {
     if (true) {
       return (
         <View style={{ width: width, height: postRecordingHeight, overflow: 'hidden', zIndex: 15, backgroundColor: 'rgba(0, 0, 0, 0.7)', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
-
+          {this.renderPlayingScreen()}
           <TouchableOpacity
-            style={{margin: 20, alignItems: 'center', justifyContent: 'center', width: 90, height: 100}}>
+            style={{margin: 20, alignItems: 'center', justifyContent: 'center', width: 140, height: 100}}>
             <Animated.Text style={{ transform: [{perspective: perspectiveAmount}, {rotateY: rotateSave}],
                                     color: '#1352A2', fontSize: 20, fontWeight: 'bold', backgroundColor: 'transparent'}}
                                     onPress={() => this.showSaveScreen()}>
@@ -283,17 +309,17 @@ export default class ZPhrasePlayer extends Component {
 
           <TouchableOpacity
             onPress={() => playing ? this.props.stopCustomPhrase() : this.playSavedPhrase()}
-            style={{margin: 20, alignItems: 'center', justifyContent: 'center', width: 90, height: 100}}>
+            style={{margin: 20, alignItems: 'center', justifyContent: 'center', width: 140, height: 100}}>
             <Animated.Text style={{ transform: [{perspective: perspectiveAmount}, {rotateY: rotatePlay}],
                                     color: 'white', fontSize: 20, fontWeight: 'bold'}}>
-              <Icon name={playIcon} size={80} />
+              <Icon name={'play-circle-o'} size={80} />
             </Animated.Text>
             <Text style={{color: 'white', fontSize: 35, fontWeight: 'bold'}}>{playText}</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
             onPress={() => this.clearPostRecordScreen()}
-            style={{margin: 20, alignItems: 'center', justifyContent: 'center', width: 100, height: 100}}>
+            style={{margin: 20, alignItems: 'center', justifyContent: 'center', width: 140, height: 100}}>
             <Text style={{color: '#FB6964', fontSize: 20, fontWeight: 'bold'}}>
               <Icon name='trash' size={80} />
             </Text>
