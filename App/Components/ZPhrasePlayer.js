@@ -17,6 +17,7 @@ export default class ZPhrasePlayer extends Component {
       playSpinValue: new Animated.Value(0),
       saveSpinValue: new Animated.Value(0),
       postRecordingHeight: 0,
+      playingHeight: 0,
       saveHeight: 0,
       fileName: '',
       saveNotice: ''
@@ -26,7 +27,8 @@ export default class ZPhrasePlayer extends Component {
   componentWillUpdate (nextProps, nextState) {
     const a = this.state.postRecordingHeight !== nextState.postRecordingHeight
     const b = this.state.saveHeight !== nextState.saveHeight
-    if (a || b) {
+    const c = this.props.playing !== nextProps.playing
+    if (a || b || c) {
       // LayoutAnimation.spring()
       const CustomLayoutSpring = {
         duration: 1300,
@@ -44,12 +46,13 @@ export default class ZPhrasePlayer extends Component {
       LayoutAnimation.configureNext(CustomLayoutSpring)
       if (a) { this.setState({ postRecordingHeight: nextState.postRecordingHeight }) }
       if (b) { this.setState({ saveHeight: nextState.saveHeight }) }
+      if (c) { this.setState({ playingHeight: this.state.playingHeight ? 0 : height }) }
 
-      const that = this
-      setTimeout(function () {
-        that.playSpin(1500)
-        // that.saveSpin(1500)
-      }, 400)
+      // const that = this
+      // setTimeout(function () {
+      //   that.playSpin(1500)
+      //   // that.saveSpin(1500)
+      // }, 400)
 
       if (this.state.saveNotice !== 'Your recording was saved' && nextState.saveNotice === 'Your recording was saved') {
         this.props.refreshData()
@@ -257,11 +260,13 @@ export default class ZPhrasePlayer extends Component {
 
   renderPlayingScreen () {
     const { playing } = this.props
+    const { playingHeight } = this.state
     const trumpFace = require('../Images/trump.png')
     const obamaFace = require('../Images/obama.png')
-    if(!playing) { return (<View/>) }
+    // if(!playing) { return (<View/>) }
     return (
-      <View style={{ width: width, height: height, overflow: 'hidden', zIndex: 9999, backgroundColor: 'rgba(0, 0, 0, 0.7)', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', position: 'absolute'}}>
+      <View style={{ width: width, height: playingHeight, overflow: 'hidden', zIndex: 9999, backgroundColor: 'rgba(0, 0, 0, 0.9)', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', position: 'absolute'}}>
+        <Text style={{fontSize: width/10, fontFamily: 'Avenir-Black', color: 'white', margin: 15}}>A Presidential</Text>
         <Image
           source={trumpFace}
           style={{
@@ -278,6 +283,7 @@ export default class ZPhrasePlayer extends Component {
             height: 200
           }}
         />
+        <Text style={{fontSize: width/10, fontFamily: 'Avenir-Black',  color: 'white', margin: 15}}>Message</Text>
       </View>
     )
   }
