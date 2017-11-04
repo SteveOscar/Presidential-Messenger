@@ -158,6 +158,7 @@ export default class ZPhrasePlayer extends Component {
   }
 
   toggleHelp () {
+    console.log('should toggle help')
     const prev = this.state.showHelp
     this.setState({ showHelp: !prev })
   }
@@ -347,32 +348,22 @@ export default class ZPhrasePlayer extends Component {
     const { showHelp } = this.state
     if (showHelp) {
       return (
-        <View style={{width: width, height: height, position: 'absolute', zIndex: 500, backgroundColor: 'rgba(0, 0, 0, 0.7)'}}>
-          <View style={{width: width, height: 100, top: 0, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
-            <Text style={[styles.helpText, {marginTop: 30}]}>1: Select Speaker</Text>
-            <Text style={[styles.helpText, {shadowColor: '#71abf2', marginTop: 2}]}><Icon3 name='ios-person-add' size={30} style={{paddingTop: 20}} /></Text>
-          </View>
-          <View style={{width: width, height: 100, top: 85, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
-            <Text style={[styles.helpText, {}]}>2: Select Category</Text>
-            <Text style={[styles.helpText, {shadowColor: '#71abf2'}]}><Icon2 name='help-circle' size={40} /></Text>
-          </View>
-          <View style={{width: width, height: 100, top: 280, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
-            <Text style={[styles.helpText, {}]}>3: Tap words to preview</Text>
-            <Text style={[styles.helpText, {paddingTop: 13}]}>(Press and hold to add to word tray.</Text>
-            <Text style={[styles.helpText, {paddingTop: 13}]}>You can add words from multiple speakers)</Text>
-            <Text style={[styles.helpText, {shadowColor: '#71abf2'}]}><Icon2 name='gesture-tap' size={30} /></Text>
+        <TouchableOpacity style={{width: width, height: height, position: 'absolute', zIndex: 500, backgroundColor: 'rgba(0, 0, 0, 0.7)'}}onPress={this.toggleHelp.bind(this)}>
+          <View style={{width: width, height: 100, top: 200, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
+            <Text style={[styles.helpText, {}]}>Tap words to preview</Text>
+            <Text style={[styles.helpText, {paddingTop: 13}]}>Press and hold to REMOVE a word.</Text>
+            <Text style={[styles.helpText, {shadowColor: '#71abf2', color: '#1352A2'}]}><Icon2 name='gesture-tap' size={30} /></Text>
             {/* <Text style={[styles.helpText, {}]}><Icon2 name='gesture-double-tap' size={30} /></Text> */}
           </View>
-          <View style={{width: width, height: 100, bottom: 70, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
-            <Text style={[styles.helpText, {}]}>(Words Bucket <Icon4 name='bucket' size={30} />)</Text>
+          <View style={{width: width, height: 150, bottom: 150, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
+            <Text style={[styles.helpText, {marginTop: 30}]}>Press 'Record' to begin recording.</Text>
+            <Text style={[styles.helpText, {shadowColor: '#71abf2', color: '#1352A2', marginTop: 10}]}><Icon name='circle' size={30} /></Text>
+            <Text style={[styles.helpText, {marginTop: 10}]}>Tap different words to build a phrase.</Text>
+            <Text style={[styles.helpText, {marginTop: 10}]}>You can press words in any order or speed.</Text>
+            <Text style={[styles.helpText, {marginTop: 10}]}>Press 'Stop' to finish.</Text>
           </View>
-          <View style={{width: width, height: 100, bottom: 0, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
-            <Text style={[styles.helpText, {marginTop: 30}]}>5: Tap 'Build Phrase'</Text>
-            <Text style={[styles.helpText, {shadowColor: '#71abf2'}]}><Icon name='magic' size={30} /></Text>
-          </View>
-          <Text onPress={this.toggleHelp.bind(this)} style={[styles.helpText, {position: 'absolute', left: 12, bottom: 12, fontSize: 45, shadowColor: '#71abf2', color: 'white'}]}>X</Text>
-          <Text onPress={this.toggleHelp.bind(this)} style={[styles.helpText, {position: 'absolute', left: 13, bottom: 8, fontSize: 10, shadowColor: '#71abf2', color: 'white'}]}>close</Text>
-        </View>
+          <Text onPress={this.toggleHelp.bind(this)} style={[styles.helpText, {position: 'absolute', left: 5, top: 8, fontSize: 10, shadowColor: '#71abf2', color: 'white'}]}>tap to close</Text>
+        </TouchableOpacity>
       )
     } else {
       return (

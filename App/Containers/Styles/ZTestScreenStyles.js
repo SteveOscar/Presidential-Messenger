@@ -39,6 +39,7 @@ export default StyleSheet.create({
     shadowOpacity: 0.7,
     shadowRadius: 2,
     shadowColor: 'red',
-    elevation: 1
+    elevation: 1,
+    textAlign: 'center'
   }
 })
