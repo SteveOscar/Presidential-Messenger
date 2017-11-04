@@ -235,14 +235,19 @@ export default class ZTestScreen extends React.Component {
 
   renderHelp () {
     const { showHelp } = this.state
+    const top1 = check.isIphoneX() ? 102 : 85
+    const top2 = check.isIphoneX() ? 10 : 0
+    const top3 = check.isIphoneX() ? 40 : 5
+    const bottom1 = check.isIphoneX() ? 90 : 70
+    const bottom2 = check.isIphoneX() ? 15 : 0
     if (showHelp) {
       return (
         <TouchableOpacity onPress={this.toggleHelp.bind(this)} style={{width: width, height: height, position: 'absolute', zIndex: 500, backgroundColor: 'rgba(0, 0, 0, 0.8)'}}>
-          <View style={{width: width, height: 100, top: 0, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
+          <View style={{width: width, height: 100, top: top2, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
             <Text style={[styles.helpText, {marginTop: 30}]}>1: Select a speaker</Text>
             <Text style={[styles.helpText, {shadowColor: '#71abf2', marginTop: 2}]}><Icon3 name='ios-person-add' size={30} style={{paddingTop: 20}} /></Text>
           </View>
-          <View style={{width: width, height: 100, top: 85, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
+          <View style={{width: width, height: 100, top: top1, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
             <Text style={[styles.helpText, {}]}>2: Select a category</Text>
             <Text style={[styles.helpText, {shadowColor: '#71abf2'}]}><Icon2 name='gesture-swipe-left' size={30} /></Text>
           </View>
@@ -253,14 +258,14 @@ export default class ZTestScreen extends React.Component {
             <Text style={[styles.helpText, {shadowColor: '#71abf2'}]}><Icon2 name='gesture-tap' size={30} /></Text>
             {/* <Text style={[styles.helpText, {}]}><Icon2 name='gesture-double-tap' size={30} /></Text> */}
           </View>
-          <View style={{width: width, height: 100, bottom: 70, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
+          <View style={{width: width, height: 100, bottom: bottom1, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
             <Text style={[styles.helpText, {}]}>(Words Bucket <Icon4 name='bucket' size={30} />)</Text>
           </View>
-          <View style={{width: width, height: 100, bottom: 0, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
+          <View style={{width: width, height: 100, bottom: bottom2, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
             <Text style={[styles.helpText, {marginTop: 30}]}>5: Tap 'Build Phrase' to go to the recording screen</Text>
             <Text style={[styles.helpText, {shadowColor: '#71abf2'}]}><Icon name='magic' size={30} /></Text>
           </View>
-          <Text onPress={this.toggleHelp.bind(this)} style={[styles.helpText, {position: 'absolute', left: 5, top: 8, fontSize: 10, shadowColor: '#71abf2', color: 'white'}]}>tap to close</Text>
+          <Text onPress={this.toggleHelp.bind(this)} style={[styles.helpText, {position: 'absolute', left: 8, top: top3, fontSize: 10, shadowColor: '#71abf2', color: 'white'}]}>tap to close</Text>
         </TouchableOpacity>
       )
     } else {

@@ -7,6 +7,7 @@ import Icon3 from 'react-native-vector-icons/Ionicons'
 import Icon4 from 'react-native-vector-icons/Entypo'
 
 const { height, width } = Dimensions.get('window')
+const check = require('isiphonex');
 
 export default class ZPhrasePlayer extends Component {
   constructor (props) {
@@ -346,6 +347,7 @@ export default class ZPhrasePlayer extends Component {
 
   renderHelp () {
     const { showHelp } = this.state
+    const top1 = check.isIphoneX() ? 40 : 5
     if (showHelp) {
       return (
         <TouchableOpacity style={{width: width, height: height, position: 'absolute', zIndex: 500, backgroundColor: 'rgba(0, 0, 0, 0.7)'}}onPress={this.toggleHelp.bind(this)}>
@@ -362,7 +364,7 @@ export default class ZPhrasePlayer extends Component {
             <Text style={[styles.helpText, {marginTop: 10}]}>You can press words in any order or speed.</Text>
             <Text style={[styles.helpText, {marginTop: 10}]}>Press 'Stop' to finish.</Text>
           </View>
-          <Text onPress={this.toggleHelp.bind(this)} style={[styles.helpText, {position: 'absolute', left: 5, top: 8, fontSize: 10, shadowColor: '#71abf2', color: 'white'}]}>tap to close</Text>
+          <Text onPress={this.toggleHelp.bind(this)} style={[styles.helpText, {position: 'absolute', left: 8, top: top1, fontSize: 10, shadowColor: '#71abf2', color: 'white'}]}>tap to close</Text>
         </TouchableOpacity>
       )
     } else {
@@ -387,6 +389,7 @@ export default class ZPhrasePlayer extends Component {
     const { autoPlaying } = this.props
     let recordWord = recording ? 'Stop' : 'Record'
     let buttonColor = this.recordButtonColor()
+    const paddingTop = check.isIphoneX() ? 35 : 15
     // let autoPlayIcon = autoPlaying ? 'stop-circle' : 'play'
     // let autoPlayText = autoPlaying ? 'Stop' : 'AutoPlay'
     // let playTextColor = record.length && !recording ? '#1352A2' : 'grey'
@@ -398,7 +401,7 @@ export default class ZPhrasePlayer extends Component {
           {this.renderHelp()}
           {this.renderPostRecording()}
           {this.renderSaveView()}
-          <ScrollView style={{paddingTop: 15, position: 'absolute', zIndex: 12, height: height-100, bottom: 100, width: '100%', backgroundColor: '#333332'}}>
+          <ScrollView style={{paddingTop: paddingTop, position: 'absolute', zIndex: 12, height: height-100, bottom: 100, width: '100%', backgroundColor: '#333332'}}>
             <View style={{flexDirection: 'row', flexWrap: 'wrap', flex: 1, justifyContent: 'center'}}>
               { this.phrase() }
             </View>
