@@ -65,7 +65,6 @@ export default class ZTestScreen extends React.Component {
       playingAutoPhrase: false,
       fileNames: [],
       showLoadPhrases: false,
-      showHelpHeight: 0,
       showHelp: false,
       potusMode: false,
       animating: false
@@ -90,7 +89,7 @@ export default class ZTestScreen extends React.Component {
     }
     const potusMode = await AsyncStorage.getItem('potusMode')
     const potusModeEnabled = potusMode == 'enabled'
-    this.setState({ potusMode: true })
+    this.setState({ potusMode: potusModeEnabled })
     // this.setState({ potusMode: potusModeEnabled })
   }
 
@@ -211,7 +210,6 @@ export default class ZTestScreen extends React.Component {
           fileNames={this.state.fileNames}
           autoPlay={this.autoPlayPhrase.bind(this)}
           stopAutoPlay={this.stopAutoPlay}
-          stopCustomPhrase={this.stopCustomPhrase.bind(this)}
           refreshData={this.getData.bind(this)}
         />
       )
@@ -311,7 +309,7 @@ export default class ZTestScreen extends React.Component {
   }
 
   render () {
-    const { phrase, showHelp, potusMode } = this.state
+    const { phrase, potusMode } = this.state
     const navButtonColors = phrase.length ? '#333332' : 'grey'
     const nextColor = phrase.length ? '#1352A2' : 'grey'
     const isIphoneX = (height / width).toFixed(2) == 2.17
@@ -513,10 +511,6 @@ export default class ZTestScreen extends React.Component {
 
   stopAutoPlay () {
     window.phraseCount = 1000
-  }
-
-  stopCustomPhrase () {
-    this.setState({ playingCustomPhrase: false })
   }
 
   autoPlayPhrase () {

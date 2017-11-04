@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import { View, Text, TouchableOpacity, Easing, LayoutAnimation, Dimensions, ScrollView, Animated, Alert, TextInput, AsyncStorage, Image } from 'react-native'
 import styles from './Styles/ZStyles'
 import Icon from 'react-native-vector-icons/FontAwesome'
-import Icon2 from 'react-native-vector-icons/Ionicons'
-
+import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons'
+import Icon3 from 'react-native-vector-icons/Ionicons'
+import Icon4 from 'react-native-vector-icons/Entypo'
 
 const { height, width } = Dimensions.get('window')
 
@@ -20,7 +21,8 @@ export default class ZPhrasePlayer extends Component {
       playingHeight: 0,
       saveHeight: 0,
       fileName: '',
-      saveNotice: ''
+      saveNotice: '',
+      showHelp: false
     }
   }
 
@@ -155,6 +157,11 @@ export default class ZPhrasePlayer extends Component {
     }).start()
   }
 
+  toggleHelp () {
+    const prev = this.state.showHelp
+    this.setState({ showHelp: !prev })
+  }
+
   saveSpin (duration) {
     const { saveSpinValue } = this.state
     saveSpinValue.setValue(0)
@@ -259,11 +266,9 @@ export default class ZPhrasePlayer extends Component {
   }
 
   renderPlayingScreen () {
-    const { playing } = this.props
     const { playingHeight } = this.state
     const trumpFace = require('../Images/trump.png')
     const obamaFace = require('../Images/obama.png')
-    // if(!playing) { return (<View/>) }
     return (
       <View style={{ width: width, height: playingHeight, overflow: 'hidden', zIndex: 9999, backgroundColor: 'rgba(0, 0, 0, 0.9)', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', position: 'absolute'}}>
         <Text style={{fontSize: width/10, fontFamily: 'Avenir-Black', color: 'white', margin: 15}}>A Presidential</Text>
@@ -290,8 +295,6 @@ export default class ZPhrasePlayer extends Component {
 
   renderPostRecording () {
     const { postRecordingHeight, playSpinValue, saveSpinValue } = this.state
-    const { playing } = this.props
-    let playText = playing ? 'Playing' : 'Play'
     const perspectiveAmount = (Math.random() * (0.3 - 0.15) + 0.15) * width
     const rotatePlay = playSpinValue.interpolate({ inputRange: [0, 1],
                                                outputRange: ['0deg', '360deg']
@@ -314,13 +317,13 @@ export default class ZPhrasePlayer extends Component {
           </TouchableOpacity>
 
           <TouchableOpacity
-            onPress={() => playing ? this.props.stopCustomPhrase() : this.playSavedPhrase()}
+            onPress={() => this.playSavedPhrase()}
             style={{margin: 20, alignItems: 'center', justifyContent: 'center', width: 140, height: 100}}>
             <Animated.Text style={{ transform: [{perspective: perspectiveAmount}, {rotateY: rotatePlay}],
                                     color: 'white', fontSize: 20, fontWeight: 'bold'}}>
               <Icon name={'play-circle-o'} size={80} />
             </Animated.Text>
-            <Text style={{color: 'white', fontSize: 35, fontWeight: 'bold'}}>{playText}</Text>
+            <Text style={{color: 'white', fontSize: 35, fontWeight: 'bold'}}>{'Play'}</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
@@ -331,6 +334,44 @@ export default class ZPhrasePlayer extends Component {
             </Text>
             <Text style={{color: 'white', fontSize: 35, fontWeight: 'bold'}}>Trash</Text>
           </TouchableOpacity>
+        </View>
+      )
+    } else {
+      return (
+        <View />
+      )
+    }
+  }
+
+  renderHelp () {
+    const { showHelp } = this.state
+    if (showHelp) {
+      return (
+        <View style={{width: width, height: height, position: 'absolute', zIndex: 500, backgroundColor: 'rgba(0, 0, 0, 0.7)'}}>
+          <View style={{width: width, height: 100, top: 0, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
+            <Text style={[styles.helpText, {marginTop: 30}]}>1: Select Speaker</Text>
+            <Text style={[styles.helpText, {shadowColor: '#71abf2', marginTop: 2}]}><Icon3 name='ios-person-add' size={30} style={{paddingTop: 20}} /></Text>
+          </View>
+          <View style={{width: width, height: 100, top: 85, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
+            <Text style={[styles.helpText, {}]}>2: Select Category</Text>
+            <Text style={[styles.helpText, {shadowColor: '#71abf2'}]}><Icon2 name='help-circle' size={40} /></Text>
+          </View>
+          <View style={{width: width, height: 100, top: 280, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
+            <Text style={[styles.helpText, {}]}>3: Tap words to preview</Text>
+            <Text style={[styles.helpText, {paddingTop: 13}]}>(Press and hold to add to word tray.</Text>
+            <Text style={[styles.helpText, {paddingTop: 13}]}>You can add words from multiple speakers)</Text>
+            <Text style={[styles.helpText, {shadowColor: '#71abf2'}]}><Icon2 name='gesture-tap' size={30} /></Text>
+            {/* <Text style={[styles.helpText, {}]}><Icon2 name='gesture-double-tap' size={30} /></Text> */}
+          </View>
+          <View style={{width: width, height: 100, bottom: 70, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
+            <Text style={[styles.helpText, {}]}>(Words Bucket <Icon4 name='bucket' size={30} />)</Text>
+          </View>
+          <View style={{width: width, height: 100, bottom: 0, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
+            <Text style={[styles.helpText, {marginTop: 30}]}>5: Tap 'Build Phrase'</Text>
+            <Text style={[styles.helpText, {shadowColor: '#71abf2'}]}><Icon name='magic' size={30} /></Text>
+          </View>
+          <Text onPress={this.toggleHelp.bind(this)} style={[styles.helpText, {position: 'absolute', left: 12, bottom: 12, fontSize: 45, shadowColor: '#71abf2', color: 'white'}]}>X</Text>
+          <Text onPress={this.toggleHelp.bind(this)} style={[styles.helpText, {position: 'absolute', left: 13, bottom: 8, fontSize: 10, shadowColor: '#71abf2', color: 'white'}]}>close</Text>
         </View>
       )
     } else {
@@ -355,14 +396,15 @@ export default class ZPhrasePlayer extends Component {
     const { autoPlaying } = this.props
     let recordWord = recording ? 'Stop' : 'Record'
     let buttonColor = this.recordButtonColor()
-    let autoPlayIcon = autoPlaying ? 'stop-circle' : 'play'
-    let autoPlayText = autoPlaying ? 'Stop' : 'AutoPlay'
+    // let autoPlayIcon = autoPlaying ? 'stop-circle' : 'play'
+    // let autoPlayText = autoPlaying ? 'Stop' : 'AutoPlay'
     // let playTextColor = record.length && !recording ? '#1352A2' : 'grey'
     // let playButtonColor = record.length && !recording ? '#1352A2' : 'transparent'
     let tabColor = recording ? '#1352A2' : '#FB6964'
     return (
         <View style={{width: '100%', height: height, position: 'absolute', zIndex: 11}}>
           {this.renderErrors()}
+          {this.renderHelp()}
           {this.renderPostRecording()}
           {this.renderSaveView()}
           <ScrollView style={{paddingTop: 15, position: 'absolute', zIndex: 12, height: height-100, bottom: 100, width: '100%', backgroundColor: '#333332'}}>
@@ -377,7 +419,7 @@ export default class ZPhrasePlayer extends Component {
             <TouchableOpacity
               onPress={() => this.state.recording ? () => {} : this.props.closeWindow()}
               style={{flex: 2, alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
-              <Text style={{color: '#333332'}}><Icon2 name='md-arrow-round-back' size={40} /></Text>
+              <Text style={{color: '#333332'}}><Icon3 name='md-arrow-round-back' size={40} /></Text>
               <Text style={{color: '#333332', fontSize: 15, fontWeight: 'bold'}}> Back</Text>
             </TouchableOpacity>
 
@@ -391,10 +433,10 @@ export default class ZPhrasePlayer extends Component {
             <View style={{height: 100, flex: 4, flexDirection: 'column', zIndex: 14}} />
 
             <TouchableOpacity
-              onPress={() => this.autoPlayPressed()}
+              onPress={this.toggleHelp.bind(this)}
               style={{flex: 2, alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
-              <Text style={{color: '#333332'}}><Icon name={autoPlayIcon} size={40} /></Text>
-              <Text style={{color: '#333332', fontSize: 15, fontWeight: 'bold'}}>{autoPlayText}</Text>
+              <Text style={{color: '#333332'}}><Icon2 name='help-circle' size={40} /></Text>
+              <Text style={{color: '#333332', fontSize: 15, fontWeight: 'bold'}}>{'Help'}</Text>
             </TouchableOpacity>
 
 
