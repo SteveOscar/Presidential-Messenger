@@ -56,7 +56,7 @@ export default class ZPhrasePlayer extends Component {
       //   // that.saveSpin(1500)
       // }, 400)
 
-      if (this.state.saveNotice !== 'Your recording was saved' && nextState.saveNotice === 'Your recording was saved') {
+      if (!this.state.saveNotice.length && nextState.saveNotice.length) {
         this.props.refreshData()
       }
     }
@@ -195,13 +195,13 @@ export default class ZPhrasePlayer extends Component {
         this.setState({
           saveHeight: 0,
           postRecordingHeight: 0,
-          saveNotice: 'Your recording was saved',
+          saveNotice: 'Your recording was saved. Unlock Potus Mode to listen to saved recordings.',
           fileName: ''
         })
         const that = this
         setTimeout(function () {
           that.setState({ saveNotice: '' })
-        }, 3000)
+        }, 3500)
       })
     } catch (error) {
       const error = `There was a problem, try restarting the app.`

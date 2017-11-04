@@ -25,7 +25,7 @@ export default class ZTerms extends Component {
     const opac = accepted ? 100 : 0
     return (
       <TouchableOpacity onPress={accepted ? this.props.closeTerms : null}>
-        <Text style={[styles.helpText, {opacity: opac, shadowColor: '#71abf2', color: 'white'}]} onPress={this.acceptTerms.bind(this)}><Icon name={'arrow-long-right'} size={50} /></Text>
+        <Text style={[styles.helpText, {opacity: opac, shadowColor: '#71abf2', color: 'white'}]}><Icon name={'arrow-long-right'} size={50} /></Text>
         <Text style={[styles.termsText, {opacity: opac}]}>Proceed</Text>
       </TouchableOpacity>
     )
@@ -39,8 +39,8 @@ export default class ZTerms extends Component {
     const acceptedIcon = accepted ? 'check' : 'circle'
     const line1 = accepted ? 0 : 100
     return (
-      <View style={{width: width, height: height, position: 'absolute', zIndex: 500, backgroundColor: 'rgba(0, 0, 0, 0.95)'}}>
-        <View style={{width: width, height: 100, top: 200, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
+      <View style={{width: width, height: height, position: 'absolute', zIndex: 500, backgroundColor: 'rgba(0, 0, 0, 0.95)', justifyContent: 'center'}}>
+        <View style={{width: width, height: 100, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
           <Text style={[styles.termsText, {fontWeight: 'bold'}]}>Terms Of Use</Text>
           <Text style={[styles.termsText, {}]}></Text>
           <Text style={[styles.helpText, {shadowColor: '#71abf2', color: 'white'}]}><Icon name={'dots-three-horizontal'} size={50} /></Text>

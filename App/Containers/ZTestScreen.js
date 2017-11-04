@@ -87,8 +87,8 @@ export default class ZTestScreen extends React.Component {
   async checkTerms () {
     const accepted = await AsyncStorage.getItem('termsAccepted')
     console.log('terms acceptance not found, showing terms')
-    // if(true) { this.setState({ showTerms: true }) }
-    if(!accepted) { this.setState({ showTerms: true }) }
+    if(true) { this.setState({ showTerms: true }) }
+    // if(!accepted) { this.setState({ showTerms: true }) }
   }
 
   acceptTerms() {
@@ -237,7 +237,7 @@ export default class ZTestScreen extends React.Component {
     const { showHelp } = this.state
     if (showHelp) {
       return (
-        <TouchableOpacity onPress={this.toggleHelp.bind(this)} style={{width: width, height: height, position: 'absolute', zIndex: 500, backgroundColor: 'rgba(0, 0, 0, 0.7)'}}>
+        <TouchableOpacity onPress={this.toggleHelp.bind(this)} style={{width: width, height: height, position: 'absolute', zIndex: 500, backgroundColor: 'rgba(0, 0, 0, 0.8)'}}>
           <View style={{width: width, height: 100, top: 0, position: 'absolute', backgroundColor: 'transparent', flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingLeft: 10}}>
             <Text style={[styles.helpText, {marginTop: 30}]}>1: Select a speaker</Text>
             <Text style={[styles.helpText, {shadowColor: '#71abf2', marginTop: 2}]}><Icon3 name='ios-person-add' size={30} style={{paddingTop: 20}} /></Text>

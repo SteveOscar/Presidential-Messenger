@@ -128,11 +128,12 @@ export default StyleSheet.create({
   },
   saveText: {
     color: 'white',
-    fontSize: 25,
+    fontSize: 20,
     fontWeight: 'bold',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.7,
     shadowRadius: 2,
+    textAlign: 'center',
     shadowColor: '#71abf2',
     elevation: 1
   },
