@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, ScrollView, Text, TouchableOpacity, Dimensions, LayoutAnimation, AsyncStorage, Alert } from 'react-native'
+import { View, ScrollView, Text, Image, TouchableOpacity, Dimensions, LayoutAnimation, AsyncStorage, Alert } from 'react-native'
 import styles from './Styles/ZStyles'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
@@ -9,7 +9,8 @@ export default class ZLoadPhrases extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      loadHeight: 0
+      loadHeight: 0,
+      playingHeight: 0
     }
   }
 
@@ -29,6 +30,28 @@ export default class ZLoadPhrases extends Component {
     // LayoutAnimation.spring()
     LayoutAnimation.configureNext(CustomLayoutSpring)
     this.setState({ loadHeight: height })
+  }
+
+  componentWillUpdate (nextProps, nextState) {
+    const c = this.props.playing !== nextProps.playing
+    if (c) {
+      // LayoutAnimation.spring()
+      const CustomLayoutSpring = {
+        duration: 1300,
+        create: {
+          type: LayoutAnimation.Types.spring,
+          property: LayoutAnimation.Properties.scaleXY,
+          springDamping: 0.5
+        },
+        update: {
+          type: LayoutAnimation.Types.spring,
+          springDamping: 0.6
+        }
+      }
+      // LayoutAnimation.spring()
+      LayoutAnimation.configureNext(CustomLayoutSpring)
+      this.setState({ playingHeight: this.state.playingHeight ? 0 : height })
+    }
   }
 
   fileList () {
@@ -99,26 +122,57 @@ export default class ZLoadPhrases extends Component {
     )
   }
 
+  renderPlayingScreen () {
+    const { playing } = this.props
+    const { playingHeight } = this.state
+    const trumpFace = require('../Images/trump.png')
+    const obamaFace = require('../Images/obama.png')
+    // if(!playing) { return (<View/>) }
+    return (
+      <View style={{ width: width, height: playingHeight, overflow: 'hidden', zIndex: 9999, backgroundColor: 'rgba(0, 0, 0, 0.9)', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', position: 'absolute'}}>
+        <Text style={{fontSize: width/10, fontFamily: 'Avenir-Black', color: 'white', margin: 15}}>A Presidential</Text>
+        <Image
+          source={trumpFace}
+          style={{
+            margin: 15,
+            width: 150,
+            height: 200
+          }}
+        />
+        <Image
+          source={obamaFace}
+          style={{
+            margin: 15,
+            width: 150,
+            height: 200
+          }}
+        />
+        <Text style={{fontSize: width/10, fontFamily: 'Avenir-Black',  color: 'white', margin: 15}}>Message</Text>
+      </View>
+    )
+  }
+
 /* eslint-disable */
   render () {
     const { fileNames } = this.props
     const { loadHeight } = this.state
     return (
       <View style={{width: width, height: height, position: 'absolute', zIndex: 14, backgroundColor: 'rgba(0, 0, 0, 0.8)'}}>
+        {this.renderPlayingScreen()}
         <ScrollView style={{ width: width, height: height * .8, top: height * .1, position: 'absolute', zIndex: 15, backgroundColor: 'transparent', flex: 1}}>
           { fileNames.length ? this.fileList() : this.noFiles() }
         </ScrollView>
         <TouchableOpacity
           style={{bottom: 20, right: 20, width: 50, height: 50, position: 'absolute'}}
           >
-            <Text style={{ color: '#FB6964', fontSize: 20, fontWeight: 'bold', backgroundColor: 'transparent', shadowOffset: { width: 1, height: 3 }, shadowOpacity: 0.7, shadowRadius: 2, shadowColor: 'white'}}
-              onPress={() => this.props.closeLoadScreen()}>
-              <Icon name='backward' size={60} />
-            </Text>
-          </TouchableOpacity>
+          <Text style={{ color: '#FB6964', fontSize: 20, fontWeight: 'bold', backgroundColor: 'transparent', shadowOffset: { width: 1, height: 3 }, shadowOpacity: 0.7, shadowRadius: 2, shadowColor: 'white'}}
+            onPress={() => this.props.closeLoadScreen()}>
+            <Icon name='backward' size={60} />
+          </Text>
+        </TouchableOpacity>
 
-        </View>
-      )
+      </View>
+    )
   }
 /* eslint-enable */
 }

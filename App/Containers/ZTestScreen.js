@@ -287,6 +287,7 @@ export default class ZTestScreen extends React.Component {
           closeLoadScreen={this.closeLoadScreen.bind(this)}
           playSavedPhrase={this.playSavedPhrase.bind(this)}
           removeFile={this.removeFile.bind(this)}
+          playing={this.state.playingCustomPhrase}
         />
       )
     } else {
@@ -300,11 +301,11 @@ export default class ZTestScreen extends React.Component {
     const { potusMode } = this.state
     if(!potusMode) {
       return (
-        <Text style={{color: '#333332'}}>Load  <Icon name='lock' size={15} /></Text>
+        <Text style={{color: '#333332'}}>Recordings  <Icon name='lock' size={15} /></Text>
       )
     } else {
       return (
-        'Load'
+        'Recordings'
       )
     }
   }
@@ -424,7 +425,7 @@ export default class ZTestScreen extends React.Component {
     const component = this
     if(!this.state.phrase.length) { return }
     Alert.alert(
-      'Hey',
+      'Are you sure?',
       'Clear the word bucket?',
       [
         {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
