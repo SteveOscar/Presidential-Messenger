@@ -31,6 +31,13 @@ export default StyleSheet.create({
     elevation: 1,
     textAlign: 'center'
   },
+  termsText: {
+    color: 'white',
+    fontSize: 15,
+    textAlign: 'center',
+    marginLeft: 15,
+    marginRight: 15
+  },
   phraseButton: {
     height: 40,
     backgroundColor: '#333332',

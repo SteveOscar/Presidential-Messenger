@@ -5,6 +5,7 @@ import ZCategorySelector from '../Components/ZCategorySelector'
 import ZPhraseView from '../Components/ZPhraseView'
 import ZPhrasePlayer from '../Components/ZPhrasePlayer'
 import ZPersonSelector from '../Components/ZPersonSelector'
+import ZTerms from '../Components/ZTerms'
 import ZLoadPhrases from '../Components/ZLoadPhrases'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons'
@@ -66,6 +67,7 @@ export default class ZTestScreen extends React.Component {
       fileNames: [],
       showLoadPhrases: false,
       showHelp: false,
+      showTerms: false,
       potusMode: false,
       animating: false
     }
@@ -77,12 +79,23 @@ export default class ZTestScreen extends React.Component {
   }
 
   componentDidMount () {
+    this.checkTerms()
     this.getData()
     this.checkPurchaseState()
-    console.log('IPHONEX PACKAGE TEST: isPhoneX?: ', check.isIphoneX())
   }
 
-  async checkPurchaseState() {
+  async checkTerms () {
+    const accepted = await AsyncStorage.getItem('termsAccepted')
+    console.log('terms acceptance not found, showing terms')
+    // if(true) { this.setState({ showTerms: true }) }
+    if(!accepted) { this.setState({ showTerms: true }) }
+  }
+
+  acceptTerms() {
+    this.setState({ showTerms: false })
+  }
+
+  async checkPurchaseState () {
     const values = await AsyncStorage.getAllKeys()
     if(values.indexOf('potusMode') == -1) {
       await AsyncStorage.setItem('potusMode', 'disabled')
@@ -276,6 +289,18 @@ export default class ZTestScreen extends React.Component {
     }
   }
 
+  renderTerms () {
+    if(this.state.showTerms) {
+      return (
+        <ZTerms
+          closeTerms={this.acceptTerms.bind(this)}
+        />
+      )
+    } else {
+      return (<View />)
+    }
+  }
+
   renderPhraseLoader () {
     if (this.state.showLoadPhrases) {
       return (
@@ -288,9 +313,7 @@ export default class ZTestScreen extends React.Component {
         />
       )
     } else {
-      return (
-        <View />
-      )
+      return (<View />)
     }
   }
 
@@ -317,7 +340,7 @@ export default class ZTestScreen extends React.Component {
       <View style={styles.mainContainer}>
         <StatusBar hidden={!isIphoneX} />
         <View style={styles.container}>
-
+          {this.renderTerms()}
           {this.renderHelp()}
           {this.renderPhrasePlayer()}
           {this.renderPhraseLoader()}
