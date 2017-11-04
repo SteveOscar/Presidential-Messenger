@@ -32,7 +32,7 @@ const Words = {
   obama: {
     Who: ['myself', 'me', 'them', 'officers', 'federal_government', 'the_CIA', 'Chinese', 'British', 'NPR', 'her', 'the_DNC', 'somebody', 'you', 'the_Koch_brothers', 'the_United_States_senate', 'Chicagoans', 'democrats', 'Donald_Trump', 'people'],
     What: ['concerns', 'relationship', 'agency', 'terrorism', 'revelation', 'vacation', 'what', 'substance', 'manipulation', 'consequence', 'climate_change', 'generation', 'races', 'presidency', 'fish_fries', 'party', 'bathrooms', 'obama_care', 'fries', 'it', 'states', 'chunks', 'challenge', 'issues', 'trust'],
-    Descriptions: ['incredible', 'explicit', 'islamic', 'political', 'vulnerable', 'consitently', 'controversial', 'deep', 'passionate', 'lost', 'a_lot', 'meaningful', 'big', 'public', 'salient', 'happy', 'proud', 'complicated', 'ignorant', 'hard'],
+    Descriptions: ['incredible', 'explicit', 'islamic', 'political', 'vulnerable', 'consistently', 'controversial', 'deep', 'passionate', 'lost', 'a_lot', 'meaningful', 'big', 'public', 'salient', 'happy', 'proud', 'complicated', 'ignorant', 'hard'],
     Verbs: ['concerns', 'have', 'steal', 'impact', 'call', 'like', 'read', 'avoid', 'doubt', 'contributed', 'lost', 'swirl', 'were', 'help', 'rise_up', 'start', 'campaign', 'leave', 'financing', 'think', 'races', 'hearing', 'felt', 'support', 'was', 'feel', 'had', 'spending', 'benefit', 'challenge', 'are', 'is', 'promote', 'give', 'made', 'has', 'party', 'talk', 'trust', 'builds'],
     Time: ['months', 'before', 'decade', 'among', 'now', 'after', 'always', 'twelve', 'forty_five', 'immediately', 'where'],
     Misc: ['and', 'on', 'in', 'a', 'maybe', 'of', 'by', 'to', 'the', 'any', 'if', 'at', 'actually', 'from', 'well_uh', 'or', 'dont', 'that', 'then', 'but', 'ughhh', 'for', 'so', 'who', 'because', 'wellll'],
@@ -87,8 +87,8 @@ export default class ZTestScreen extends React.Component {
   async checkTerms () {
     const accepted = await AsyncStorage.getItem('termsAccepted')
     console.log('terms acceptance not found, showing terms')
-    if(true) { this.setState({ showTerms: true }) }
-    // if(!accepted) { this.setState({ showTerms: true }) }
+    // if(true) { this.setState({ showTerms: true }) }
+    if(!accepted) { this.setState({ showTerms: true }) }
   }
 
   acceptTerms() {
@@ -170,7 +170,7 @@ export default class ZTestScreen extends React.Component {
       } else {
         Alert.alert(
           'Potus Mode Required',
-          `Unlocks all restricted words and the ability to save and load recorded phrases. One week free trial, and then: ${product.priceString}/month`,
+          `Unlocks all restricted words and the ability to load/replay recorded phrases. One week free trial, and then: ${product.priceString}/month`,
           [
             {text: 'Buy with 1 week free trial', onPress: () => this.buyProduct(product), style: 'destructive'},
             {text: 'Restore previous purchase', onPress: () => this.restorePurchases()},
@@ -450,8 +450,8 @@ export default class ZTestScreen extends React.Component {
     const component = this
     if(!this.state.phrase.length) { return }
     Alert.alert(
-      'Are you sure?',
-      'Clear the word bucket?',
+      'Clear Word Bucket?',
+      'Please confirm this action',
       [
         {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
         {text: 'OK', onPress: function () { component.setState({ phrase: [], selected: null }) }}

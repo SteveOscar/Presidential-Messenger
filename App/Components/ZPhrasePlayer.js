@@ -411,10 +411,10 @@ export default class ZPhrasePlayer extends Component {
             <View style={{height: 100, flex: 1, flexDirection: 'column', zIndex: 14}} />
 
             <TouchableOpacity
-              onPress={() => this.state.recording ? () => {} : this.props.closeWindow()}
+              onPress={this.toggleHelp.bind(this)}
               style={{flex: 2, alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
-              <Text style={{color: '#333332'}}><Icon3 name='md-arrow-round-back' size={40} /></Text>
-              <Text style={{color: '#333332', fontSize: 15, fontWeight: 'bold'}}> Back</Text>
+              <Text style={{color: '#333332'}}><Icon2 name='help-circle' size={40} /></Text>
+              <Text style={{color: '#333332', fontSize: 15, fontWeight: 'bold'}}>{'Help'}</Text>
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => this.onRecordPress()}
@@ -427,12 +427,11 @@ export default class ZPhrasePlayer extends Component {
             <View style={{height: 100, flex: 4, flexDirection: 'column', zIndex: 14}} />
 
             <TouchableOpacity
-              onPress={this.toggleHelp.bind(this)}
+              onPress={() => this.state.recording ? () => {} : this.props.closeWindow()}
               style={{flex: 2, alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
-              <Text style={{color: '#333332'}}><Icon2 name='help-circle' size={40} /></Text>
-              <Text style={{color: '#333332', fontSize: 15, fontWeight: 'bold'}}>{'Help'}</Text>
+              <Text style={{color: '#333332'}}><Icon3 name='md-arrow-round-back' size={40} /></Text>
+              <Text style={{color: '#333332', fontSize: 15, fontWeight: 'bold'}}> Back</Text>
             </TouchableOpacity>
-
 
             <View style={{height: 100, flex: 1, flexDirection: 'column', zIndex: 14}} />
           </View>
