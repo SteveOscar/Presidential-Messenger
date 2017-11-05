@@ -1,4 +1,4 @@
-package com.presidents;
+package com.gaffer;
 
 import com.facebook.react.ReactActivity;
 

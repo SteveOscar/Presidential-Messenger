@@ -45,7 +45,7 @@ export default class ZTerms extends Component {
           <Text style={[styles.termsText, {}]}></Text>
           <Text style={[styles.helpText, {shadowColor: '#71abf2', color: 'white'}]}><Icon name={'dots-three-horizontal'} size={50} /></Text>
           <Text style={[styles.termsText, {}]}></Text>
-          <Text style={[styles.termsText, {paddingTop: 13}]}>By using Presidential Messenger, you agree not to represent any sounds or phrases produced with the application as authentic recordings in any way, or to use the application in any manner that constitues defamation of another persion.</Text>
+          <Text style={[styles.termsText, {paddingTop: 13}]}>By using Gaffer, you agree not to represent any sounds or phrases produced with the application as authentic recordings in any way, or to use the application in any manner that constitues defamation of another persion.</Text>
           <Text style={[styles.termsText, {}]}></Text>
           <Text style={[styles.termsText, {}]}></Text>
           <Text style={[styles.termsText, {}]}></Text>
