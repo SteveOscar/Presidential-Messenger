@@ -50,7 +50,7 @@ const Words = {
 }
 
 const products = [
-   'com.stevenolson.presidentialmessenger',
+   'com.stevenolson.presidentialmessenger2',
 ];
 
 export default class ZTestScreen extends React.Component {
@@ -170,9 +170,9 @@ export default class ZTestScreen extends React.Component {
       } else {
         Alert.alert(
           'Potus Mode Required',
-          `Unlocks all restricted words and the ability to load/replay recorded phrases. One week free trial, and then: ${product.priceString}/month`,
+          `Unlocks all restricted words and the ability to load/replay recorded phrases. One-time purchase of ${product.priceString}`,
           [
-            {text: 'Buy with 1 week free trial', onPress: () => this.buyProduct(product), style: 'destructive'},
+            {text: 'Enable Potus Mode', onPress: () => this.buyProduct(product), style: 'destructive'},
             {text: 'Restore previous purchase', onPress: () => this.restorePurchases()},
             {text: 'Maybe Later', onPress: () => console.log('Cancel Pressed')}
           ],
