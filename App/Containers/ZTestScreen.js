@@ -102,7 +102,7 @@ export default class ZTestScreen extends React.Component {
     }
     const potusMode = await AsyncStorage.getItem('potusMode')
     const potusModeEnabled = potusMode == 'enabled'
-    this.setState({ potusMode: potusModeEnabled })
+    this.setState({ potusMode: true })
     // this.setState({ potusMode: potusModeEnabled })
   }
 

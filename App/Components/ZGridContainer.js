@@ -9,7 +9,11 @@ export default class ZGridContainer extends Component {
 
   wordList () {
     const { words, person } = this.props
-    const sorted = words.sort()
+    const sorted = words.sort(function (a, b) {
+      if (a.toLowerCase() < b.toLowerCase()) return -1;
+      else if (a.toLowerCase() > b.toLowerCase()) return 1;
+      return 0;
+    });
     return sorted.map((word, i) => {
       return (
         <TouchableOpacity style={[styles.wordButton2, {shadowColor: person.color }]}
