@@ -43,8 +43,8 @@ const Words = {
     What: ['primaries', 'party', 'pill', 'emergency', 'plant', 'factories', 'deal', 'termination', 'terror', 'tax', 'bread', 'dollars', 'mess', 'college', 'work', 'audience', 'intelligence', 'problem', 'catastrophe', 'victory', 'states'],
     Descriptions: ['correct', 'tougher', 'massive', 'better', 'good', 'tremendous', 'properly', 'finished', 'legally', 'phenomenal', 'total', 'absolutely', 'fabulous', 'approved', 'smarter', 'unfairly', 'legitamite', 'illegal', 'strongly', 'dead'],
     Verbs: ['vote', 'party', 'pay', 'plant', 'is', 'leave', 'trade', 'deal', 'finished', 'created', 'cut', 'create', 'tax', 'look', 'think', 'spoke', 'work', 'does', 'shot', 'help', 'approve', 'forgot', 'did', 'demean'],
-    Time: ['two', 'now', 'seventy_one', 'today', 'now', 'six', 'trillion', 'before', 'years', 'never', 'here'],
-    Misc: ['of', 'and', 'so', 'then', 'by', 'dont', 'do', 'please', 'ya_know', 'but', 'without', 'from', 'yes', 'without', 'who', 'to', 'wow', 'in'],
+    Time: ['two', 'now', 'seventy_one', 'today', 'six', 'trillion', 'before', 'years', 'never', 'here'],
+    Misc: ['of', 'and', 'so', 'then', 'by', 'dont', 'do', 'please', 'ya_know', 'but', 'without', 'from', 'yes', 'who', 'to', 'wow', 'in'],
     Bonus: ['waterboarding', 'ahhh', 'Mexico2', 'fair', 'at_all', 'heee']
   }
 }
