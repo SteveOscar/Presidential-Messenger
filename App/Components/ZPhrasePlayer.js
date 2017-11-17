@@ -192,11 +192,17 @@ export default class ZPhrasePlayer extends Component {
     // Okay, save it
     try {
       const name = `@messenger:${fileName}`
+      let saveNotice
+      if(this.props.potusMode) {
+        saveNotice = 'Your recording was saved. You can load it from the home screen.'
+      } else {
+        saveNotice = 'Your recording was saved. Unlock Potus Mode to listen to saved recordings.'
+      }
       await AsyncStorage.setItem(name, JSON.stringify(record)).then((success) => {
         this.setState({
           saveHeight: 0,
           postRecordingHeight: 0,
-          saveNotice: 'Your recording was saved. Unlock Potus Mode to listen to saved recordings.',
+          saveNotice: saveNotice,
           fileName: ''
         })
         const that = this

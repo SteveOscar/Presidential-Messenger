@@ -113,6 +113,33 @@
 		8C1DF3E01FBE2D8600FBDADB /* trump_there.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF3C11FBE2D7D00FBDADB /* trump_there.mp3 */; };
 		8C1DF3E11FBE2D8600FBDADB /* trump_this.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF3BF1FBE2D7C00FBDADB /* trump_this.mp3 */; };
 		8C1DF3E21FBE2D8600FBDADB /* trump_through.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF3BC1FBE2D7B00FBDADB /* trump_through.mp3 */; };
+		8C1DF3EE1FBE596C00FBDADB /* trump_bull_shit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF3ED1FBE596300FBDADB /* trump_bull_shit.mp3 */; };
+		8C1DF3EF1FBE596C00FBDADB /* trump_damn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF3E31FBE596000FBDADB /* trump_damn.mp3 */; };
+		8C1DF3F01FBE596C00FBDADB /* trump_king.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF3E41FBE596100FBDADB /* trump_king.mp3 */; };
+		8C1DF3F11FBE596C00FBDADB /* trump_maybe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF3E81FBE596200FBDADB /* trump_maybe.mp3 */; };
+		8C1DF3F21FBE596C00FBDADB /* trump_pussy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF3E91FBE596200FBDADB /* trump_pussy.mp3 */; };
+		8C1DF3F31FBE596C00FBDADB /* trump_shitoutofthesea.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF3E51FBE596100FBDADB /* trump_shitoutofthesea.mp3 */; };
+		8C1DF3F41FBE596C00FBDADB /* trump_shock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF3EC1FBE596300FBDADB /* trump_shock.mp3 */; };
+		8C1DF3F51FBE596C00FBDADB /* trump_south_korea.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF3EA1FBE596200FBDADB /* trump_south_korea.mp3 */; };
+		8C1DF3F61FBE596C00FBDADB /* trump_talk.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF3EB1FBE596300FBDADB /* trump_talk.mp3 */; };
+		8C1DF3F71FBE596C00FBDADB /* trump_time.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF3E61FBE596100FBDADB /* trump_time.mp3 */; };
+		8C1DF3F81FBE596C00FBDADB /* trump_tooo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF3E71FBE596200FBDADB /* trump_tooo.mp3 */; };
+		8C1DF4091FBE607C00FBDADB /* trump_bad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF4011FBE607600FBDADB /* trump_bad.mp3 */; };
+		8C1DF40A1FBE607C00FBDADB /* trump_dishonest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF3FD1FBE607500FBDADB /* trump_dishonest.mp3 */; };
+		8C1DF40B1FBE607C00FBDADB /* trump_done.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF3FC1FBE607500FBDADB /* trump_done.mp3 */; };
+		8C1DF40C1FBE607C00FBDADB /* trump_fake_news.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF3FB1FBE607400FBDADB /* trump_fake_news.mp3 */; };
+		8C1DF40D1FBE607C00FBDADB /* trump_fake.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF4031FBE607700FBDADB /* trump_fake.mp3 */; };
+		8C1DF40E1FBE607C00FBDADB /* trump_great.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF4021FBE607600FBDADB /* trump_great.mp3 */; };
+		8C1DF40F1FBE607C00FBDADB /* trump_media.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF4041FBE607700FBDADB /* trump_media.mp3 */; };
+		8C1DF4101FBE607C00FBDADB /* trump_million.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF4081FBE607800FBDADB /* trump_million.mp3 */; };
+		8C1DF4111FBE607C00FBDADB /* trump_more.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF3FE1FBE607500FBDADB /* trump_more.mp3 */; };
+		8C1DF4121FBE607C00FBDADB /* trump_put_out.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF3F91FBE607400FBDADB /* trump_put_out.mp3 */; };
+		8C1DF4131FBE607C00FBDADB /* trump_social_media.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF4051FBE607700FBDADB /* trump_social_media.mp3 */; };
+		8C1DF4141FBE607C00FBDADB /* trump_stories.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF4001FBE607600FBDADB /* trump_stories.mp3 */; };
+		8C1DF4151FBE607C00FBDADB /* trump_tonight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF4071FBE607800FBDADB /* trump_tonight.mp3 */; };
+		8C1DF4161FBE607C00FBDADB /* trump_truth.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF3FA1FBE607400FBDADB /* trump_truth.mp3 */; };
+		8C1DF4171FBE607C00FBDADB /* trump_twenty_eight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF4061FBE607700FBDADB /* trump_twenty_eight.mp3 */; };
+		8C1DF4181FBE607C00FBDADB /* trump_well.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DF3FF1FBE607600FBDADB /* trump_well.mp3 */; };
 		8C242A511F64DBAF003C69CD /* obama_financing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A411F64DBAF003C69CD /* obama_financing.mp3 */; };
 		8C242A521F64DBAF003C69CD /* obama_at.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A421F64DBAF003C69CD /* obama_at.mp3 */; };
 		8C242A531F64DBAF003C69CD /* obama_the_koch_brothers.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C242A431F64DBAF003C69CD /* obama_the_koch_brothers.mp3 */; };
@@ -658,6 +685,33 @@
 		8C1DF3C61FBE2D7E00FBDADB /* trump_russia.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_russia.mp3; path = ../../../../Desktop/PresidentialSounds/trump_russia.mp3; sourceTree = "<group>"; };
 		8C1DF3C71FBE2D7F00FBDADB /* trump_drugs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_drugs.mp3; path = ../../../../Desktop/PresidentialSounds/trump_drugs.mp3; sourceTree = "<group>"; };
 		8C1DF3C81FBE2D7F00FBDADB /* trump_easier.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_easier.mp3; path = ../../../../Desktop/PresidentialSounds/trump_easier.mp3; sourceTree = "<group>"; };
+		8C1DF3E31FBE596000FBDADB /* trump_damn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_damn.mp3; path = ../../../../Desktop/PresidentialSounds/trump_damn.mp3; sourceTree = "<group>"; };
+		8C1DF3E41FBE596100FBDADB /* trump_king.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_king.mp3; path = ../../../../Desktop/PresidentialSounds/trump_king.mp3; sourceTree = "<group>"; };
+		8C1DF3E51FBE596100FBDADB /* trump_shitoutofthesea.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_shitoutofthesea.mp3; path = ../../../../Desktop/PresidentialSounds/trump_shitoutofthesea.mp3; sourceTree = "<group>"; };
+		8C1DF3E61FBE596100FBDADB /* trump_time.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_time.mp3; path = ../../../../Desktop/PresidentialSounds/trump_time.mp3; sourceTree = "<group>"; };
+		8C1DF3E71FBE596200FBDADB /* trump_tooo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_tooo.mp3; path = ../../../../Desktop/PresidentialSounds/trump_tooo.mp3; sourceTree = "<group>"; };
+		8C1DF3E81FBE596200FBDADB /* trump_maybe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_maybe.mp3; path = ../../../../Desktop/PresidentialSounds/trump_maybe.mp3; sourceTree = "<group>"; };
+		8C1DF3E91FBE596200FBDADB /* trump_pussy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_pussy.mp3; path = ../../../../Desktop/PresidentialSounds/trump_pussy.mp3; sourceTree = "<group>"; };
+		8C1DF3EA1FBE596200FBDADB /* trump_south_korea.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_south_korea.mp3; path = ../../../../Desktop/PresidentialSounds/trump_south_korea.mp3; sourceTree = "<group>"; };
+		8C1DF3EB1FBE596300FBDADB /* trump_talk.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_talk.mp3; path = ../../../../Desktop/PresidentialSounds/trump_talk.mp3; sourceTree = "<group>"; };
+		8C1DF3EC1FBE596300FBDADB /* trump_shock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_shock.mp3; path = ../../../../Desktop/PresidentialSounds/trump_shock.mp3; sourceTree = "<group>"; };
+		8C1DF3ED1FBE596300FBDADB /* trump_bull_shit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_bull_shit.mp3; path = ../../../../Desktop/PresidentialSounds/trump_bull_shit.mp3; sourceTree = "<group>"; };
+		8C1DF3F91FBE607400FBDADB /* trump_put_out.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_put_out.mp3; path = ../../../../Desktop/PresidentialSounds/trump_put_out.mp3; sourceTree = "<group>"; };
+		8C1DF3FA1FBE607400FBDADB /* trump_truth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_truth.mp3; path = ../../../../Desktop/PresidentialSounds/trump_truth.mp3; sourceTree = "<group>"; };
+		8C1DF3FB1FBE607400FBDADB /* trump_fake_news.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_fake_news.mp3; path = ../../../../Desktop/PresidentialSounds/trump_fake_news.mp3; sourceTree = "<group>"; };
+		8C1DF3FC1FBE607500FBDADB /* trump_done.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_done.mp3; path = ../../../../Desktop/PresidentialSounds/trump_done.mp3; sourceTree = "<group>"; };
+		8C1DF3FD1FBE607500FBDADB /* trump_dishonest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_dishonest.mp3; path = ../../../../Desktop/PresidentialSounds/trump_dishonest.mp3; sourceTree = "<group>"; };
+		8C1DF3FE1FBE607500FBDADB /* trump_more.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_more.mp3; path = ../../../../Desktop/PresidentialSounds/trump_more.mp3; sourceTree = "<group>"; };
+		8C1DF3FF1FBE607600FBDADB /* trump_well.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_well.mp3; path = ../../../../Desktop/PresidentialSounds/trump_well.mp3; sourceTree = "<group>"; };
+		8C1DF4001FBE607600FBDADB /* trump_stories.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_stories.mp3; path = ../../../../Desktop/PresidentialSounds/trump_stories.mp3; sourceTree = "<group>"; };
+		8C1DF4011FBE607600FBDADB /* trump_bad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_bad.mp3; path = ../../../../Desktop/PresidentialSounds/trump_bad.mp3; sourceTree = "<group>"; };
+		8C1DF4021FBE607600FBDADB /* trump_great.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_great.mp3; path = ../../../../Desktop/PresidentialSounds/trump_great.mp3; sourceTree = "<group>"; };
+		8C1DF4031FBE607700FBDADB /* trump_fake.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_fake.mp3; path = ../../../../Desktop/PresidentialSounds/trump_fake.mp3; sourceTree = "<group>"; };
+		8C1DF4041FBE607700FBDADB /* trump_media.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_media.mp3; path = ../../../../Desktop/PresidentialSounds/trump_media.mp3; sourceTree = "<group>"; };
+		8C1DF4051FBE607700FBDADB /* trump_social_media.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_social_media.mp3; path = ../../../../Desktop/PresidentialSounds/trump_social_media.mp3; sourceTree = "<group>"; };
+		8C1DF4061FBE607700FBDADB /* trump_twenty_eight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_twenty_eight.mp3; path = ../../../../Desktop/PresidentialSounds/trump_twenty_eight.mp3; sourceTree = "<group>"; };
+		8C1DF4071FBE607800FBDADB /* trump_tonight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_tonight.mp3; path = ../../../../Desktop/PresidentialSounds/trump_tonight.mp3; sourceTree = "<group>"; };
+		8C1DF4081FBE607800FBDADB /* trump_million.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = trump_million.mp3; path = ../../../../Desktop/PresidentialSounds/trump_million.mp3; sourceTree = "<group>"; };
 		8C242A411F64DBAF003C69CD /* obama_financing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_financing.mp3; sourceTree = "<group>"; };
 		8C242A421F64DBAF003C69CD /* obama_at.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_at.mp3; sourceTree = "<group>"; };
 		8C242A431F64DBAF003C69CD /* obama_the_koch_brothers.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = obama_the_koch_brothers.mp3; sourceTree = "<group>"; };
@@ -1135,7 +1189,34 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				8C1DF4011FBE607600FBDADB /* trump_bad.mp3 */,
+				8C1DF3FD1FBE607500FBDADB /* trump_dishonest.mp3 */,
+				8C1DF3FC1FBE607500FBDADB /* trump_done.mp3 */,
+				8C1DF3FB1FBE607400FBDADB /* trump_fake_news.mp3 */,
+				8C1DF4031FBE607700FBDADB /* trump_fake.mp3 */,
+				8C1DF4021FBE607600FBDADB /* trump_great.mp3 */,
+				8C1DF4041FBE607700FBDADB /* trump_media.mp3 */,
+				8C1DF4081FBE607800FBDADB /* trump_million.mp3 */,
+				8C1DF3FE1FBE607500FBDADB /* trump_more.mp3 */,
+				8C1DF3F91FBE607400FBDADB /* trump_put_out.mp3 */,
+				8C1DF4051FBE607700FBDADB /* trump_social_media.mp3 */,
+				8C1DF4001FBE607600FBDADB /* trump_stories.mp3 */,
+				8C1DF4071FBE607800FBDADB /* trump_tonight.mp3 */,
+				8C1DF3FA1FBE607400FBDADB /* trump_truth.mp3 */,
+				8C1DF4061FBE607700FBDADB /* trump_twenty_eight.mp3 */,
+				8C1DF3FF1FBE607600FBDADB /* trump_well.mp3 */,
 				8C1DF3BD1FBE2D7C00FBDADB /* trump_ability.mp3 */,
+				8C1DF3ED1FBE596300FBDADB /* trump_bull_shit.mp3 */,
+				8C1DF3E31FBE596000FBDADB /* trump_damn.mp3 */,
+				8C1DF3E41FBE596100FBDADB /* trump_king.mp3 */,
+				8C1DF3E81FBE596200FBDADB /* trump_maybe.mp3 */,
+				8C1DF3E91FBE596200FBDADB /* trump_pussy.mp3 */,
+				8C1DF3E51FBE596100FBDADB /* trump_shitoutofthesea.mp3 */,
+				8C1DF3EC1FBE596300FBDADB /* trump_shock.mp3 */,
+				8C1DF3EA1FBE596200FBDADB /* trump_south_korea.mp3 */,
+				8C1DF3EB1FBE596300FBDADB /* trump_talk.mp3 */,
+				8C1DF3E61FBE596100FBDADB /* trump_time.mp3 */,
+				8C1DF3E71FBE596200FBDADB /* trump_tooo.mp3 */,
 				8C1DF3C01FBE2D7D00FBDADB /* trump_anybody.mp3 */,
 				8C1DF3C41FBE2D7E00FBDADB /* trump_but_uhh.mp3 */,
 				8C1DF3C51FBE2D7E00FBDADB /* trump_disgraceful.mp3 */,
@@ -1972,6 +2053,7 @@
 				8C7BCE751F677C55000478DB /* trump_dead.mp3 in Resources */,
 				8C1DF3741FBBE67100FBDADB /* trump_trade.mp3 in Resources */,
 				8C242A921F65CACC003C69CD /* obama_climate_change.mp3 in Resources */,
+				8C1DF4121FBE607C00FBDADB /* trump_put_out.mp3 in Resources */,
 				8C1DF37E1FBBE81D00FBDADB /* trump_ya_know.mp3 in Resources */,
 				8C1DF3DF1FBE2D8600FBDADB /* trump_the_usa.mp3 in Resources */,
 				8C7BCF0D1F6A0B5D000478DB /* trump_somebody.mp3 in Resources */,
@@ -1990,12 +2072,16 @@
 				8C1DF3681FBBE5CD00FBDADB /* trump_donald_trump.mp3 in Resources */,
 				8C242A6B1F65BEDE003C69CD /* obama_big.mp3 in Resources */,
 				8CE556601F429D1900C3CF96 /* obama_mother_fucker.mp3 in Resources */,
+				8C1DF3F21FBE596C00FBDADB /* trump_pussy.mp3 in Resources */,
+				8C1DF3EF1FBE596C00FBDADB /* trump_damn.mp3 in Resources */,
 				8C1DF3701FBBE65F00FBDADB /* trump_so.mp3 in Resources */,
 				8C1DF37B1FBBE81D00FBDADB /* trump_tax.mp3 in Resources */,
 				8CE556B51F48B57300C3CF96 /* obama_it.mp3 in Resources */,
 				8C242A581F64DBAF003C69CD /* obama_forty_five.mp3 in Resources */,
 				8CE556B71F48B57300C3CF96 /* obama_dont.mp3 in Resources */,
 				8C7BCF0C1F6A0B5D000478DB /* trump_fabulous.mp3 in Resources */,
+				8C1DF3EE1FBE596C00FBDADB /* trump_bull_shit.mp3 in Resources */,
+				8C1DF40C1FBE607C00FBDADB /* trump_fake_news.mp3 in Resources */,
 				8C1DF3731FBBE66C00FBDADB /* trump_tough.mp3 in Resources */,
 				8C242A6D1F65BEDE003C69CD /* obama_immediately.mp3 in Resources */,
 				8C1DF37F1FBBE82500FBDADB /* trump_fellas.mp3 in Resources */,
@@ -2005,9 +2091,11 @@
 				8C1DF3661FBBE5CD00FBDADB /* trump_deal.mp3 in Resources */,
 				8C7BCE5C1F675483000478DB /* trump_of.mp3 in Resources */,
 				8C26FACA1FA673AC00FD36AC /* trump_at_all.mp3 in Resources */,
+				8C1DF3F81FBE596C00FBDADB /* trump_tooo.mp3 in Resources */,
 				8CE556B11F48B57300C3CF96 /* obama_issues.mp3 in Resources */,
 				8CE556CD1F48BC9300C3CF96 /* obama_benefit.mp3 in Resources */,
 				8C242A561F64DBAF003C69CD /* obama_consequence.mp3 in Resources */,
+				8C1DF40E1FBE607C00FBDADB /* trump_great.mp3 in Resources */,
 				8C242A711F65BEDE003C69CD /* obama_races.mp3 in Resources */,
 				8C1DF3A91FBBF2E300FBDADB /* trump_plant.mp3 in Resources */,
 				8C1DF3E21FBE2D8600FBDADB /* trump_through.mp3 in Resources */,
@@ -2050,12 +2138,15 @@
 				8C1DF3DB1FBE2D8600FBDADB /* trump_easier.mp3 in Resources */,
 				8CE556911F4657FD00C3CF96 /* obama_because.mp3 in Resources */,
 				8CE5569F1F4791B400C3CF96 /* obama_on.mp3 in Resources */,
+				8C1DF4141FBE607C00FBDADB /* trump_stories.mp3 in Resources */,
 				8C242ADD1F674215003C69CD /* obama_the_cia.mp3 in Resources */,
 				8C7BCF081F6A0B5D000478DB /* trump_waterboarding.mp3 in Resources */,
 				8C7BCE5E1F675483000478DB /* trump_abe_lincoln.mp3 in Resources */,
 				8CE556901F4657FD00C3CF96 /* obama_who.mp3 in Resources */,
 				8C7BCE791F677C55000478DB /* trump_college.mp3 in Resources */,
+				8C1DF40D1FBE607C00FBDADB /* trump_fake.mp3 in Resources */,
 				8C7BCE781F677C55000478DB /* trump_people.mp3 in Resources */,
+				8C1DF4181FBE607C00FBDADB /* trump_well.mp3 in Resources */,
 				8C242ADF1F674215003C69CD /* obama_agency.mp3 in Resources */,
 				8C242A8E1F65CACC003C69CD /* obama_rise_up.mp3 in Resources */,
 				8C1DF3911FBBF2DC00FBDADB /* trump_then.mp3 in Resources */,
@@ -2070,6 +2161,7 @@
 				8C7BCEA71F68C3F7000478DB /* trump_catastrophe.mp3 in Resources */,
 				8C26FACD1FA673B500FD36AC /* trump_legally.mp3 in Resources */,
 				8C1DF3B11FBBF4C500FBDADB /* trump_party.mp3 in Resources */,
+				8C1DF4111FBE607C00FBDADB /* trump_more.mp3 in Resources */,
 				8C1DF37C1FBBE81D00FBDADB /* trump_the_dnc.mp3 in Resources */,
 				8C7BCEA01F68C3F7000478DB /* trump_years.mp3 in Resources */,
 				8C3B76791F6EE22700DC8965 /* trump_trillion.mp3 in Resources */,
@@ -2089,6 +2181,7 @@
 				8C242AA21F65D00F003C69CD /* obama_and_and.mp3 in Resources */,
 				8C1DF36A1FBBE62200FBDADB /* trump_factories.mp3 in Resources */,
 				8C3B767E1F6EE22700DC8965 /* trump_here.mp3 in Resources */,
+				8C1DF40F1FBE607C00FBDADB /* trump_media.mp3 in Resources */,
 				8C7BCEA31F68C3F7000478DB /* trump_shot.mp3 in Resources */,
 				8C7BCF0A1F6A0B5D000478DB /* trump_intelligence.mp3 in Resources */,
 				8C1DF3BB1FBBF81600FBDADB /* trump_bernie.mp3 in Resources */,
@@ -2120,7 +2213,9 @@
 				8C7BCE7A1F677C55000478DB /* trump_to.mp3 in Resources */,
 				8C242AA41F65D00F003C69CD /* obama_have.mp3 in Resources */,
 				8C242A6A1F65BEDE003C69CD /* obama_leave.mp3 in Resources */,
+				8C1DF4131FBE607C00FBDADB /* trump_social_media.mp3 in Resources */,
 				8C242ABB1F65D7B2003C69CD /* obama_by.mp3 in Resources */,
+				8C1DF4091FBE607C00FBDADB /* trump_bad.mp3 in Resources */,
 				8C3B767A1F6EE22700DC8965 /* trump_six.mp3 in Resources */,
 				8C3B767C1F6EE22700DC8965 /* trump_total.mp3 in Resources */,
 				8C242ADC1F674215003C69CD /* obama_impact.mp3 in Resources */,
@@ -2135,7 +2230,9 @@
 				8C7BCF111F6A0B5D000478DB /* trump_president.mp3 in Resources */,
 				8C7BCE6F1F677C55000478DB /* trump_sean.mp3 in Resources */,
 				8CE556CF1F48BC9300C3CF96 /* obama_had.mp3 in Resources */,
+				8C1DF3F41FBE596C00FBDADB /* trump_shock.mp3 in Resources */,
 				8C242AE61F67451E003C69CD /* obama_like.mp3 in Resources */,
+				8C1DF3F71FBE596C00FBDADB /* trump_time.mp3 in Resources */,
 				8C242A601F64DBAF003C69CD /* obama_now.mp3 in Resources */,
 				8CE5566C1F43EFFD00C3CF96 /* obama_sorry_ass.mp3 in Resources */,
 				8C242A6F1F65BEDE003C69CD /* obama_a.mp3 in Resources */,
@@ -2179,9 +2276,11 @@
 				8CE556D01F48BC9300C3CF96 /* obama_before.mp3 in Resources */,
 				8C1DF3B61FBBF4C500FBDADB /* trump_ya_know.mp3 in Resources */,
 				8C7BCE8A1F689272000478DB /* trump_wow.mp3 in Resources */,
+				8C1DF3F31FBE596C00FBDADB /* trump_shitoutofthesea.mp3 in Resources */,
 				8C7BCE771F677C55000478DB /* trump_vote.mp3 in Resources */,
 				8C242A941F65CACC003C69CD /* obama_generation.mp3 in Resources */,
 				8C1DF3E01FBE2D8600FBDADB /* trump_there.mp3 in Resources */,
+				8C1DF4151FBE607C00FBDADB /* trump_tonight.mp3 in Resources */,
 				8C1DF37A1FBBE81D00FBDADB /* trump_please.mp3 in Resources */,
 				8CE5564B1F4295EC00C3CF96 /* obama_is.mp3 in Resources */,
 				8CE556D21F48BC9300C3CF96 /* obama_salient.mp3 in Resources */,
@@ -2190,9 +2289,11 @@
 				8CE556891F4657FD00C3CF96 /* obama_democrats.mp3 in Resources */,
 				8C242AB51F65D7B2003C69CD /* obama_consistently.mp3 in Resources */,
 				8C1DF3B21FBBF4C500FBDADB /* trump_please.mp3 in Resources */,
+				8C1DF4101FBE607C00FBDADB /* trump_million.mp3 in Resources */,
 				8C1DF3721FBBE66900FBDADB /* trump_them.mp3 in Resources */,
 				8C242AA11F65D00F003C69CD /* obama_fake_news.mp3 in Resources */,
 				8C242A8F1F65CACC003C69CD /* obama_them.mp3 in Resources */,
+				8C1DF3F51FBE596C00FBDADB /* trump_south_korea.mp3 in Resources */,
 				8C7BCE6E1F677C55000478DB /* trump_spoke.mp3 in Resources */,
 				8C7BCE8E1F689272000478DB /* trump_victory.mp3 in Resources */,
 				8CE556591F42996200C3CF96 /* obama_ughhh.mp3 in Resources */,
@@ -2200,6 +2301,7 @@
 				8CE556931F4657FD00C3CF96 /* obama_wellll.mp3 in Resources */,
 				8C1DF3641FBBE5CD00FBDADB /* trump_by.mp3 in Resources */,
 				8CE556581F42996200C3CF96 /* obama_what.mp3 in Resources */,
+				8C1DF40B1FBE607C00FBDADB /* trump_done.mp3 in Resources */,
 				8CE556611F429D1900C3CF96 /* obama_nothing.mp3 in Resources */,
 				8C7BCE591F675483000478DB /* trump_from.mp3 in Resources */,
 				8C7BCE8C1F689272000478DB /* trump_forgot.mp3 in Resources */,
@@ -2207,6 +2309,7 @@
 				8C1DF36D1FBBE64300FBDADB /* trump_leave.mp3 in Resources */,
 				8C1DF3621FBBE5C600FBDADB /* trump_fair.mp3 in Resources */,
 				8C242A701F65BEDE003C69CD /* obama_think.mp3 in Resources */,
+				8C1DF4171FBE607C00FBDADB /* trump_twenty_eight.mp3 in Resources */,
 				8C1DF3D71FBE2D8600FBDADB /* trump_anybody.mp3 in Resources */,
 				8CE5564D1F4295EC00C3CF96 /* obama_and.mp3 in Resources */,
 				8C1DF3D61FBE2D8600FBDADB /* trump_ability.mp3 in Resources */,
@@ -2231,12 +2334,14 @@
 				8CE556871F4657FD00C3CF96 /* obama_states.mp3 in Resources */,
 				8CE5569E1F4791B400C3CF96 /* obama_people.mp3 in Resources */,
 				8C242AE31F674215003C69CD /* obama_islamic.mp3 in Resources */,
+				8C1DF3F61FBE596C00FBDADB /* trump_talk.mp3 in Resources */,
 				8C242A571F64DBAF003C69CD /* obama_of.mp3 in Resources */,
 				8C242A851F65CACC003C69CD /* obama_swirl.mp3 in Resources */,
 				8C242A551F64DBAF003C69CD /* obama_me.mp3 in Resources */,
 				8C242AD91F674215003C69CD /* obama_among.mp3 in Resources */,
 				64B69FE21F5C46F798D5703E /* MaterialIcons.ttf in Resources */,
 				8C7BCEA41F68C3F7000478DB /* trump_problem.mp3 in Resources */,
+				8C1DF40A1FBE607C00FBDADB /* trump_dishonest.mp3 in Resources */,
 				8C1DF3671FBBE5CD00FBDADB /* trump_do.mp3 in Resources */,
 				8C3B76811F6EE22700DC8965 /* trump_yes.mp3 in Resources */,
 				8C7BCE921F689272000478DB /* trump_you.mp3 in Resources */,
@@ -2259,6 +2364,7 @@
 				8C1DF3691FBBE61E00FBDADB /* trump_dont.mp3 in Resources */,
 				8CE5568C1F4657FD00C3CF96 /* obama_are.mp3 in Resources */,
 				8CE5568A1F4657FD00C3CF96 /* obama_for.mp3 in Resources */,
+				8C1DF4161FBE607C00FBDADB /* trump_truth.mp3 in Resources */,
 				8C7BCF101F6A0B5D000478DB /* trump_approved.mp3 in Resources */,
 				F097B300726242D78E5408CB /* SimpleLineIcons.ttf in Resources */,
 				8C242AE41F674215003C69CD /* obama_relationship.mp3 in Resources */,
@@ -2276,6 +2382,8 @@
 				8C242A931F65CACC003C69CD /* obama_passionate.mp3 in Resources */,
 				8C1DF3A31FBBF2E300FBDADB /* trump_is.mp3 in Resources */,
 				8C7BCE8B1F689272000478DB /* trump_unfairly.mp3 in Resources */,
+				8C1DF3F01FBE596C00FBDADB /* trump_king.mp3 in Resources */,
+				8C1DF3F11FBE596C00FBDADB /* trump_maybe.mp3 in Resources */,
 				8CE556561F42996200C3CF96 /* obama_proud.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
