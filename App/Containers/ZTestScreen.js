@@ -35,17 +35,17 @@ const Words = {
     Descriptions: ['incredible', 'explicit', 'islamic', 'political', 'vulnerable', 'consistently', 'controversial', 'deep', 'passionate', 'lost', 'a_lot', 'meaningful', 'big', 'public', 'salient', 'happy', 'proud', 'complicated', 'ignorant', 'hard'],
     Verbs: ['concerns', 'have', 'steal', 'impact', 'call', 'like', 'read', 'avoid', 'doubt', 'contributed', 'lost', 'swirl', 'were', 'help', 'rise_up', 'start', 'campaign', 'leave', 'financing', 'think', 'races', 'hearing', 'felt', 'support', 'was', 'feel', 'had', 'spending', 'benefit', 'challenge', 'are', 'is', 'promote', 'give', 'made', 'has', 'party', 'talk', 'trust', 'builds'],
     Time: ['months', 'before', 'decade', 'among', 'now', 'after', 'always', 'twelve', 'forty_five', 'immediately', 'where'],
-    Misc: ['and', 'on', 'in', 'a', 'maybe', 'of', 'by', 'to', 'the', 'any', 'if', 'at', 'actually', 'from', 'well_uh', 'or', 'dont', 'that', 'then', 'but', 'ughhh', 'for', 'so', 'who', 'because', 'wellll'],
-    Bonus: ['bitch', 'mother_fucker', 'and_and', 'trumped_up', 'fake_news', 'mother_fuckers', 'sorry_ass', 'shit', 'damn_fries', 'whos_ass', 'noo', 'pussy', 'goddam', 'whatever']
+    Misc: ['and', 'on', 'in', 'a', 'maybe', 'of', 'by', 'to', 'the', 'any', 'if', 'at', 'actually', 'from', 'or', 'dont', 'that', 'then', 'but', 'ughhh', 'for', 'so', 'who', 'because', 'wellll'],
+    Bonus: ['bitch', 'mother_fucker', 'and_and', 'trumped_up', 'fake_news', 'mother_fuckers', 'sorry_ass', 'well_uh', 'shit', 'damn_fries', 'whos_ass', 'noo', 'pussy', 'goddam', 'whatever']
   },
   trump: {
-    Who: ['Mexico', 'Russia', 'South_Korea', 'the_USA', 'the_DNC', 'Homeland_Security', 'anybody', 'companies', 'everybody', 'The_United_States', 'Michigan', 'Pennsylvania', 'Bernie', 'them', 'Donald_Trump', 'fellas', 'ISIS', 'Chicago', 'president_Obama', 'Abe_Lincoln', 'the_CIA', 'others', 'somebody', 'you', 'president', 'they', 'you2', 'Afghanistan', 'democrats', 'women', 'people', 'fox', 'Sean'],
-    What: ['primaries', 'truth', 'media', 'social_media', 'stories', 'time', 'drugs', 'king', 'ability', 'party', 'pill', 'emergency', 'plant', 'factories', 'deal', 'termination', 'terror', 'tax', 'bread', 'dollars', 'mess', 'college', 'work', 'audience', 'intelligence', 'problem', 'catastrophe', 'victory', 'states'],
-    Descriptions: ['correct', 'done', 'great', 'well', 'dishonest', 'fake', 'bad', 'easier', 'tougher', 'disgraceful', 'massive', 'better', 'good', 'tremendous', 'properly', 'finished', 'legally', 'phenomenal', 'total', 'absolutely', 'fabulous', 'approved', 'smarter', 'unfairly', 'legitamite', 'illegal', 'strongly', 'dead'],
-    Verbs: ['vote', 'shock', 'talk', 'party', 'pay', 'plant', 'is', 'leave', 'trade', 'deal', 'finished', 'created', 'cut', 'create', 'tax', 'look', 'think', 'spoke', 'work', 'does', 'shot', 'help', 'approve', 'forgot', 'did', 'demean'],
+    Who: ['Mexico', 'Russia', 'Sarah_Palin', 'President_Bush', 'Clinton', 'Iraq', 'I', 'me', 'South_Korea', 'the_USA', 'the_DNC', 'Homeland_Security', 'anybody', 'companies', 'everybody', 'The_United_States', 'Michigan', 'Pennsylvania', 'Bernie', 'them', 'Donald_Trump', 'fellas', 'ISIS', 'Chicago', 'president_Obama', 'Abe_Lincoln', 'the_CIA', 'others', 'somebody', 'you', 'president', 'they', 'you2', 'Afghanistan', 'democrats', 'women', 'people', 'fox', 'Sean'],
+    What: ['primaries', 'profits', 'truth', 'media', 'social_media', 'stories', 'time', 'drugs', 'king', 'ability', 'party', 'pill', 'emergency', 'plant', 'factories', 'deal', 'termination', 'terror', 'tax', 'bread', 'dollars', 'mess', 'college', 'work', 'audience', 'intelligence', 'problem', 'catastrophe', 'victory', 'states'],
+    Descriptions: ['correct', 'amazing', 'done', 'great', 'well', 'dishonest', 'fake', 'bad', 'easier', 'tougher', 'disgraceful', 'massive', 'better', 'good', 'tremendous', 'properly', 'finished', 'legally', 'phenomenal', 'total', 'absolutely', 'fabulous', 'approved', 'smarter', 'unfairly', 'legitamite', 'illegal', 'strongly', 'dead'],
+    Verbs: ['vote', 'shock', 'cannot', 'have', 'did_not', 'talk', 'party', 'pay', 'plant', 'is', 'leave', 'trade', 'deal', 'finished', 'created', 'cut', 'create', 'tax', 'look', 'think', 'spoke', 'work', 'does', 'shot', 'help', 'approve', 'forgot', 'did', 'demean'],
     Time: ['two', 'twenty_eight', 'million', 'tonight', 'now', 'through', 'seventy_one', 'today', 'six', 'trillion', 'before', 'years', 'never', 'here'],
-    Misc: ['of', 'and', 'more', 'maybe', 'this', 'so2', 'there', 'so', 'then', 'by', 'dont', 'do', 'please', 'ya_know', 'but', 'without', 'from', 'yes', 'who', 'to', 'wow', 'in'],
-    Bonus: ['waterboarding', 'put_out', 'fake_news', 'tooo', 'damn', 'shitoutofthesea', 'bull_shit', 'pussy', 'but_uhh', 'ahhh', 'Mexico2', 'fair', 'at_all', 'heee']
+    Misc: ['of', 'and', 'more', 'not', 'maybe', 'really', 'this', 'so2', 'there', 'so', 'then', 'by', 'dont', 'do', 'please', 'ya_know', 'but', 'without', 'from', 'yes', 'who', 'to', 'wow', 'in'],
+    Bonus: ['waterboarding', 'put_out', 'fake_news', 'frankly', 'tooo', 'damn', 'shitoutofthesea', 'bull_shit', 'pussy', 'but_uhh', 'ahhh', 'Mexico2', 'fair', 'at_all', 'heee']
   }
 }
 
