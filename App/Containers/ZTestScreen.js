@@ -32,7 +32,7 @@ const Words = {
   obama: {
     Who: ['myself', 'me', 'we', 'us', 'Iran', 'ISIL', 'Libya', 'Yemen', 'the_oil_companies', 'congress', 'the_entire_world', 'women', 'men', 'governers', 'Americans', 'African_Americans', 'them', 'I', 'Bradley_Cooper', 'officers', 'federal_government', 'the_CIA', 'Chinese', 'British', 'NPR', 'her', 'the_DNC', 'somebody', 'you', 'the_Koch_brothers', 'the_United_States_senate', 'Chicagoans', 'democrats', 'Donald_Trump', 'people'],
     What: ['concerns', 'pride', 'respect', 'coke', 'luxury', 'force', 'diplomacy', 'development', 'education', 'progress', 'power', 'cause', 'history', 'problems', 'descrimination', 'country', 'relationship', 'agency', 'terrorism', 'revelation', 'vacation', 'substance', 'manipulation', 'consequence', 'climate_change', 'generation', 'races', 'presidency', 'fish_fries', 'party', 'bathrooms', 'obama_care', 'fries', 'it', 'states', 'chunks', 'challenge', 'issues', 'trust'],
-    Descriptions: ['incredible', 'soft', 'slowly', 'hardest', 'done', 'serious', 'immediate', 'alone', 'vigilant', 'careful', 'true', 'most', 'sure', 'naive', 'legitamite', 'explicit', 'islamic', 'political', 'vulnerable', 'consistently', 'controversial', 'deep', 'passionate', 'lost', 'meaningful', 'big', 'public', 'salient', 'happy', 'proud', 'complicated', 'ignorant', 'hard'],
+    Descriptions: ['incredible', 'soft', 'slowly', 'hardest', 'done', 'serious', 'immediate', 'alone', 'vigilant', 'careful', 'true', 'most', 'sure', 'naive', 'legitamite', 'explicit', 'Islamic', 'political', 'vulnerable', 'consistently', 'controversial', 'deep', 'passionate', 'lost', 'meaningful', 'big', 'public', 'salient', 'happy', 'proud', 'complicated', 'ignorant', 'hard'],
     Verbs: ['concerns', 'force', 'costs', 'respect', 'be', 'cause', 'died', 'do', 'have', 'dont', 'steal', 'impact', 'call', 'like', 'read', 'avoid', 'doubt', 'contributed', 'lost', 'swirl', 'were', 'help', 'rise_up', 'start', 'campaign', 'leave', 'financing', 'think', 'races', 'hearing', 'felt', 'support', 'was', 'feel', 'had', 'spending', 'benefit', 'challenge', 'are', 'is', 'promote', 'give', 'made', 'has', 'party', 'talk', 'trust', 'builds'],
     Time: ['months', 'a_lot', 'years', 'one', 'a_third', 'ninety', 'percent', 'right_now', 'along', 'before', 'decade', 'among', 'now', 'after', 'always', 'twelve', 'forty_five', 'immediately'],
     Helpers: ['and', 'on', 'my', 'much', 'way', 'not', 'typically', 'where', 'what', 'about', 'why', 'would', 'probably', 'in', 'a', 'maybe', 'of', 'by', 'to', 'the', 'any', 'if', 'at', 'actually', 'from', 'or', 'that', 'then', 'but', 'for', 'so', 'who', 'because', 'wellll'],
@@ -101,8 +101,8 @@ export default class ZTestScreen extends React.Component {
     }
     const potusMode = await AsyncStorage.getItem('potusMode')
     const potusModeEnabled = potusMode == 'enabled'
-    // this.setState({ potusMode: true })
-    this.setState({ potusMode: potusModeEnabled })
+    this.setState({ potusMode: true })
+    // this.setState({ potusMode: potusModeEnabled })
   }
 
   buyProduct(product) {

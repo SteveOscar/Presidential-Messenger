@@ -51,12 +51,6 @@ export default class ZPhrasePlayer extends Component {
       if (b) { this.setState({ saveHeight: nextState.saveHeight }) }
       if (c) { this.setState({ playingHeight: this.state.playingHeight ? 0 : height }) }
 
-      // const that = this
-      // setTimeout(function () {
-      //   that.playSpin(1500)
-      //   // that.saveSpin(1500)
-      // }, 400)
-
       if (!this.state.saveNotice.length && nextState.saveNotice.length) {
         this.props.refreshData()
       }
@@ -108,7 +102,7 @@ export default class ZPhrasePlayer extends Component {
   playSavedPhrase () {
     const { record } = this.state
     if (!record.length) { return }
-    this.playSpin(2000)
+    // this.playSpin(2000)
     this.props.playRecording(record)
   }
 
@@ -241,7 +235,7 @@ export default class ZPhrasePlayer extends Component {
             <Text style={{color: 'white', fontSize: 20, margin: 15}}>Enter A Name</Text>
             <TextInput
               style={{height: 40, paddingLeft: 5, borderRadius: 5, padding: 3, backgroundColor: 'rgba(255, 255, 255, 0.1)', color: 'white', marginLeft: 10, marginRight: 10}}
-              onChangeText={(text) => this.setState({fileName: text})}
+              onChangeText={(text) => this.setState({fileName: text.slice(0, 30)})}
               value={fileName}
               autoFocus={true}
             />
@@ -379,16 +373,16 @@ export default class ZPhrasePlayer extends Component {
       )
     }
   }
-
-  autoPlayPressed () {
-    const { autoPlaying } = this.props
-    if (this.state.recording) { return }
-    if(autoPlaying) {
-      this.props.stopAutoPlay()
-    } else {
-      this.props.autoPlay()
-    }
-  }
+  //
+  // autoPlayPressed () {
+  //   const { autoPlaying } = this.props
+  //   if (this.state.recording) { return }
+  //   if(autoPlaying) {
+  //     this.props.stopAutoPlay()
+  //   } else {
+  //     this.props.autoPlay()
+  //   }
+  // }
 
   render () {
     const { recording, record } = this.state

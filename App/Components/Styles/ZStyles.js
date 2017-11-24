@@ -119,7 +119,7 @@ export default StyleSheet.create({
     margin: 15
   },
   categoryButton: {
-    width: width / 4.3,
+    width: width / 4.15,
     height: 38,
     margin: 2,
     alignItems: 'center',
