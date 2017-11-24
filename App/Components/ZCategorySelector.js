@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 
 // const { height } = Dimensions.get('window')
 
-const categories = [ 'Who', 'What', 'Time', 'Verbs', 'Descriptions', 'Misc', 'Bonus' ]
+const categories = [ 'Who', 'What', 'Time', 'Verbs', 'Descriptions', 'Helpers', 'Bonus' ]
 
 export default class ZCategorySelector extends Component {
 
@@ -19,7 +19,7 @@ export default class ZCategorySelector extends Component {
     }, 2500)
   }
 
-  renderCat(cat) {
+  renderBonus(cat) {
     const { potusMode } = this.props
     if(!potusMode) {
       return (
@@ -32,10 +32,16 @@ export default class ZCategorySelector extends Component {
     }
   }
 
+  renderCat(cat) {
+    if(cat === 'Who') { return 'Who/Where' }
+    if(cat === 'Time') { return 'Time/Numbers' }
+    return cat
+  }
+
   categoryList () {
     return categories.map((cat, i) => {
       const color = this.props.selected === cat ? '#FB6964' : '#F0F1EE'
-      const text = (cat === 'Bonus') ? this.renderCat(cat) : cat
+      const text = (cat === 'Bonus') ? this.renderBonus(cat) : this.renderCat(cat)
       return (
         <TouchableOpacity style={[styles.categoryButton, { backgroundColor: color }]} key={i} onPress={() => this.props.updateCategory(cat)} >
           <Text style={styles.wordText}>{text}</Text>

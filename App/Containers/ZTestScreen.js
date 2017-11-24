@@ -30,13 +30,13 @@ const check = require('isiphonex');
 
 const Words = {
   obama: {
-    Who: ['myself', 'me', 'we', 'the_entire_world', 'women', 'men', 'governers', 'Americans', 'African_Americans', 'them', 'I', 'Bradley_Cooper', 'officers', 'federal_government', 'the_CIA', 'Chinese', 'British', 'NPR', 'her', 'the_DNC', 'somebody', 'you', 'the_Koch_brothers', 'the_United_States_senate', 'Chicagoans', 'democrats', 'Donald_Trump', 'people'],
-    What: ['concerns', 'pride', 'cause', 'history', 'problems', 'descrimination', 'country', 'relationship', 'agency', 'terrorism', 'revelation', 'vacation', 'substance', 'manipulation', 'consequence', 'climate_change', 'generation', 'races', 'presidency', 'fish_fries', 'party', 'bathrooms', 'obama_care', 'fries', 'it', 'states', 'chunks', 'challenge', 'issues', 'trust'],
-    Descriptions: ['incredible', 'serious', 'immediate', 'alone', 'vigilant', 'careful', 'true', 'most', 'sure', 'naive', 'legitamite', 'explicit', 'islamic', 'political', 'vulnerable', 'consistently', 'controversial', 'deep', 'passionate', 'lost', 'meaningful', 'big', 'public', 'salient', 'happy', 'proud', 'complicated', 'ignorant', 'hard'],
-    Verbs: ['concerns', 'be', 'cause', 'died', 'do', 'have', 'dont', 'steal', 'impact', 'call', 'like', 'read', 'avoid', 'doubt', 'contributed', 'lost', 'swirl', 'were', 'help', 'rise_up', 'start', 'campaign', 'leave', 'financing', 'think', 'races', 'hearing', 'felt', 'support', 'was', 'feel', 'had', 'spending', 'benefit', 'challenge', 'are', 'is', 'promote', 'give', 'made', 'has', 'party', 'talk', 'trust', 'builds'],
-    Time: ['months', 'a_lot', 'along', 'before', 'decade', 'among', 'now', 'after', 'always', 'twelve', 'forty_five', 'immediately', 'where'],
-    Misc: ['and', 'on', 'much', 'what', 'about', 'why', 'would', 'probably', 'in', 'a', 'maybe', 'of', 'by', 'to', 'the', 'any', 'if', 'at', 'actually', 'from', 'or', 'that', 'then', 'but', 'for', 'so', 'who', 'because', 'wellll'],
-    Bonus: ['bitch', 'mother_fucker', 'ya_know', '9-11', 'ughhh', 'contraception', 'Jim_Crow', 'nerd', 'and_and', 'trumped_up', 'fake_news', 'mother_fuckers', 'sorry_ass', 'well_uh', 'shit', 'damn_fries', 'whos_ass', 'noo', 'pussy', 'goddam', 'whatever']
+    Who: ['myself', 'me', 'we', 'us', 'Iran', 'ISIL', 'Libya', 'Yemen', 'the_oil_companies', 'congress', 'the_entire_world', 'women', 'men', 'governers', 'Americans', 'African_Americans', 'them', 'I', 'Bradley_Cooper', 'officers', 'federal_government', 'the_CIA', 'Chinese', 'British', 'NPR', 'her', 'the_DNC', 'somebody', 'you', 'the_Koch_brothers', 'the_United_States_senate', 'Chicagoans', 'democrats', 'Donald_Trump', 'people'],
+    What: ['concerns', 'pride', 'respect', 'coke', 'luxury', 'force', 'diplomacy', 'development', 'education', 'progress', 'power', 'cause', 'history', 'problems', 'descrimination', 'country', 'relationship', 'agency', 'terrorism', 'revelation', 'vacation', 'substance', 'manipulation', 'consequence', 'climate_change', 'generation', 'races', 'presidency', 'fish_fries', 'party', 'bathrooms', 'obama_care', 'fries', 'it', 'states', 'chunks', 'challenge', 'issues', 'trust'],
+    Descriptions: ['incredible', 'soft', 'slowly', 'hardest', 'done', 'serious', 'immediate', 'alone', 'vigilant', 'careful', 'true', 'most', 'sure', 'naive', 'legitamite', 'explicit', 'islamic', 'political', 'vulnerable', 'consistently', 'controversial', 'deep', 'passionate', 'lost', 'meaningful', 'big', 'public', 'salient', 'happy', 'proud', 'complicated', 'ignorant', 'hard'],
+    Verbs: ['concerns', 'force', 'costs', 'respect', 'be', 'cause', 'died', 'do', 'have', 'dont', 'steal', 'impact', 'call', 'like', 'read', 'avoid', 'doubt', 'contributed', 'lost', 'swirl', 'were', 'help', 'rise_up', 'start', 'campaign', 'leave', 'financing', 'think', 'races', 'hearing', 'felt', 'support', 'was', 'feel', 'had', 'spending', 'benefit', 'challenge', 'are', 'is', 'promote', 'give', 'made', 'has', 'party', 'talk', 'trust', 'builds'],
+    Time: ['months', 'a_lot', 'years', 'one', 'a_third', 'ninety', 'percent', 'right_now', 'along', 'before', 'decade', 'among', 'now', 'after', 'always', 'twelve', 'forty_five', 'immediately'],
+    Helpers: ['and', 'on', 'my', 'much', 'way', 'not', 'typically', 'where', 'what', 'about', 'why', 'would', 'probably', 'in', 'a', 'maybe', 'of', 'by', 'to', 'the', 'any', 'if', 'at', 'actually', 'from', 'or', 'that', 'then', 'but', 'for', 'so', 'who', 'because', 'wellll'],
+    Bonus: ['bitch', 'mother_fucker', 'marijuana', 'meth', 'crack', 'the_ayatollah', 'religious', 'uh_tell_ya', 'a_food_fight', 'ya_know', '9-11', 'ughhh', 'contraception', 'Jim_Crow', 'nerd', 'and_and', 'trumped_up', 'fake_news', 'mother_fuckers', 'sorry_ass', 'well_uh', 'shit', 'damn_fries', 'whos_ass', 'noo', 'pussy', 'goddam', 'whatever']
   },
   trump: {
     Who: ['Mexico', 'Vietnam', 'China', 'China2', 'North_Korea', 'Asia', 'Pakistan', 'Paul_Manafort', 'Osama_Bin_Laden', 'Qatar', 'India', 'Saddam_Hussein', 'Russia', 'Sarah_Palin', 'President_Bush', 'Clinton', 'Iraq', 'I', 'me', 'South_Korea', 'the_USA', 'the_DNC', 'Homeland_Security', 'anybody', 'companies', 'everybody', 'The_United_States', 'Michigan', 'Pennsylvania', 'Bernie', 'them', 'Donald_Trump', 'fellas', 'ISIS', 'Chicago', 'president_Obama', 'Abe_Lincoln', 'the_CIA', 'others', 'somebody', 'you', 'president', 'they', 'you2', 'Afghanistan', 'democrats', 'women', 'people', 'fox', 'Sean'],
@@ -44,7 +44,7 @@ const Words = {
     Descriptions: ['correct', 'mellow', 'killer', 'truly', 'terrible', 'drunk', 'involved', 'hard', 'amazing', 'done', 'great', 'well', 'dishonest', 'fake', 'bad', 'easier', 'tougher', 'disgraceful', 'massive', 'better', 'good', 'tremendous', 'properly', 'finished', 'legally', 'phenomenal', 'total', 'absolutely', 'fabulous', 'approved', 'smarter', 'unfairly', 'legitamite', 'illegal', 'strongly', 'dead'],
     Verbs: ['vote', 'can', 'obstruct', 'are', 'retire', 'dont', 'drink', 'say', 'do', 'shock', 'let', 'cannot', 'have', 'did_not', 'talk', 'party', 'pay', 'plant', 'is', 'leave', 'trade', 'deal', 'finished', 'created', 'cut', 'create', 'tax', 'look', 'think', 'spoke', 'work', 'does', 'shot', 'help', 'approve', 'forgot', 'did', 'demean'],
     Time: ['two', 'five', 'four', 'thirteen', 'twelve', 'seven', 'twenty_eight', 'million', 'tonight', 'back', 'then', 'now', 'through', 'seventy_one', 'today', 'six', 'trillion', 'before', 'years', 'never', 'here'],
-    Misc: ['of', 'and', 'should', 'more', 'would', 'will', 'any', 'no', 'that', 'for', 'not', 'maybe', 'really', 'this', 'so2', 'there', 'so', 'then', 'by', 'please', 'ya_know', 'but', 'without', 'from', 'yes', 'who', 'to', 'wow', 'in'],
+    Helpers: ['of', 'and', 'should', 'more', 'would', 'will', 'any', 'no', 'that', 'for', 'not', 'maybe', 'really', 'this', 'so2', 'there', 'so', 'then', 'by', 'please', 'ya_know', 'but', 'without', 'from', 'yes', 'who', 'to', 'wow', 'in'],
     Bonus: ['waterboarding', 'China!', 'SS', 'hey', 'collusion', 'Obamacare', 'extreme_vetting', 'young_women', 'kick_ass', 'stone_cold_drunk', 'put_out', 'Arab', 'fake_news', 'frankly', 'tooo', 'damn', 'shitoutofthesea', 'bull_shit', 'pussy', 'but_uhh', 'ahhh', 'Mexico2', 'fair', 'at_all', 'heee']
   }
 }
@@ -87,7 +87,6 @@ export default class ZTestScreen extends React.Component {
   async checkTerms () {
     const accepted = await AsyncStorage.getItem('termsAccepted')
     console.log('terms acceptance not found, showing terms')
-    // if(true) { this.setState({ showTerms: true }) }
     if(!accepted) { this.setState({ showTerms: true }) }
   }
 
@@ -102,8 +101,8 @@ export default class ZTestScreen extends React.Component {
     }
     const potusMode = await AsyncStorage.getItem('potusMode')
     const potusModeEnabled = potusMode == 'enabled'
-    this.setState({ potusMode: true })
-    // this.setState({ potusMode: potusModeEnabled })
+    // this.setState({ potusMode: true })
+    this.setState({ potusMode: potusModeEnabled })
   }
 
   buyProduct(product) {
