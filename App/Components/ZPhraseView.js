@@ -11,7 +11,7 @@ export default class ZPhraseView extends Component {
       const word = wordData.word
       // const borderColor = this.props.selected === i ? '#1352A2' : '#333332'
       // const textColor = this.props.selected === i ? 'yellow' : '#F0F1EE'
-      const width = ((word.length * 12) < 35) ? 35 : (word.length * 9)
+      const width = ((word.length * 12) < 40) ? 40 : (word.length * 11)
       return (
         <TouchableOpacity style={[styles.phraseButton, { width: width, borderColor: '#333332' }]}
           key={i}
